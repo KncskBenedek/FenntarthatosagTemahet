@@ -1,3 +1,4 @@
+/*Oldal anímáció és kinézet*/
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to right, #a2dcf3, #2bb2e7);
+  background: linear-gradient(to right, #f4e8c2, #a88952);
   z-index: -1;
 }
 section {
@@ -46,4 +47,46 @@ section {
   left: 0;
   top: 0;
   opacity: 0.3;
+}
+/*Navigációs bár*/
+.navbar {
+  background-color: black;
+  height: 40px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+.container li {
+  padding-top: 10px;
+  list-style-type: none;
+}
+.container a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 500ms;
+}
+.container a:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -7px;
+  transition: 0.3s;
+}
+.container a:hover:after {
+  transition: 500ms;
+  width: 100%;
+  text-decoration: none;
+}
+.container a:hover {
+  font-size: 18px;
+  color: #ebd7b4;
+  transition: 500ms;
 }
