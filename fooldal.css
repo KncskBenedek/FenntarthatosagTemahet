@@ -13,7 +13,7 @@
   background: linear-gradient(to right, #f4e8c2, #a88952);
   z-index: -1;
 }
-section {
+article {
   display: flex;
   height: 80vh;
   justify-content: center;
@@ -51,17 +51,34 @@ section {
 /*Navigációs bár*/
 .navbar {
   background-color: black;
-  height: 40px;
+  height: 4vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: white;
+}
+.navicon {
+  display: none;
+  cursor: pointer;
+}
+.navicon div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  transition: 500ms;
 }
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  justify-items: center;
+  justify-content: space-around;
+  width: 60%;
 }
 .container li {
-  padding-top: 10px;
   list-style-type: none;
 }
 .container a {
@@ -88,5 +105,69 @@ section {
 .container a:hover {
   font-size: 18px;
   color: #ebd7b4;
+  transition: 500ms;
+}
+@media screen and (max-width: 770px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero {
+    left: 0;
+    top: 10vh;
+    position: absolute;
+    width: 50%;
+  }
+  .hero::after {
+    opacity: 0;
+  }
+  .hero img {
+    display: none;
+  }
+  .container {
+    background-color: #a88952; /*Háttér színévelk egyezzen meg*/
+    position: absolute;
+    right: 0;
+    height: 96vh;
+    top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    transform: translateX(100%);
+    transition: 500ms ease-in;
+  }
+  .container li {
+    opacity: 0;
+    cursor: pointer;
+  }
+  .navicon {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+  background-color: black; /*A nav bár színvel egyezzen emg*/
+}
+
+@keyframes containerFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: 500ms;
+}
+.toggle .line2 {
+  opacity: 0;
+  transition: 500ms;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
   transition: 500ms;
 }
