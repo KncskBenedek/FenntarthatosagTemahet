@@ -15,7 +15,7 @@
 }
 article {
   display: flex;
-  height: 80vh;
+  height: 90vh;
   justify-content: center;
   align-items: center;
 }
@@ -51,7 +51,7 @@ article {
 /*Navigációs bár*/
 .navbar {
   background-color: black;
-  height: 4vh;
+  height: 5vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -59,6 +59,9 @@ article {
 
 .navbar h1 {
   color: white;
+}
+.navbar ion-icon {
+  color: green;
 }
 .navicon {
   display: none;
@@ -127,8 +130,8 @@ article {
     background-color: #a88952; /*Háttér színévelk egyezzen meg*/
     position: absolute;
     right: 0;
-    height: 96vh;
-    top: 4vh;
+    height: 90vh;
+    top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,4 +173,43 @@ article {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
   transition: 500ms;
+}
+/*Footer*/
+.footer {
+  background-color: black;
+  height: 5vh;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.nevek {
+  display: flex;
+  justify-content: space-between;
+}
+.logok {
+  align-items: center;
+}
+.logok img {
+  width: 50px;
+}
+.logok a {
+  height: 60px;
+  width: 60px;
+}
+.facebook {
+  color: #3b5998;
+  font-size: 50px;
+}
+.instangram {
+  background-image: linear-gradient(
+    200deg,
+    rgb(81, 91, 212),
+    rgb(129, 52, 175),
+    rgb(221, 42, 123),
+    rgb(254, 218, 119),
+    rgb(245, 133, 41)
+  );
+  font-size: 50px;
+  border-radius: 13px;
+  color: white;
 }

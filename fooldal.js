@@ -14,6 +14,8 @@ const headline = QS(".headline");
 const navbar = QS(".navbar");
 const navIcon = QS(".navicon");
 const nav = QS(".container");
+const footer = QS(".footer");
+
 const linkek = document.querySelectorAll(".container li");
 
 var tl = gsap.timeline();
@@ -43,6 +45,13 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
     navbar,
     1.2,
     { y: "-100%" },
+    { y: "0%", ease: Power2.easeInOut },
+    "-=1.2"
+  )
+  .fromTo(
+    footer,
+    1.2,
+    { y: "100%" },
     { y: "0%", ease: Power2.easeInOut },
     "-=1.2"
   );
