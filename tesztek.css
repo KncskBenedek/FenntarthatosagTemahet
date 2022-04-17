@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+article, div{
+    border: 1px solid black;
+    padding: 5px;
+}
+#teszt_article{
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(129, 127, 127);
+    border: none;
+    border-radius: 10px;
+}
+
+.dl_tesztdoboz{
+    margin-bottom: 10px;
+    background-color: azure;
+    border: none;
+    border-radius: 5px;
+}
+
+.t_tipus{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#gomb{
+    display: block;
+    margin: auto;
+    font-size: 17px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+}
+
+#gomb:hover{
+    background-color: rgb(75, 115, 190);
+    border-color: rgb(75, 115, 190);
+    cursor: pointer;
+}
