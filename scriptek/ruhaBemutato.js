@@ -5,6 +5,4 @@ function init(){
     balra gomb
     jobra gomb
     kisképre kattintva nagyképként kiemel
-    
-
 */

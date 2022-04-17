@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#nagyRuhaBemutato{
+    display: flex;
+}
+
+#nagyKepFelulet{
+    grid-area: nkf;
+    flex: 0 0 66%;
+}
+
+#leiras{
+    grid-area: le;
+    flex: 0 0 33%;
+}
+
+button {
+    border: 1px solid black;
+    flex: 0 0 2%;
+    height: 35px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+    opacity: 0.8;
+}
+#nagyKepBelso{
+    display: flex;
+    align-items: center;
+}
+
+#nagykep{
+    flex: 0 0 96%;
+}
+button:hover{
+    background-color: rgb(168, 168, 168);
+}
+
+button:active{
+    background-color: rgb(58, 58, 58);
+}
