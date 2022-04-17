@@ -2,15 +2,15 @@
 
 #nagyRuhaBemutato{
     display: flex;
+    flex-direction: row;
 }
 
 #nagyKepFelulet{
-    grid-area: nkf;
     flex: 0 0 66%;
 }
 
+
 #leiras{
-    grid-area: le;
     flex: 0 0 33%;
 }
 
@@ -28,7 +28,7 @@ button {
 }
 
 #nagykep{
-    flex: 0 0 96%;
+    flex: 0 0 90%;
 }
 button:hover{
     background-color: rgb(168, 168, 168);
@@ -36,4 +36,13 @@ button:hover{
 
 button:active{
     background-color: rgb(58, 58, 58);
+}
+
+#kiskepek{
+    display: flex;
+}
+
+#kiskepek img{
+    flex-wrap: wrap;
+    flex-basis: 33%;
 }
