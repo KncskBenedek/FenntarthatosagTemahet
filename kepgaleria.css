@@ -6,12 +6,19 @@
 
 .MSZ_main{
     margin: auto;
+    width: 100%;
     display: grid;
     grid-template-areas: "na"
                         "hea"
                         "art"
                         "fo";
-    background: linear-gradient(to right, #f4e8c2, #a88952);
+    
+}
+
+html{
+  width: 100%;
+  background: linear-gradient(to right, #f4e8c2, #a88952);
+  min-width: fit-content;
 }
 
 /*-----------------------Menü-----------------------*/
@@ -132,7 +139,7 @@
 /*-------------------ARTICLE-------------------*/
 .MSZ_article{
   padding-top: 60px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 
@@ -145,7 +152,7 @@
   --font-serif: "Cardo", serif;
 }
 
-.MSZ_galeria {
+#MSZ_galeria {
   display: grid;
   grid-gap: 4rem;
   padding: 1rem;
@@ -191,31 +198,6 @@
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
-}
-
-.MSZ_kartya:nth-child(1):before {
-  background-image: url(probaKepek/kep1.jpg);
-}
-.MSZ_kartya:nth-child(2):before {
-  background-image: url(probaKepek/kep2.jpg);
-}
-.MSZ_kartya:nth-child(3):before {
-  background-image: url(probaKepek/kep3.jpg);
-}
-.MSZ_kartya:nth-child(4):before {
-  background-image: url(probaKepek/kep4.jpg);
-}
-.MSZ_kartya:nth-child(5):before {
-  background-image: url(probaKepek/kep5.jpg);
-}
-.MSZ_kartya:nth-child(6):before {
-  background-image: url(probaKepek/kep6.jpg);
-}
-.MSZ_kartya:nth-child(7):before {
-  background-image: url(probaKepek/kep7.jpg);
-}
-.MSZ_kartya:nth-child(8):before {
-  background-image: url(probaKepek/kep8.jpg);
 }
 
 .MSZ_content {
@@ -309,16 +291,24 @@ footer{
   grid-area: fo;
 }
 
+@media (max-width: 400px) {
+  #MSZ_galeria {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body{
+    width: 100%;
+  }
+}
 @media (min-width: 600px) {
-  .MSZ_galeria {
+  #MSZ_galeria {
     grid-template-columns: repeat(2, 1fr);
   }
-  .MSZ_kartya {
+  #MSZ_kartya {
     height: 350px;
   }
 }
 @media (min-width: 800px) {
-  .MSZ_galeria {
+  #MSZ_galeria {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -327,3 +317,6 @@ footer{
     transform: translateY(0);
   }
 }
+
+/*------------------------------------------*/
+
