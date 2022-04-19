@@ -110,75 +110,11 @@ article {
   color: #ebd7b4;
   transition: 500ms;
 }
-@media screen and (max-width: 770px) {
-  body {
-    overflow-x: hidden;
-  }
-  .hero {
-    left: 0;
-    top: 10vh;
-    position: absolute;
-    width: 50%;
-  }
-  .hero::after {
-    opacity: 0;
-  }
-  .hero img {
-    display: none;
-  }
-  .container {
-    background-color: #a88952; /*Háttér színévelk egyezzen meg*/
-    position: absolute;
-    right: 0;
-    height: 90vh;
-    top: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    transform: translateX(100%);
-    transition: 500ms ease-in;
-  }
-  .container li {
-    opacity: 0;
-    cursor: pointer;
-  }
-  .navicon {
-    display: block;
-  }
-}
-.nav-active {
-  transform: translateX(0%);
-  background-color: black; /*A nav bár színvel egyezzen emg*/
-}
-
-@keyframes containerFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-  transition: 500ms;
-}
-.toggle .line2 {
-  opacity: 0;
-  transition: 500ms;
-}
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -6px);
-  transition: 500ms;
-}
 /*Footer*/
 .footer {
   background-color: black;
-  height: 5vh;
   color: white;
+  height: 5vh;
   display: flex;
   justify-content: space-between;
 }
@@ -212,4 +148,97 @@ article {
   font-size: 50px;
   border-radius: 13px;
   color: white;
+}
+@media screen and (max-width: 770px) {
+  body {
+    overflow-x: hidden;
+  }
+  article {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero {
+    left: 0;
+    top: 10vh;
+    position: absolute;
+    width: 50%;
+  }
+  .hero::after {
+    opacity: 0;
+  }
+  .hero img {
+    display: none;
+  }
+  .container {
+    background-color: #a88952; /*Háttér színévelk egyezzen meg*/
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    transform: translateX(100%);
+    transition: 500ms ease-in;
+  }
+  .container li {
+    opacity: 0;
+    cursor: pointer;
+  }
+  .navicon {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    align-items: center;
+    transition: 1200ms;
+  }
+  .keszitok {
+    padding-top: 10px;
+  }
+  .nevek {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logok {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+  background-color: black; /*A nav bár színvel egyezzen emg*/
+}
+
+@keyframes containerFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  transition: 500ms;
+}
+.toggle .line2 {
+  opacity: 0;
+  transition: 500ms;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  transition: 500ms;
 }
