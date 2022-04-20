@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 /*Oldal anímáció és kinézet*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
 }
 .slider {
   position: absolute;
@@ -117,24 +119,31 @@ article {
   height: 5vh;
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.keszitok {
+  font-size: 12px;
 }
 .nevek {
   display: flex;
   justify-content: space-between;
+  font-size: 11px;
 }
+
 .logok {
   align-items: center;
 }
 .logok img {
-  width: 50px;
+  width: 40px;
 }
 .logok a {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 .facebook {
   color: #3b5998;
-  font-size: 50px;
+  font-size: 40px;
 }
 .instangram {
   background-image: linear-gradient(
@@ -145,7 +154,7 @@ article {
     rgb(254, 218, 119),
     rgb(245, 133, 41)
   );
-  font-size: 50px;
+  font-size: 40px;
   border-radius: 13px;
   color: white;
 }
