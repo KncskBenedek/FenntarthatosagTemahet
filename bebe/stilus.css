@@ -1,17 +1,28 @@
 @charset "UTF-8";
+*{
+    box-sizing: border-box;
+}
+#ruhaBemutato{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 #nagyRuhaBemutato{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 3px;
 }
 
 #nagyKepFelulet{
-    flex: 0 0 66%;
+    width: 60%;
+}
+#nagyKepFelulet img{
+    width: 100%;
 }
 
-
 #leiras{
-    flex: 0 0 33%;
+    width: 30%;
 }
 
 button {
@@ -38,11 +49,12 @@ button:active{
     background-color: rgb(58, 58, 58);
 }
 
-#kiskepek{
-    display: flex;
+#kisKepek{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-#kiskepek img{
-    flex-wrap: wrap;
-    flex-basis: 33%;
+#kisKepek img{
+    padding: 3px;
+    width: 100%;
 }
