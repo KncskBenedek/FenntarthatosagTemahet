@@ -1,0 +1,63 @@
+const cikkek = [
+	{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		kep : ,
+		felsorolas : "",
+		hivatkozas : "",
+		szerzo : "Vera",
+	},
+		{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		kep : ,
+		hivatkozas : "",
+		szerzo : "Baresz",
+	},
+		{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		kep : ,
+		szerzo : "Tori",
+	},
+		{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		kep : ,
+		felsorolas "",
+		szerzo : "Betti",
+	},
+		{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		szerzo : "Gréti",
+	},
+		{
+		focim : "",
+		alcim : "",
+		bekezdes : "",
+		kep : ,
+		szerzo : "Mesi",
+	},
+		{
+		focim : "PLUSZ érdekességek, alternatívák, lépések a hulladékmentes(ebb) jövőnk felé.",
+		alcim : "",
+		bekezdes : "Neked is fontos a fenntarthatóság? Rengeteg lehetőséged van tenni a környezetedért.Nagyon fontos ha már egy alternatívát kiváltasz, már azzal is nagyon sokat tehetsz környezeted egészségéért.Hulladékmentes alternatíva az egyszer használatos, eldobható tárgyak helyett",
+		felsorolas "1. Műanyag zacskó helyett vászontáskát használj!
+					2. Elviteles, automatás kávéhoz saját termosz vagy műanyag poharat használni
+					3. PET-palackos italok helyett használj saját kulacsot!
+					4. A zöldségesnél, pékségben használatos leheletvékony kisméretű műanyag zacskók helyett használj zsinóros vászonzsákokat! 
+					5. Műanyag fogkefék helyett használj, fanyelű természetes sörtéjűt
+					6. Eldobható műanyag borotvák helyett használj hagyományos fém biztonsági borotvát cserélhető borotvapengékkel. 
+					7. Sminklemosó és vattakorongok helyett, használj mosható arctisztító párnákat!
+					8. Műanyag szívószál helyett papír szívószálat használj!
+					9. Műanyag evőeszközök helyett használj fa vagy fém evőeszközöket!
+					10. Mesterséges illatok helyett frissítsd otthonod levegőjét inkább természetes illóolajokkal. ",
+		szerzo : "Dóri",
+	},
+];
