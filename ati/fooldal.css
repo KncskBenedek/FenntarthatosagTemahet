@@ -166,6 +166,14 @@ article {
     overflow-x: hidden;
     
   }
+  .headline{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 7vh;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+  }
   article {
     display: flex;
     height: 95vh;
