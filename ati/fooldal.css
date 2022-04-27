@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 /*Oldal anímáció és kinézet*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
 }
 .slider {
   position: absolute;
@@ -110,9 +112,72 @@ article {
   color: #ebd7b4;
   transition: 500ms;
 }
+/*Footer*/
+.footer {
+  background-color: black;
+  color: white;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.keszitok {
+  font-size: 11px;
+}
+.nevek {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+.logok {
+  align-items: center;
+}
+.logok img {
+  width: 4vh;
+}
+.logok a {
+  height: 40px;
+  width: 40px;
+}
+.facebook {
+  color: #3b5998;
+  font-size: 4vh;
+}
+.instangram {
+  background-image: linear-gradient(
+    200deg,
+    rgb(81, 91, 212),
+    rgb(129, 52, 175),
+    rgb(221, 42, 123),
+    rgb(254, 218, 119),
+    rgb(245, 133, 41)
+  );
+  font-size: 4vh;
+  border-radius: 13px;
+  color: white;
+}
 @media screen and (max-width: 770px) {
+  html{
+    overflow-x: hidden;
+  }
   body {
     overflow-x: hidden;
+    
+  }
+  .headline{
+    top: 0%;
+    left: 0%;
+    font-size: 7vh;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+  }
+  article {
+    display: flex;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
   }
   .hero {
     left: 0;
@@ -146,6 +211,29 @@ article {
   .navicon {
     display: block;
   }
+
+  .footer {
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    align-items: center;
+    transition: 1200ms;
+  }
+  .keszitok {
+    padding: 0px;
+  }
+  .nevek {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logok {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 .nav-active {
   transform: translateX(0%);
@@ -173,43 +261,4 @@ article {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
   transition: 500ms;
-}
-/*Footer*/
-.footer {
-  background-color: black;
-  height: 5vh;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
-.nevek {
-  display: flex;
-  justify-content: space-between;
-}
-.logok {
-  align-items: center;
-}
-.logok img {
-  width: 50px;
-}
-.logok a {
-  height: 60px;
-  width: 60px;
-}
-.facebook {
-  color: #3b5998;
-  font-size: 50px;
-}
-.instangram {
-  background-image: linear-gradient(
-    200deg,
-    rgb(81, 91, 212),
-    rgb(129, 52, 175),
-    rgb(221, 42, 123),
-    rgb(254, 218, 119),
-    rgb(245, 133, 41)
-  );
-  font-size: 50px;
-  border-radius: 13px;
-  color: white;
 }
