@@ -1,6 +1,8 @@
 window.addEventListener("load", init);
-function init(){
+localStorage.getItem("aktualis");
 
+function init(){
+    console.log(key);
 }
 /*
     balra gomb

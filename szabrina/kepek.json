@@ -1,12 +1,12 @@
 {
     "kepek":[
-        {"cim":"ruha0", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep1.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha1", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep2.jpg", "elso":"probaKepek/fooldal_probakep.jpg"},
-        {"cim":"ruha2", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep3.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha3", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep4.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha4", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep5.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha5", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep6.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha6", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep7.jpg", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha7", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"probaKepek/kep8.jpg", "elso":"probaKepek/szamalk_logo.png"}
+        {"cim":"ruha0", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep1.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha1", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep2.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/fooldal_probakep.jpg"},
+        {"cim":"ruha2", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep3.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha3", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep4.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha4", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep5.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha5", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep6.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha6", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep7.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
+        {"cim":"ruha7", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep8.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"}
     ]
 }

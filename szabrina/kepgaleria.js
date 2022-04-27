@@ -34,22 +34,21 @@ console.log(data);
     var tDIV = document.querySelector("#MSZ_tarolo");
     var galeriaDIV = document.querySelector('#MSZ_galeria');
 
-    data.kepek.forEach(element => {
-    var clone = tDIV.content.cloneNode(true);
-    var td = clone.querySelectorAll("span");
-    td[0].textContent = element.cim;
-    td[1].textContent = element.szerzo;
-    td[2].textContent = element.fotosnev;
-    clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${element.eleresiut})`;
-    galeriaDIV.appendChild(clone);
-    document.querySelector(".MSZ_btn").addEventListener("click",betolt);
-
+    for (const key in data.kepek) {
+      
+        var clone = tDIV.content.cloneNode(true);
+        var td = clone.querySelectorAll("span");
+        td[0].textContent = data.kepek[key].cim;
+        td[1].textContent = data.kepek[key].szerzo;
+        td[2].textContent = data.kepek[key].fotosnev;
+        clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].eleresiut})`;
+        clone.querySelector("a").href = data.kepek[key].tovabboldalra;
+        galeriaDIV.appendChild(clone);
+        document.querySelector(".MSZ_btn").addEventListener("click",function(){kattint(JSON.stringify(data.kepek[key]))});
+        console.log(data.kepek[key]);
+      }
     }
-    );
-
   }
-  
-}
 
 function jsonbolOlvas(){
   fetch('kepek.json')
@@ -57,7 +56,6 @@ function jsonbolOlvas(){
   .then(data => MSZ_kepbetolt(data));
 }
 
-function betolt(evt){
-  
-  console.log(evt.target);
+function kattint(aktKep){
+  localStorage.setItem("aktualis", aktKep);
 }
