@@ -1,5 +1,6 @@
 window.addEventListener("load", init);
 function init(){
+
 }
 /*
     balra gomb
