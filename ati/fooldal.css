@@ -6,6 +6,10 @@
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 .slider {
   position: absolute;
   top: 0;
@@ -17,7 +21,7 @@
 }
 article {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   justify-content: center;
   align-items: center;
 }
@@ -50,6 +54,40 @@ article {
   top: 0;
   opacity: 0.3;
 }
+/*Scroll animációk beállitások*/
+.cikkek {
+  height: 30vh;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: right;
+  transition: 2000ms;
+}
+.c {
+  width: 300px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: right;
+  transition: 900ms;
+  opacity: 0;
+}
+.bikkek {
+  height: 30vh;
+  background: linear-gradient(to right, #f4e8c2, #a88952);
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: right;
+  transition: 2000ms;
+}
+.b {
+  width: 300px;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
+  background-position: right;
+  transition: 900ms;
+  opacity: 0;
+}
+
 /*Navigációs bár*/
 .navbar {
   background-color: black;
@@ -159,14 +197,13 @@ article {
   color: white;
 }
 @media screen and (max-width: 770px) {
-  html{
+  html {
     overflow-x: hidden;
   }
   body {
     overflow-x: hidden;
-    
   }
-  .headline{
+  .headline {
     top: 0%;
     left: 0%;
     font-size: 7vh;
