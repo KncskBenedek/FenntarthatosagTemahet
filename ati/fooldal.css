@@ -10,6 +10,7 @@ html,
 body {
   overflow-x: hidden;
 }
+
 .slider {
   position: absolute;
   top: 0;
@@ -55,37 +56,33 @@ article {
   opacity: 0.3;
 }
 /*Scroll animációk beállitások*/
-.cikkek {
-  height: 30vh;
+.scrollAnimacio div {
+  height: 25vh;
   background-size: 200% 200%;
   background-image: linear-gradient(to right, black 50%, transparent 50%);
   background-position: right;
   transition: 2000ms;
 }
-.c {
+.scrollAnimacio div div {
   width: 300px;
+  height: 15vh;
+  background: linear-gradient(to left, darkgray 50%, black 50%);
   background-size: 200% 200%;
-  background-image: linear-gradient(to right, black 50%, transparent 50%);
-  background-position: right;
-  transition: 900ms;
-  opacity: 0;
-}
-.bikkek {
-  height: 30vh;
-  background: linear-gradient(to right, #f4e8c2, #a88952);
-  background-size: 200% 200%;
-  background-image: linear-gradient(to right, black 50%, transparent 50%);
-  background-position: right;
-  transition: 2000ms;
-}
-.b {
-  width: 300px;
-  background-size: 200% 200%;
-  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: left;
   /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
-  background-position: right;
   transition: 900ms;
   opacity: 0;
+}
+.scrollAnimacio div div h1 {
+  text-align: center;
+}
+.scrollAnimacio div div p {
+  text-align: center;
+}
+.scrollAnimacio div div:hover {
+  background-position: right;
+  color: black;
+  opacity: 1;
 }
 
 /*Navigációs bár*/
