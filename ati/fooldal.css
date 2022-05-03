@@ -6,6 +6,11 @@
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
+
 .slider {
   position: absolute;
   top: 0;
@@ -17,7 +22,7 @@
 }
 article {
   display: flex;
-  height: 90vh;
+  height: 95vh;
   justify-content: center;
   align-items: center;
 }
@@ -50,6 +55,36 @@ article {
   top: 0;
   opacity: 0.3;
 }
+/*Scroll animációk beállitások*/
+.scrollAnimacio div {
+  height: 25vh;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, black 50%, transparent 50%);
+  background-position: right;
+  transition: 2000ms;
+}
+.scrollAnimacio div div {
+  width: 300px;
+  height: 15vh;
+  background: linear-gradient(to left, darkgray 50%, black 50%);
+  background-size: 200% 200%;
+  background-position: left;
+  /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
+  transition: 900ms;
+  opacity: 0;
+}
+.scrollAnimacio div div h1 {
+  text-align: center;
+}
+.scrollAnimacio div div p {
+  text-align: center;
+}
+.scrollAnimacio div div:hover {
+  background-position: right;
+  color: black;
+  opacity: 1;
+}
+
 /*Navigációs bár*/
 .navbar {
   background-color: black;
@@ -159,15 +194,13 @@ article {
   color: white;
 }
 @media screen and (max-width: 770px) {
-  html{
+  html {
     overflow-x: hidden;
   }
   body {
     overflow-x: hidden;
-    
   }
-  .headline{
-    position: absolute;
+  .headline {
     top: 0%;
     left: 0%;
     font-size: 7vh;
