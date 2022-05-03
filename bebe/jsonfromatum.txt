@@ -1,0 +1,4 @@
+képek: [
+	{cím, szerző, fotosnev, eleresiut, modell, tervezo, tipus, kiskeoek: ["eleresiut.jpg", "..."]},
+	{cím, szerző, fotosnev, eleresiut, modell, tervezo, tipus, kiskeoek: ["eleresiut.jpg", "..."]},
+]
