@@ -16,20 +16,18 @@ const navbar = QS(".navbar");
 const navIcon = QS(".navicon");
 const nav = QS(".container");
 const footer = QS(".footer");
-const cikkek = QS(".cikkek");
+const cikkek = QS(".bejegyzes1");
 const scroll = QS(".scroll");
-const tesztek = QS(".tesztek");
-const galeria = QS(".gal");
-const jatek = QS(".jatek");
+const tesztek = QS(".bejegyzes2");
+const galeria = QS(".bejegyzes3");
 
 const linkek = document.querySelectorAll(".container li");
 
 var tl = gsap.timeline();
 //scroll animációk
-scrollAnimacio(".c", cikkek);
-scrollAnimacio(".t", tesztek);
-scrollAnimacio(".g", galeria);
-scrollAnimacio(".j", jatek);
+scrollAnimacio(".b1", cikkek);
+scrollAnimacio(".b2", tesztek);
+scrollAnimacio(".b3", galeria);
 
 // föóldal anímációk
 tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
@@ -87,6 +85,7 @@ const navSlide = () => {
 
 function init() {
   navSlide();
+  tartalom();
 }
 
 function scrollAnimacio(belso, kulso) {
@@ -94,12 +93,12 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
-        start: "top 800px",
-        end: "top 800px",
+        start: "top 80%",
+        end: "top 80%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 2 - 125,
+      x: cikkek.offsetWidth / 5-100,
       duration: 2,
       opacity: 1,
       color: "white",
@@ -107,8 +106,8 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(kulso, {
       scrollTrigger: {
         trigger: kulso,
-        start: "top 800px",
-        end: "top 800px",
+        start: "top 80%",
+        end: "top 80%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
@@ -120,8 +119,8 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
-        start: "top 900px",
-        end: "top 900px",
+        start: "top 90%",
+        end: "top 90%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
@@ -133,8 +132,8 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(kulso, {
       scrollTrigger: {
         trigger: kulso,
-        start: "top 900px",
-        end: "top 900px",
+        start: "top 90%",
+        end: "top 90%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
@@ -142,5 +141,27 @@ function scrollAnimacio(belso, kulso) {
       backgroundPosition: "left",
       color: "white",
     });
+  }
+}
+function tartalom(){
+  fetch("ati/fooldal.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.bevezeto);
+      megjelenit(data.bevezeto);
+    })
+    .catch((err) => console.log("hiba", err));
+
+}
+function megjelenit(bevezeto) {
+  
+  for (let index = 1; index < bevezeto.length+1; index++) {
+    txt ="";
+    txt += `<h3>${bevezeto[index-1].cim}</h3>`;
+    for (const key in bevezeto[index-1].bekezdes) {
+      console.log(bevezeto[index-1].bekezdes[key]);
+      txt += `<li>${bevezeto[index-1].bekezdes[key]}</li>`;
+    }
+    QS(".b"+index).innerHTML = txt;
   }
 }
