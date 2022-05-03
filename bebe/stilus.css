@@ -1,60 +1,16 @@
 @charset "UTF-8";
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-#ruhaBemutato{
-    display: grid;
-    grid-template-columns: 1fr;
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
 }
-
-#nagyRuhaBemutato{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 3px;
-}
-
-#nagyKepFelulet{
-    width: 60%;
-}
-#nagyKepFelulet img{
-    width: 100%;
+#bemutat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #leiras{
-    width: 30%;
-}
-
-button {
-    border: 1px solid black;
-    flex: 0 0 2%;
-    height: 35px;
-    background-color: rgb(226, 226, 226);
-    border-radius: 5px;
-    opacity: 0.8;
-}
-#nagyKepBelso{
-    display: flex;
-    align-items: center;
-}
-
-#nagykep{
-    flex: 0 0 90%;
-}
-button:hover{
-    background-color: rgb(168, 168, 168);
-}
-
-button:active{
-    background-color: rgb(58, 58, 58);
-}
-
-#kisKepek{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#kisKepek img{
-    padding: 3px;
-    width: 100%;
+    padding: 10px;
 }
