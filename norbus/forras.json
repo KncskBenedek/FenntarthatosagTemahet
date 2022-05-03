@@ -1,6 +1,6 @@
 {"cikkek"  : [
 	{
-		"focim" : "",
+		"focim" : "Az energiánk 20%-a szélerőművekből fog érkezni",
 		"alcim" : "",
 		"bekezdes" : "",
 		"kep" : "",
@@ -9,17 +9,32 @@
 		"szerzo" : "Vera"
 	},
 		{
-		"focim" : "",
-		"alcim" : "",
-		"bekezdes" : "",
+		"focim" : "A fenntarthatóság fogalmai:",
+		"1alcim" : "De mit is jelent valójában a kifejezés és miért fontos, hogy foglalkozzunk vele?",
+		"1bekezdes" : "A fenntarthatóság fogalma 1987-ben indult útjára, amikor az ENSZ a fenntartható fejlődést – melyet azóta leegyszerűsítve fenntarthatóságnak is nevezünk – a következőképpen definiálta: fejlődés, amely „anélkül elégíti ki a jelen szükségleteit, hogy veszélyeztetné a jövő generációk lehetőségét saját igényeik kielégítésére”. Azaz fenntartható például az a fejlődés, melynek során nem használunk fel minden, korlátosan hozzáférhető nyersanyagot vagy nem szennyezzük be visszafordíthatatlanul vizeinket.Mint a fenntarthatóság egészével, úgy magával a definíció értelmezésével, gyakorlatba ültetésével kapcsolatban sem teljes az összhang a témával foglalkozók között.Ennek fő oka, hogy az ENSZ által meghatározott definíció kellően általános ahhoz, hogy szabad teret engedjen a konkrét célok, valamint a célok elérését biztosító eszközök meghatározásának.",
+		"2alcim" : "A zéro összegű játék hívők",
+		"2bekezdes" : "Sok környezeti szakértő számára például a fenntartható fejlődés alapvetően egyfajta oximoronnak (önmagában való ellentmondásnak) tekinthető, hiszen a környezet befolyásolása nélkül nem képzelhető el fejlődés.Ők úgy gondolják, hogy a gazdaság az emberi társadalom, a társadalom pedig a bioszféra (azaz a földi élet tere) egyik alrendszerének tekinthető, és ezek együttműködése zéróösszegű játék: amit az egyik nyer, az szükségszerűen veszteséget jelent a másik számára, miközben az ökoszisztéma (az élőlény-közösségek és élőhelyeik összessége) valamely összetevőjének túlzott használata drasztikus hatással van az ökoszisztéma egészére.",
+		"3alcim" : "A win-win hívők",
+		"3bekezdes" : "A fenntarthatóság lényege azonban sokak szerint  – éppen a nyertes-nyertes (win-win) lehetőségek kiaknázása, az olyan eszközök és megoldások megtalálása és alkalmazása, amelyekkel a társadalom és a környezet egyaránt jól jár, és amelyek révén akár évtizedek múlva is összhangban élhetünk a környezetünkkel.Ebben a megközelítésben a fenntarthatóság összetett jelenség. Egyrészt tényszerűséget és tudományosságot várunk el tőle. Másrészt a fenntarthatóság maga cselekvésre – leginkább szokásaink megváltoztatására – szólít fel, és így gyakorlati szerepe is meghatározó.A célok és feladatok értelmezésétől függetlenül és nagyon leegyszerűsítve tehát a fenntarthatóság mindazon fogalmakat és tevékenységeket magában foglalja, amelyek lehetővé teszik, hogy a Földön az élet évtizedek múlva is a maihoz hasonló lehessen.Bár véleményem szerint ezt egy fajta minimalista megközelítésnek kellene tekinteni – hiszen globálisan nézve (bizonyos területeket vagy embercsoportokat tekintve) a mai helyzeten is lehet még javítani –, az aktuális gazdasági-társadalmi folyamatokat figyelembe véve azonban már a jelenlegi szint fenntartása is komoly célkitűzésnek számít.",
+		"4alcim" : "Környezet, azaz ’odafigyelés’ (környezeti felelősség):",
+		"4bekezdes" : "Környezettudatosság, környezet-etikus magatartás, környezetünk védelme, beleértve a klímaváltozással és a tudatos fogyasztással kapcsolatos szempontokat.Biológiai sokszínűség fenntartása, azaz az állat- és növényvilág védelme.Természeti erőforrásokkal való fenntartható gazdálkodás, takarékos használat, megújuló energiaforrások használata.",
+		"5alcim" : "Társadalmi dimenzió, azaz ’elfogadás’ (társadalmi felelősség):",
+		"5bekezdes" : "Fenntartható társadalom: egészségügyi és élelmezési, valamint a túlnépesedésből és az öregedő társadalmakból fakadó társadalmi problémák kezelése.Szociális igazságosság, esélyegyenlőség, társadalmi különbségek.Társadalmi sokszínűség, szolidaritás, békés egymás mellett élés.",
+		"6alcim" : "Gazdasági dimenzió, azaz a ’felelős vállalat’ megközelítés:",
+		"6bekezdes" : "Tisztességes, átlátható vállalati működés, „fair trade”.Környezeti terhelés csökkentése pl. CO2 kibocsátás minimalizálása és papírmentes iroda révén.Emberközpontúság mind a kollégák, mind az ügyfelek tekintetében.Társadalmi szerepvállalás fontossága.",
+		"link" : "LINK:https://vitafutura.hu/mit-jelent-a-fenntarthatosag/",
 		"kep" : "",
 		"hivatkozas" : "",
 		"szerzo" : "Baresz"
 	},
 		{
-		"focim" : "",
-		"alcim" : "",
-		"bekezdes" : "",
+		"focim" : "Fenntarthatóság a színházban",
+		"1alcim" : "Kovács Bea: Zöld út – Bizonyítékok a fenntartható színház létezésére",
+		"1bekezdes" : "Az Éghajlatpolitika és előadóművészetek elnevezésű digitális találkozón elhangzott, hogyan segíthet a történetmesélés a példamutatásban: Az előadások meg tudják mutatni a nézőnek azt, hogy a változás (a környezet védelméért) már elkezdődött, mert léteznek olyan emberek, akik képesek voltak változtatni saját életükön. Az erős, jól felépített, a közösségi szellemre ható történetek a tudományos álláspontot is képesek közelebb vinni a nézőhöz, és érthetővé, átláthatóbbá fordítják az (öko)szisztémák kusza, komplex viszonyrendszerét.A Csíki Játékszínben Sándor Anna 2019-es kezdeményezése óta már többen is leszoktak az egyszer használatos sminklemosó használatáról, helyettük mosható textilkorongokat alkalmaznak. A népszerű nagy színészek nyílt felelősségvállalásáról és a színházak által kezdeményezett párbeszédeket is folytatnak a témával kapcsolatban. Illetve a városi színházak olykor segítséget kérnek a kellékgyűjtéshez, megspórolva ezzel a gyártást és az azzal járó költségeket és hulladékot. A Marosvásárhelyi Nemzeti Színház Tompa Miklós Társulatának munkatársai nyilvános folyótisztítási akcióban vettek részt, a Radnóti Színház legújabb kiadványa pedig környezetvédelmi okokból csak digitális formátumban jelent meg. ",
+		"2alcim" : "Mára huszonegy tagja van a Zöld Színház Projekt kezdeményezésnek az ország legkülönbözőbb részeiről.",
+		"2bekezdes" : "Papp Endre (a Zöld Színház Projekt vezetője) világossá teszi, hogy a Zöld Színház Projekt nem hivatott szembemenni a művészeti víziókkal, csupán arra tesz javaslatot, hogy az adott díszletelemet és kelléket honnan szerezzék be.",
+		"3alcim" : "Színház újrahasznosított papírból",
+		"3bekezdes" : "A színházat alkotó, újrahasznosított papírból álló bálák elsősorban régi magazinokból, újságokból és irodai hulladékokból készülnek. A színház teteje egy használt cirkuszi sátor újrahasznosításával alakítanak ki, melyet bambusszal feszítenek ki. A sátor tetején elhelyezett nyílásnak köszönhetően pedig mesterséges színpadi világításra sincs szükség, a természetes fény elég a nappali előadásokhoz.",
 		"kep" : "",
 		"szerzo" : "Tori"
 	},
@@ -39,7 +54,6 @@
 		"6alcim" : "Fenntarthatóság az iskolában",
 		"6bekezdes" : "Az iskolákban lenne a legfontosabb, ha a fenntarthatóságról többet beszélnének, tanítanának róla, így már kiskoruktól kezdve figyelnének a környezetükre. Meg kell tanítani az iskolákban hogyqn gyűjtsék a hulladékot szelektíven, ne pazaroljanak, ne szemeteljenek, és hogyan védjék meg a Földünket. Ne használjanak műanyagot, helyette számos megoldás található ami környezettudatos. ",
 		"kep" : "",
-		
 		"szerzo" : "Betti"
 	},
 		{
