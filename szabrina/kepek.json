@@ -1,12 +1,76 @@
 {
-    "kepek":[
-        {"cim":"ruha0", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep1.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha1", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep2.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/fooldal_probakep.jpg"},
-        {"cim":"ruha2", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep3.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha3", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep4.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha4", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep5.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha5", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep6.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha6", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep7.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"},
-        {"cim":"ruha7", "szerzo":"XY", "fotosnev":"ZX", "eleresiut":"../kepek/kep8.jpg", "tovabboldalra":"../bebe/ruhaBemutato.html", "elso":"probaKepek/szamalk_logo.png"}
+    "kepek": [
+        {
+            "id": 0,
+            "cim": "ruha0",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep1.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 1,
+            "cim": "ruha1",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep2.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/fooldal_probakep.jpg"
+        },
+        {
+            "id": 2,
+            "cim": "ruha2",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep3.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 3,
+            "cim": "ruha3",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep4.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 4,
+            "cim": "ruha4",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep5.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 5,
+            "cim": "ruha5",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep6.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 6,
+            "cim": "ruha6",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep7.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        },
+        {
+            "id": 7,
+            "cim": "ruha7",
+            "szerzo": "XY",
+            "fotosnev": "ZX",
+            "eleresiut": "../kepek/kep8.jpg",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "elso": "probaKepek/szamalk_logo.png"
+        }
     ]
 }

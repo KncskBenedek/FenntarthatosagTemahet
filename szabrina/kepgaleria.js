@@ -27,28 +27,39 @@ function MSZ_slider() {
   setTimeout(MSZ_slider, 2000);
 }
 
-function MSZ_kepbetolt(data){
-console.log(data);
+function MSZ_kepbetolt(data) {
+  console.log(data);
 
-  if ('content' in document.createElement('template')){
-    var tDIV = document.querySelector("#MSZ_tarolo");
-    var galeriaDIV = document.querySelector('#MSZ_galeria');
+  if ("content" in document.createElement("template")) {
+      var tDIV = document.querySelector("#MSZ_tarolo");
+      var galeriaDIV = document.querySelector("#MSZ_galeria");
 
-    for (const key in data.kepek) {
-      
-        var clone = tDIV.content.cloneNode(true);
-        var td = clone.querySelectorAll("span");
-        td[0].textContent = data.kepek[key].cim;
-        td[1].textContent = data.kepek[key].szerzo;
-        td[2].textContent = data.kepek[key].fotosnev;
-        clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].eleresiut})`;
-        clone.querySelector("a").href = data.kepek[key].tovabboldalra;
-        galeriaDIV.appendChild(clone);
-        document.querySelector(".MSZ_btn").addEventListener("click",function(){kattint(JSON.stringify(data.kepek[key]))});
-        console.log(data.kepek[key]);
+      for (const key in data.kepek) {
+          var clone = tDIV.content.cloneNode(true);
+          var td = clone.querySelectorAll("span");
+          td[0].textContent = data.kepek[key].cim;
+          td[1].textContent = data.kepek[key].szerzo;
+          td[2].textContent = data.kepek[key].fotosnev;
+          clone.querySelector(
+              ".MSZ_kartya"
+          ).style.backgroundImage = `url(${data.kepek[key].eleresiut})`;
+          clone.querySelector(".MSZ_btn").id = data.kepek[key].id;
+          //clone.querySelector("a").href = data.kepek[key].tovabboldalra;
+          galeriaDIV.appendChild(clone);
       }
-    }
+      console.log(document.querySelectorAll(".MSZ_btn"));
+      const gombTomb = document.querySelectorAll(".MSZ_btn");
+      gombTomb.forEach((elem) => {
+          elem.addEventListener("click", function (event) {
+              console.log(event.target.id); //ez a kattintott gomb sorszáma
+              let aktID = event.target.id;
+              console.log(data.kepek[aktID]); //ez a kattintott gombhoz tartozó adat
+              let aktKep = data.kepek[aktID];
+              kattint(aktKep);
+          });
+      });
   }
+}
 
 function jsonbolOlvas(){
   fetch('kepek.json')
@@ -56,6 +67,11 @@ function jsonbolOlvas(){
   .then(data => MSZ_kepbetolt(data));
 }
 
-function kattint(aktKep){
-  localStorage.setItem("aktualis", aktKep);
+function kattint(aktKep) {
+  console.log(aktKep);
+  localStorage.setItem("aktualis", JSON.stringify(aktKep));
+  //ezzel lépek a következő oldalra
+  window.location.assign(aktKep.tovabboldalra);
 }
+
+
