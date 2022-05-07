@@ -1,0 +1,4 @@
+képek: [
+	{szerző, fotosnev,  modell, tervezo, tipus, kepek: ["ElsőAnagykép.jpg", "..."]},
+	{szerző, fotosnev,  modell, tervezo, tipus, kepek: ["ElsőAnagykép.jpg", "..."]},
+]

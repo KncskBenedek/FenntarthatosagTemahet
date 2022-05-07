@@ -1,0 +1,16 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+#bemutat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#leiras{
+    padding: 10px;
+}

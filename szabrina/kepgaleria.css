@@ -239,10 +239,10 @@ html{
   background-color: black;
   border: none;
 }
-.MSZ_btn:hover {
+.MSZ_btn :hover {
   background-color: #0d0d0d;
 }
-.MSZ_btn:focus {
+.MSZ_btn :focus {
   outline: 1px dashed white;
   outline-offset: 3px;
 }
