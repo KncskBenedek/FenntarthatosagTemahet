@@ -2,9 +2,8 @@
     "kepek": [
         {
             "id": 0,
-            "cim": "ruha0",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
+            "tervezo": "Árokszállási Renáta Andrea",
+            "fotosnev": "Gáll Regina",
             "eleresiut": "../kepek/kep1.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "elso": "probaKepek/szamalk_logo.png"

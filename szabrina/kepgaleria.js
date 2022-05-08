@@ -37,9 +37,8 @@ function MSZ_kepbetolt(data) {
       for (const key in data.kepek) {
           var clone = tDIV.content.cloneNode(true);
           var td = clone.querySelectorAll("span");
-          td[0].textContent = data.kepek[key].cim;
-          td[1].textContent = data.kepek[key].szerzo;
-          td[2].textContent = data.kepek[key].fotosnev;
+          td[0].textContent = data.kepek[key].tervezo;
+          td[1].textContent = data.kepek[key].fotosnev;
           clone.querySelector(
               ".MSZ_kartya"
           ).style.backgroundImage = `url(${data.kepek[key].eleresiut})`;
