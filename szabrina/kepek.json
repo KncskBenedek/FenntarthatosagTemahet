@@ -4,54 +4,61 @@
             "id": 0,
             "tervezo": "Árokszállási Renáta Andrea",
             "fotosnev": "Gáll Regina",
-            "eleresiut": "../kepek/kep1.jpg",
+            "modell": "Árokszállási Renáta Andrea",
+            "eleresiut": "../kepek/Gáll Regina/ruha10/39.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/szamalk_logo.png"
+            "szoveg": "A ruhát a nyári strandszezonra terveztem, formáját tekintve egyszerű, fürdőruha fölé felvehető lenge ruha. Az anyagmaradékból pedig fejkendő készült a Nap erős sugárzása ellen. A ruha Árokszállási Renáta munkája.",
+            "kepek": ["../kepek/Gáll Regina/ruha10/39.jpg","../kepek/Gáll Regina/ruha10/40.jpg","../kepek/Gáll Regina/ruha10/41.jpg"]
         },
         {
             "id": 1,
-            "cim": "ruha1",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
-            "eleresiut": "../kepek/kep2.jpg",
+            "tervezo": "Árokszállási Renáta Andrea",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Árokszállási Renáta Andrea",
+            "eleresiut": "../kepek/Fehér Szebasztián/ruha10/_MG_9437.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/fooldal_probakep.jpg"
+            "szoveg": "A tervezőt idézve: 'Régi, megunt ingekből nyári öltözéket terveztem.'",
+            "kepek": ["../kepek/Fehér Szebasztián/ruha10/_MG_9437.jpg","../kepek/Fehér Szebasztián/ruha10/_MG_9438.jpg","../kepek/Fehér Szebasztián/ruha10/_MG_9439.jpg","../kepek/Fehér Szebasztián/ruha10/_MG_9440.jpg"]
         },
         {
             "id": 2,
-            "cim": "ruha2",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
-            "eleresiut": "../kepek/kep3.jpg",
+            "tervezo": "Bajusz Gyöngyike",
+            "fotosnev": "Gáll Regina",
+            "modell": "Bajusz Gyöngyike",
+            "eleresiut": "../kepek/Gáll Regina/ruha8/48.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/szamalk_logo.png"
+            "szoveg": "Bajusz Gyöngyike ruhájánál fontos szempont volt, hogy a megvarrásánál egyáltalán ne keletkezzen hulladék. Az anyag téglalapokra lett szétvágva, amiből egy elegáns és könnyed nyári ruha készült.",
+            "kepek": ["../kepek/Gáll Regina/ruha8/48.jpg","../kepek/Gáll Regina/ruha8/49.jpg","../kepek/Gáll Regina/ruha8/50.jpg","../kepek/Gáll Regina/ruha8/51.jpg","../kepek/Gáll Regina/ruha8/52.jpg"]
         },
         {
             "id": 3,
-            "cim": "ruha3",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
-            "eleresiut": "../kepek/kep4.jpg",
+            "tervezo": "Bajusz Gyöngyike",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Bajusz Gyöngyike",
+            "eleresiut": "../kepek/Fehér Szebasztián/ruha8/48.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/szamalk_logo.png"
+            "szoveg": "Mi történhet egy nagyméretű férfi inggel, amit már nem hord a viselője? Darabjaira szétszedve, újragondolva és újrarendezve női felsővé változhat a fenntarthatóság jegyében. A ruha Bajusz Gyöngyike munkája.",
+            "kepek": ["../kepek/Fehér Szebasztián/ruha8/_MG_9426.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9427.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9428.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9429.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9430.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9431.jpg"]
         },
         {
             "id": 4,
-            "cim": "ruha4",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
-            "eleresiut": "../kepek/kep5.jpg",
+            "tervezo": "Bartha Emma Zsuzsanna",
+            "fotosnev": "Józsa Anna",
+            "modell": "Jeszenszky Luca",
+            "eleresiut": "../kepek/Józsa Anna/ruha13/33.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/szamalk_logo.png"
+            "szoveg": "Bartha Emma ruhájának elkészítésekor az egyszerűség, és a hulladék nélkül való elkészíthetőség volt a fő szempont. Egyszerűen, egy téglalapból lett kiszabva a ruhadarab. A felső öltözet különlegessége, hogy többféleképpen hordható: a barna oldalával kifele fordítva, de a mintással is egyaránt. Ezen kívül, mivel vállainál cipzár fut, 90 fokkal elfordítva és szétcipzározva is viselhető.",
+            "kepek": ["../kepek/Józsa Anna/ruha13/33.jpg","../kepek/Józsa Anna/ruha13/34.jpg"]
         },
         {
             "id": 5,
-            "cim": "ruha5",
-            "szerzo": "XY",
-            "fotosnev": "ZX",
-            "eleresiut": "../kepek/kep6.jpg",
+            "tervezo": "Bartha Emma Zsuzsanna",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Jeszenszky Luca",
+            "eleresiut": "../kepek/Fehér Szebasztián/ruha3/_MG_9400.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
-            "elso": "probaKepek/szamalk_logo.png"
+            "szoveg": "Az ing tervezésekor leginkább az aszimmetria került előtérbe mind színében, mind formájában. Két teljesen különböző ing lett szétbontva, és egy olyan lett létrehozva, mely a geometria témáját is tükrözi, illetve a letisztultság is jellemző rá. Az öltözéket Bartha Emma készítette.",
+            "kepek": ["../kepek/Fehér Szebasztián/ruha3/_MG_9400.jpg","../kepek/Fehér Szebasztián/ruha3/_MG_9401.jpg","../kepek/Fehér Szebasztián/ruha3/_MG_9402.jpg","../kepek/Fehér Szebasztián/ruha3/_MG_9403.jpg"]
         },
         {
             "id": 6,

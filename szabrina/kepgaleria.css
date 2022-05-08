@@ -226,6 +226,9 @@ html{
   font-style: italic;
   line-height: 1.35;
 }
+.MSZ_copy dt{
+  font-weight: bold;
+}
 
 .MSZ_btn {
   cursor: pointer;
