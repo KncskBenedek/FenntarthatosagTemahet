@@ -2,7 +2,9 @@
   "bevezeto": [
     {
       "cim": "Fentarhatósági témahét 2022 Számalk-Szalezi",
-      "bekezdes":{ "b1":"A Fenntarthatósági Témahét 2022. április 25. és 29. között kerül megrendezésre, amelyet Emberi Erőforrások Minisztériuma hirdet. Minden hazai és határon túli nevelési-oktatási intézmény  csatlakozhat idén a mi iskolánk is újra belevágott."}
+      "bekezdes": {
+        "b1": "A Fenntarthatósági Témahét 2022. április 25. és 29. között kerül megrendezésre, amelyet Emberi Erőforrások Minisztériuma hirdet. Minden hazai és határon túli nevelési-oktatási intézmény  csatlakozhat idén a mi iskolánk is újra belevágott."
+      }
     },
     {
       "cim": "Mit tervezünk erre a hétre?",

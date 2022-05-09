@@ -93,12 +93,12 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
-        start: "top 80%",
-        end: "top 80%",
+        start: "top 90%",
+        end: "top 90%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 5-100,
+      x: cikkek.offsetWidth / 5,
       duration: 2,
       opacity: 1,
       color: "white",
@@ -106,8 +106,8 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(kulso, {
       scrollTrigger: {
         trigger: kulso,
-        start: "top 80%",
-        end: "top 80%",
+        start: "top 90%",
+        end: "top 90%",
         markers: true,
         toggleActions: "restart none reverse none",
       },
@@ -121,10 +121,11 @@ function scrollAnimacio(belso, kulso) {
         trigger: belso,
         start: "top 90%",
         end: "top 90%",
+        scrub: true,
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 2 - 125,
+      x: cikkek.offsetWidth / 5,
       duration: 2,
       opacity: 1,
       color: "white",
@@ -143,7 +144,7 @@ function scrollAnimacio(belso, kulso) {
     });
   }
 }
-function tartalom(){
+function tartalom() {
   fetch("ati/fooldal.json")
     .then((response) => response.json())
     .then((data) => {
@@ -151,17 +152,15 @@ function tartalom(){
       megjelenit(data.bevezeto);
     })
     .catch((err) => console.log("hiba", err));
-
 }
 function megjelenit(bevezeto) {
-  
-  for (let index = 1; index < bevezeto.length+1; index++) {
-    txt ="";
-    txt += `<h3>${bevezeto[index-1].cim}</h3>`;
-    for (const key in bevezeto[index-1].bekezdes) {
-      console.log(bevezeto[index-1].bekezdes[key]);
-      txt += `<li>${bevezeto[index-1].bekezdes[key]}</li>`;
+  for (let index = 1; index < bevezeto.length + 1; index++) {
+    txt = "";
+    txt += `<h3>${bevezeto[index - 1].cim}</h3>`;
+    for (const key in bevezeto[index - 1].bekezdes) {
+      console.log(bevezeto[index - 1].bekezdes[key]);
+      txt += `<li>${bevezeto[index - 1].bekezdes[key]}</li>`;
     }
-    QS(".b"+index).innerHTML = txt;
+    QS(".b" + index).innerHTML = txt;
   }
 }
