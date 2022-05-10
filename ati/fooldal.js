@@ -19,6 +19,7 @@ const cikkek = QS(".bejegyzes1");
 const scroll = QS(".scroll");
 const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
+const content = QS(".content");
 var lathato = true;
 
 const linkek = document.querySelectorAll(".container li");
@@ -79,11 +80,10 @@ const navSlide = () => {
 function init() {
   navSlide();
   tartalom();
-  navIcon.addEventListener("click",videoNincs)
-  setTimeout( ()=>{
+  navIcon.addEventListener("click", videoNincs);
+  setTimeout(() => {
     ScrollTrigger.refresh();
-  },100)
- 
+  }, 100);
 }
 
 function scrollAnimacio(belso, kulso) {
@@ -99,7 +99,7 @@ function scrollAnimacio(belso, kulso) {
       x: cikkek.offsetWidth / 4,
       duration: 2,
       opacity: 1,
-      color: "white",
+      color: "#2c364f;",
     });
     gsap.to(kulso, {
       scrollTrigger: {
@@ -111,13 +111,13 @@ function scrollAnimacio(belso, kulso) {
       },
       duration: 2,
       backgroundPosition: "left",
-      color: "white",
+      color: "#2c364f;",
     });
   } else {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
-        startTrigger:"500px",
+        startTrigger: "500px",
         start: "top 90%",
         end: "top 90%",
         scrub: true,
@@ -127,7 +127,7 @@ function scrollAnimacio(belso, kulso) {
       x: cikkek.offsetWidth / 4,
       duration: 2,
       opacity: 1,
-      color: "white",
+      color: "#2c364f;",
     });
     gsap.to(kulso, {
       scrollTrigger: {
@@ -139,7 +139,7 @@ function scrollAnimacio(belso, kulso) {
       },
       duration: 2,
       backgroundPosition: "left",
-      color: "white",
+      color: "#2c364f;",
     });
   }
 }
@@ -147,7 +147,6 @@ function tartalom() {
   fetch("ati/fooldal.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.bevezeto);
       megjelenit(data.bevezeto);
     })
     .catch((err) => console.log("hiba", err));
@@ -157,20 +156,21 @@ function megjelenit(bevezeto) {
     txt = "";
     txt += `<h3>${bevezeto[index - 1].cim}</h3>`;
     for (const key in bevezeto[index - 1].bekezdes) {
-      console.log(bevezeto[index - 1].bekezdes[key]);
       txt += `<li>${bevezeto[index - 1].bekezdes[key]}</li>`;
     }
     QS(".b" + index).innerHTML = txt;
   }
 }
-function videoNincs(){
-  if (lathato){
-    hero.style.display = "none";
+function videoNincs() {
+  if (lathato) {
+    hero.style.opacity = "0";
     hero.style.transition = "500ms";
+    hero.style.zIndex = "-10";
     lathato = false;
-  }else{
-    hero.style.display = "block";
+  } else {
+    hero.style.zIndex = "0";
+    hero.style.opacity = "1";
     hero.style.transition = "500ms";
-    lathato= true;
+    lathato = true;
   }
 }
