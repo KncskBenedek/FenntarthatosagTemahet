@@ -12,14 +12,15 @@ function ID(elem) {
 function $(elem) {
     return document.querySelector(elem);
 }
+const kepekArr = [];
 window.addEventListener("load", function () {
-    if(localStorage.length){
-        ID("bemutato").innerHTML = "Nem szabadna itt lenned enyje benyje.";
+    if(localStorage.length === 0){
+
+        ID("bemutat").innerHTML = "<h1>Nem szabadna ide így eljutnod ejnye bejnye.</h1>";
+    
     }else{
+
     var ruhaJson = JSON.parse(localStorage.getItem("aktualis"));
-
-    ID("bemutat").innerHTML += "<h1>Nem szabadna itt lenned ejnye bejnye</h1>";
-
     // console.log(cucc);
     ID("ruhaLeiras").innerHTML = ruhaJson.szoveg;
     ID("tervezo").innerHTML = "Tervező: " + ruhaJson.tervezo;
@@ -32,8 +33,10 @@ window.addEventListener("load", function () {
     let index = 0;
 
     //slide elemek, kepek elemek
+    
     let hossz = ruhaJson.kepek.length;
     for (let index = 0; index < hossz; index++) {
+        //kepekArr.push(ruhaJson.kepek[index]);
         if (index === 0) {
             indicators += `<li data-target="#nagyKep" data-slide-to="${index}" class="active"></li>`;
             kepek += `<div class="carousel-item active"><img src="${ruhaJson.kepek[index]}" alt="Los Angeles" /></div>`;
@@ -58,6 +61,6 @@ window.addEventListener("load", function () {
     let nagykep = indicators + kepek + gombok;
     ID("nagyKep").innerHTML += nagykep;
 
-    localStorage.clear();
 }
 });
+
