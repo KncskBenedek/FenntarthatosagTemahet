@@ -70,7 +70,7 @@ function kezd(tombKepek){
     if(tombKepek.length <=3){
         alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="${tombKepek.length === 2?"ketKisKep":"alapKiskepek"}">`;
     }else{
-        alsoKepek = `<div id="kisLeptetoCont"> <button id="bal"><<</button> <div id="kisKepek" class="alapKiskepek">`;
+        alsoKepek = `<div id="kisLeptetoCont"> <div class="gomb"><button id="bal"><<</button> </div><div id="kisKepek" class="alapKiskepek">`;
     }
     let meddig = alsoKepek.length === 2?2:3;
     for (let index = 0; index < meddig; index++) {
@@ -80,7 +80,7 @@ function kezd(tombKepek){
     alsoKepek += `</div></div> `;
     
     }else{
-        alsoKepek += `</div> <button id="jobb">>></button> </div> `;
+        alsoKepek += `</div> <div class="gomb"> <button id="jobb">>></button> </div> </div> `;
     }
     ID("kepekContainer").innerHTML += alsoKepek;
 }
