@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Cairo", sans-serif;
+
+
+body {
+    margin :auto;
+    background-color: black;
 }
 
 /*Navig�ci�s b�r*/
@@ -77,7 +77,7 @@
             color: #ebd7b4;
             transition: 500ms;
         }
-/*Footer*/
+Footer
 .footer {
     background-color: black;
     color: white;

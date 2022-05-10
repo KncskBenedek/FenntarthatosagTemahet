@@ -38,7 +38,7 @@ function megjelenit(cikkek) {
           txt += "</div>";
         } else if (key === "szerzo") {
           txt += `<div class = "szerzo">`;
-          txt += `<p="pt-4 pb-8 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">${aktualisCikk[key]}</p>`;
+          txt += `<p=>${aktualisCikk[key]}</p>`;
           txt += "</div>";
         }else if (key === "link") {
           txt += `<div class = "link">`;
@@ -56,7 +56,7 @@ function megjelenit(cikkek) {
           txt += felsorTxt;
         }else if (key.indexOf("kep")>=0) {
           txt += `<div class = "kep">`;
-          txt += `<img class = "box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10"" src= "${aktualisCikk[key]}" alt="kep">`;
+          txt += `<img src= "${aktualisCikk[key]}" alt="kep">`;
           txt += "</div>";
         }
       }
