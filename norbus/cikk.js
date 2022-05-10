@@ -11,61 +11,33 @@ function tartalom(){
       megjelenit(data.cikkek);
     })
     .catch((err) => console.log("hiba", err));
-
-
-
 }
-
-function benneVan(cikkJson, cikkNeve) {
-  return Object.prototype.hasOwnProperty.call(cikkJson,cikkNeve)
-}
-
-
 
 function megjelenit(cikkek) {
-
-  var bekezdSzam = 1;
-  var alcimSzam = 1;
-
+  var cikkekSzama = 0;
   for (const kulcs in cikkek) {
-    txt = "";
-    console.log(cikkek[kulcs].cim);
-    if(benneVan(cikkek[kulcs], "cim")) {
-      txt += `<h1>${cikkek[kulcs].cim}</h1>`;
+    let aktualisCikk = cikkek[kulcs];
+    let txt = "";
+    txt += `<div class = "${cikkekSzama}">`;
+    for (const key in aktualisCikk) {
+      cikkekSzama++;
+        if(key === "cim") {
+          txt += `<h1>${aktualisCikk[key]}</h1>`;
+        }else if (key.indexOf("bekezd")>=0){
+          txt += `<p>${aktualisCikk[key]}</p>`;
+        }else if (key.indexOf("alcim")>=0){
+          txt += `<h2>${aktualisCikk[key]}</h2>`;
+        } else if (key === "szerzo") {
+          txt += `<p>${aktualisCikk[key]}</p>`;
+        }else if (key === "link") {
+          txt += `<a href="${aktualisCikk[key]}">Forrás</a>`;
+        } else if (key.indexOf("felsorolas")>=0) {
+
+        }
+      }
+      txt += "</div>";
+      $(".cikkek").innerHTML += txt;
     }
-    if(benneVan(cikkek[kulcs], ("bekezd" + bekezdSzam))) {
-      console.log(("bekezd" + bekezdSzam));
-      bekezdes = ("bekezd" + bekezdSzam);
-      txt += `<h3>${cikkek[kulcs][bekezdes]}</h3>`;
-      bekezdSzam++;
-    }
-    if(benneVan(cikkek[kulcs], ("alcim" + alcimSzam))) {
-      aclim = ("alcim" + alcimSzam);
-      txt += `<p>${cikkek[kulcs][alcim]}</p>`;
-      alcimSzam++;
-    }
-    
-    if(benneVan(cikkek[kulcs], "kep")) {
-      //txt += `<img${cikkek[kulcs].kep}`;
-    }
-    if(benneVan(cikkek[kulcs], "link")) {
-      txt += `<a href="${cikkek[kulcs].link}">Forrás</a>`;
-    } 
-    if(benneVan(cikkek[kulcs], "szerzo")) {
-      txt += `<p>${cikkek[kulcs].szerzo}</p>`;
-    }
-    }
-    $(".cikkek").innerHTML = txt;
   }
     
-  /*for (const cikkKulcs in cikkek[index]) {
-      }
-      
-      //txt += `<li>${cikkek[index-1].cim[key]}</li>`;
-    }
-
-*/
-    
-
-
 tartalom();
