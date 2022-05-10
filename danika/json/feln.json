@@ -1,110 +1,115 @@
 {
     "feln":[
         {
-            "kerdes":"1. Található-e Magyarországon (műanyag) csomagolás mentes bolt?",
-            "v1":"Igen, van",
-            "v2":"Magyaroszágon nincs, de külföldön van",
-            "v3":"Magyaroszágon és külföldön sincs",
-            "helyesV":"Igen, van"
-        },
-        {
-            "kerdes":"2. Hogyan dobjuk a szelektívbe a műanyagot?0",
-            "v1":"tisztán, kimosva",
-            "v2":"koszosan",
-            "v3":"mindegy",
-            "helyesV":"tisztán, kimosva"
-        },
-        {
-            "kerdes":"3. Ha bővíteni akarod a ruhatárad és mindegy milyen márkájú akkor...0",
-            "v1":"turkálókban vásárolok",
-            "v2":"Online vásárolok",
-            "v3":"noname boltokban vásárolok",
-            "helyesV":"turkálókban vásárolok"
-        },
-        {
-            "kerdes":"4. Mi a legjobb alternatíva a nejlon zacskókra?0",
-            "v1":"vászon szatyrok",
-            "v2":"papír zacskók",
-            "v3":"erősebb műanyagból készült szatyrok",
-            "helyesV":"vászon szatyrok"
-        },
-        {
-            "kerdes":"5. A felsorolás között mi a legkörnyelózetbarátabb közlekedés?0",
-            "v1":"séta",
-            "v2":"vonat",
-            "v3":"autó",
-            "helyesV":"séta"
-        },
-        {
-            "kerdes":"6. Ha szemetet látsz eldobva...0",
-            "v1":"felveszem és kidobom a legközelebb kukába",
-            "v2":"ott hagyom",
-            "v3":"belerúgok",
-            "helyesV":"felveszem és kidobom a legközelebb kukába"
-        },
-        {
-            "kerdes":"7. Mi az újrahasznosítás célja?0",
-            "v1":"A természetes erőforrások lehető legkevesebb felhasználása.",
-            "v2":"kevesebb szemét legyen",
-            "v3":"mert jól hangzik",
-            "helyesV":"A természetes erőforrások lehető legkevesebb felhasználása."
-        },
-        {
-            "kerdes":"8. Mi kerülhet a papír szelektívbe?0",
-            "v1":"újságok, tejes -gyümölcsleves papírdobozok, könyvek",
-            "v2":"hőpapír (nyugta, blokk)",
-            "v3":"olajjal/zsíradékkal szennyezett papír",
-            "helyesV":"újságok, tejes -gyümölcsleves papírdobozok, könyvek"
-        },
-        {
-            "kerdes":"9. Mi a komposzt?0",
-            "v1":"szerves anyagok lebomlásának a végterméke",
-            "v2":"szerves és szervetlen anyagok lebomlásának a végterméke",
-            "v3":"szervetlen anyagok lebomlásának a végterméke",
-            "helyesV":"szerves anyagok lebomlásának a végterméke"
-        },
-        {
-            "kerdes":"10. Miket komposztálhatunk?0",
-            "v1":"zöldség - gyümölcs maradék, tojáshéj",
-            "v2":"nagy ágak, fatörzsek, diófalevér",
-            "v3":"fém, műanyag, vegyszeres dolgok",
-            "helyesV":"zöldség - gyümölcs maradék, tojáshéj"
-        },
-        {
-            "kerdes":"11. Vásárlásnál0",
-            "v1":"figyelembe veszem, hogy milyen a csomagolása",
-            "v2":"nem törödök, hogy milyen a csomagolása",
-            "v3":"nem érdekel, hogy milyen a csomagolása",
-            "helyesV":"figyelembe veszem, hogy milyen a csomagolása"
-        },
-        {
-            "kerdes":"12. Ha elmegyek a boltba.....0",
-            "v1":"csak azt veszem meg amire szükségem van",
-            "v2":"mindent megveszek, amit a szemem kíván",
-            "v3":"felvásárolom az egész LIDL-t",
-            "helyesV":"csak azt veszem meg amire szükségem van"
-        },
-        {
-            "kerdes":"13. Mi  a szürkevíz?0",
-            "v1":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak.",
-            "v2":"szürke színű víz",
-            "v3":"javarészt a vécékben kepződik, olyan  szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak",
-            "helyesV":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak."
-        },
-        {
-            "kerdes":"14. Mi a feketevíz?0",
-            "v1":"javarészt a vécékben kepződik, olyan szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak",
-            "v2":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak.",
-            "v3":"feket színű víz",
-            "helyesV":"javarészt a vécékben kepződik, olyan szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak"
-        },
-        {
-            "kerdes":"15. Az okostelefont...0",
-            "v1":"csak 2-3 évente cserélem",
-            "v2":"évente cserélem",
-            "v3":"amikor van egy jobb akkor azt rögtön megveszem",
-            "helyesV":"csak 2-3 évente cserélem"
+            "radio":[
+                {
+                    "kerdes":"1. Található-e Magyarországon (műanyag) csomagolás mentes bolt?",
+                    "v1":"Igen, van",
+                    "v2":"Magyaroszágon nincs, de külföldön van",
+                    "v3":"Magyaroszágon és külföldön sincs",
+                    "helyesV":"Igen, van"
+                },
+                {
+                    "kerdes":"2. Hogyan dobjuk a szelektívbe a műanyagot?",
+                    "v1":"tisztán, kimosva",
+                    "v2":"koszosan",
+                    "v3":"mindegy",
+                    "helyesV":"tisztán, kimosva"
+                },
+                {
+                    "kerdes":"3. Ha bővíteni akarod a ruhatárad és mindegy milyen márkájú akkor...",
+                    "v1":"turkálókban vásárolok",
+                    "v2":"Online vásárolok",
+                    "v3":"noname boltokban vásárolok",
+                    "helyesV":"turkálókban vásárolok"
+                },
+                {
+                    "kerdes":"4. Mi a legjobb alternatíva a nejlon zacskókra?",
+                    "v1":"vászon szatyrok",
+                    "v2":"papír zacskók",
+                    "v3":"erősebb műanyagból készült szatyrok",
+                    "helyesV":"vászon szatyrok"
+                },
+                {
+                    "kerdes":"5. A felsorolás között mi a legkörnyelózetbarátabb közlekedés?",
+                    "v1":"séta",
+                    "v2":"vonat",
+                    "v3":"autó",
+                    "helyesV":"séta"
+                },
+                {
+                    "kerdes":"6. Ha szemetet látsz eldobva...",
+                    "v1":"felveszem és kidobom a legközelebb kukába",
+                    "v2":"ott hagyom",
+                    "v3":"belerúgok",
+                    "helyesV":"felveszem és kidobom a legközelebb kukába"
+                },
+                {
+                    "kerdes":"7. Mi az újrahasznosítás célja?",
+                    "v1":"A természetes erőforrások lehető legkevesebb felhasználása.",
+                    "v2":"kevesebb szemét legyen",
+                    "v3":"mert jól hangzik",
+                    "helyesV":"A természetes erőforrások lehető legkevesebb felhasználása."
+                },
+                {
+                    "kerdes":"8. Mi kerülhet a papír szelektívbe?",
+                    "v1":"újságok, tejes -gyümölcsleves papírdobozok, könyvek",
+                    "v2":"hőpapír (nyugta, blokk)",
+                    "v3":"olajjal/zsíradékkal szennyezett papír",
+                    "helyesV":"újságok, tejes -gyümölcsleves papírdobozok, könyvek"
+                },
+                {
+                    "kerdes":"9. Mi a komposzt?",
+                    "v1":"szerves anyagok lebomlásának a végterméke",
+                    "v2":"szerves és szervetlen anyagok lebomlásának a végterméke",
+                    "v3":"szervetlen anyagok lebomlásának a végterméke",
+                    "helyesV":"szerves anyagok lebomlásának a végterméke"
+                },
+                {
+                    "kerdes":"10. Miket komposztálhatunk?",
+                    "v1":"zöldség - gyümölcs maradék, tojáshéj",
+                    "v2":"nagy ágak, fatörzsek, diófalevér",
+                    "v3":"fém, műanyag, vegyszeres dolgok",
+                    "helyesV":"zöldség - gyümölcs maradék, tojáshéj"
+                },
+                {
+                    "kerdes":"11. Vásárlásnál",
+                    "v1":"figyelembe veszem, hogy milyen a csomagolása",
+                    "v2":"nem törödök, hogy milyen a csomagolása",
+                    "v3":"nem érdekel, hogy milyen a csomagolása",
+                    "helyesV":"figyelembe veszem, hogy milyen a csomagolása"
+                },
+                {
+                    "kerdes":"12. Ha elmegyek a boltba.....",
+                    "v1":"csak azt veszem meg amire szükségem van",
+                    "v2":"mindent megveszek, amit a szemem kíván",
+                    "v3":"felvásárolom az egész LIDL-t",
+                    "helyesV":"csak azt veszem meg amire szükségem van"
+                },
+                {
+                    "kerdes":"13. Mi  a szürkevíz?",
+                    "v1":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak.",
+                    "v2":"szürke színű víz",
+                    "v3":"javarészt a vécékben kepződik, olyan  szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak",
+                    "helyesV":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak."
+                },
+                {
+                    "kerdes":"14. Mi a feketevíz?",
+                    "v1":"javarészt a vécékben kepződik, olyan szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak",
+                    "v2":"olyan szennyezett víz amelyben, szappan vagy mosószer maradványok, kisebb nagyobb szennyeződések vannak.",
+                    "v3":"feket színű víz",
+                    "helyesV":"javarészt a vécékben kepződik, olyan szennyezett vízet értünk alatta, amiben fertőző, egészségre és környezetre veszélyes baktériumok vannak"
+                },
+                {
+                    "kerdes":"15. Az okostelefont...",
+                    "v1":"csak 2-3 évente cserélem",
+                    "v2":"évente cserélem",
+                    "v3":"amikor van egy jobb akkor azt rögtön megveszem",
+                    "helyesV":"csak 2-3 évente cserélem"
+                }
+            ]
         }
+        
     ]
 }
     

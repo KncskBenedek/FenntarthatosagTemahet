@@ -1,81 +1,85 @@
 {
     "altIsk":[
         {
-            "kerdes":"1. A műanyagot milyen színű szelektív kukába gyűjtjük?",
-            "v1":"citromsárga",
-            "v2":"kék",
-            "v3":"zöld",
-            "helyesV":"citromsárga"
-        },
-        {
-            "kerdes":"2. A papírt milyen színű szelektív kukába gyűjtjük?",
-            "v1":"kék",
-            "v2":"piros",
-            "v3":"szürke",
-            "helyesV":"kék"
-        },
-        {
-            "kerdes":"3. Az üveget milyen színű szelektív kukába gyűjtjük?",
-            "v1":"zöld",
-            "v2":"lila",
-            "v3":"citromsárga",
-            "helyesV":"zöld"
-        },
-        {
-            "kerdes":"4. A fémet milyen színű szelektív kukába gyűjtjük?",
-            "v1":"szürke",
-            "v2":"kék",
-            "v3":"narancssárga",
-            "helyesV":"szürke"
-        },
-        {
-            "kerdes":"5. Milyen színűek a szelektív kukák?",
-            "v1":"citromsárga, kék, szürke, zöld",
-            "v2":"piros, kék, zöld, fekete",
-            "v3":"citromsárga, zöld, lila, rózsaszín",
-            "helyesV":"citromsárga, kék, szürke, zöld"
-        },
-        {
-            "kerdes":"6. A felsorolás között mi a legkörnyezetbarátabb közlekedés?",
-            "v1":"séta",
-            "v2":"vonat",
-            "v3":"autó",
-            "helyesV":"séta"
-        },
-        {
-            "kerdes":"7. A felsorolás között melyik a takarékosabb?",
-            "v1":"zuhanyzás",
-            "v2":"habfürdő, pancsolás kádban",
-            "v3":"fürdűszobából vizipark csinálás",
-            "helyesV":"zuhanyzás"
-        },
-        {
-            "kerdes":"8. Miket komposztálhatunk?",
-            "v1":"zöldség - gyümölcs maradék, tojáshéj",
-            "v2":"nagy ágak, fatörzsek, diófalevél",
-            "v3":"fém, műanyag, vegyszeres dolgok",
-            "helyesV":"zöldség - gyümölcs maradék, tojáshéj"
-        },
-        {
-            "kerdes":"9. Fogmosásnál... ",
-            "v1":"elzárom a csapot, ha már nem kell víz",
-            "v2":"nem zárom el a csapot, hadd folyjon",
-            "v3":"ki tekerem tejlesen, mert miért ne",
-            "helyesV":"elzárom a csapot, ha már nem kell víz"
-        },
-        {
-            "kerdes":"10. Közlekedésnél....",
-            "v1":"ha lehet biciklizek",
-            "v2":"autózom",
-            "v3":"tömegközlekedést használok",
-            "helyesV":"ha lehet biciklizek"
-        },
-        {
-            "kerdes":"11. Az okostelefont...",
-            "v1":"csak 2-3 évente cserélem",
-            "v2":"évente cserélem",
-            "v3":"amikor van egy jobb akkor azt rögtön megveszem",
-            "helyesV":"csak 2-3 évente cserélem"
+            "radio":[
+                {
+                    "kerdes":"1. A műanyagot milyen színű szelektív kukába gyűjtjük?",
+                    "v1":"citromsárga",
+                    "v2":"kék",
+                    "v3":"zöld",
+                    "helyesV":"citromsárga"
+                },
+                {
+                    "kerdes":"2. A papírt milyen színű szelektív kukába gyűjtjük?",
+                    "v1":"kék",
+                    "v2":"piros",
+                    "v3":"szürke",
+                    "helyesV":"kék"
+                },
+                {
+                    "kerdes":"3. Az üveget milyen színű szelektív kukába gyűjtjük?",
+                    "v1":"zöld",
+                    "v2":"lila",
+                    "v3":"citromsárga",
+                    "helyesV":"zöld"
+                },
+                {
+                    "kerdes":"4. A fémet milyen színű szelektív kukába gyűjtjük?",
+                    "v1":"szürke",
+                    "v2":"kék",
+                    "v3":"narancssárga",
+                    "helyesV":"szürke"
+                },
+                {
+                    "kerdes":"5. Milyen színűek a szelektív kukák?",
+                    "v1":"citromsárga, kék, szürke, zöld",
+                    "v2":"piros, kék, zöld, fekete",
+                    "v3":"citromsárga, zöld, lila, rózsaszín",
+                    "helyesV":"citromsárga, kék, szürke, zöld"
+                },
+                {
+                    "kerdes":"6. A felsorolás között mi a legkörnyezetbarátabb közlekedés?",
+                    "v1":"séta",
+                    "v2":"vonat",
+                    "v3":"autó",
+                    "helyesV":"séta"
+                },
+                {
+                    "kerdes":"7. A felsorolás között melyik a takarékosabb?",
+                    "v1":"zuhanyzás",
+                    "v2":"habfürdő, pancsolás kádban",
+                    "v3":"fürdűszobából vizipark csinálás",
+                    "helyesV":"zuhanyzás"
+                },
+                {
+                    "kerdes":"8. Miket komposztálhatunk?",
+                    "v1":"zöldség - gyümölcs maradék, tojáshéj",
+                    "v2":"nagy ágak, fatörzsek, diófalevél",
+                    "v3":"fém, műanyag, vegyszeres dolgok",
+                    "helyesV":"zöldség - gyümölcs maradék, tojáshéj"
+                },
+                {
+                    "kerdes":"9. Fogmosásnál... ",
+                    "v1":"elzárom a csapot, ha már nem kell víz",
+                    "v2":"nem zárom el a csapot, hadd folyjon",
+                    "v3":"ki tekerem tejlesen, mert miért ne",
+                    "helyesV":"elzárom a csapot, ha már nem kell víz"
+                },
+                {
+                    "kerdes":"10. Közlekedésnél....",
+                    "v1":"ha lehet biciklizek",
+                    "v2":"autózom",
+                    "v3":"tömegközlekedést használok",
+                    "helyesV":"ha lehet biciklizek"
+                },
+                {
+                    "kerdes":"11. Az okostelefont...",
+                    "v1":"csak 2-3 évente cserélem",
+                    "v2":"évente cserélem",
+                    "v3":"amikor van egy jobb akkor azt rögtön megveszem",
+                    "helyesV":"csak 2-3 évente cserélem"
+                }
+            ]
         }
     ]
 }
