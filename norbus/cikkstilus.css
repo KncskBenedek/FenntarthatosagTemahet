@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
-/*Oldal anímáció és kinézet*/
+/*Oldal anï¿½mï¿½ciï¿½ ï¿½s kinï¿½zet*/
 * {
     margin: 0;
     padding: 0;
@@ -7,93 +7,7 @@
     font-family: "Cairo", sans-serif;
 }
 
-html,
-body {
-    overflow-x: hidden;
-}
-
-.slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(to right, #f4e8c2, #a88952);
-    z-index: -1;
-}
-
-article {
-    display: flex;
-    height: 95vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero {
-    height: 60%;
-    width: 100%;
-    position: relative;
-}
-
-    .hero img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-.headline {
-    position: absolute;
-    top: 75%;
-    left: 0%;
-    font-size: 100px;
-    color: rgb(255, 255, 255);
-    z-index: 100;
-}
-
-.hero::after {
-    content: "";
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0.3;
-}
-/*Scroll animációk beállitások*/
-.scrollAnimacio div {
-    height: auto;
-    background-size: 200% 200%;
-    background-image: linear-gradient(to right, black 50%, transparent 50%);
-    background-position: right;
-    transition: 2000ms;
-}
-
-    .scrollAnimacio div div {
-        width: 50%;
-        background: linear-gradient(to left, darkgray 50%, black 50%);
-        background-size: 200% 200%;
-        background-position: left;
-        /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
-        transition: 900ms;
-        opacity: 0;
-    }
-
-        .scrollAnimacio div div h1 {
-            text-align: center;
-        }
-
-        .scrollAnimacio div div p {
-            text-align: left;
-        }
-
-        .scrollAnimacio div div:hover {
-            background-position: right;
-            color: black;
-            opacity: 1;
-        }
-
-/*Navigációs bár*/
+/*Navigï¿½ciï¿½s bï¿½r*/
 .navbar {
     background-color: black;
     height: 5vh;
@@ -211,66 +125,6 @@ article {
 }
 
 @media screen and (max-width: 770px) {
-    html {
-        overflow-x: hidden;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .headline {
-        top: 0%;
-        left: 0%;
-        font-size: 7vh;
-        color: rgb(255, 255, 255);
-        z-index: 100;
-    }
-
-    article {
-        display: flex;
-        height: 95vh;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero {
-        left: 0;
-        top: 10vh;
-        position: absolute;
-        width: 50%;
-    }
-
-        .hero::after {
-            opacity: 0;
-        }
-
-        .hero img {
-            display: none;
-        }
-
-    .container {
-        background-color: #a88952; /*Háttér színévelk egyezzen meg*/
-        position: absolute;
-        right: 0;
-        height: 90vh;
-        top: 5vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 30%;
-        transform: translateX(100%);
-        transition: 500ms ease-in;
-    }
-
-        .container li {
-            opacity: 0;
-            cursor: pointer;
-        }
-
-    .navicon {
-        display: block;
-    }
 
     .footer {
         display: flex;
@@ -301,7 +155,7 @@ article {
 
 .nav-active {
     transform: translateX(0%);
-    background-color: black; /*A nav bár színvel egyezzen emg*/
+    background-color: black; /*A nav bï¿½r szï¿½nvel egyezzen emg*/
 }
 
 @keyframes containerFade {
