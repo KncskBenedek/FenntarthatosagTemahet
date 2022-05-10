@@ -14,13 +14,13 @@ function tartalom(){
 }
 
 function megjelenit(cikkek) {
-  var cikkekSzama = 0;
+  var cikkekSzama = 1;
   for (const kulcs in cikkek) {
     let aktualisCikk = cikkek[kulcs];
     let txt = "";
     txt += `<div class = "${cikkekSzama}">`;
+    cikkekSzama++;
     for (const key in aktualisCikk) {
-      cikkekSzama++;
         if(key === "cim") {
           txt += `<h1>${aktualisCikk[key]}</h1>`;
         }else if (key.indexOf("bekezd")>=0){
@@ -32,7 +32,11 @@ function megjelenit(cikkek) {
         }else if (key === "link") {
           txt += `<a href="${aktualisCikk[key]}">Forrás</a>`;
         } else if (key.indexOf("felsorolas")>=0) {
-
+          txt += `<ul>`;
+          txt += `<li>${aktualisCikk[key]}</li>`;
+          txt += `</ul>`;
+        }else if (key.indexOf("kep")>=0) {
+          txt += `<img src= "${aktualisCikk[key]}" alt="kep">`;
         }
       }
       txt += "</div>";
