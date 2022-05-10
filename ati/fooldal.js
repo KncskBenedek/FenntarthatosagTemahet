@@ -86,6 +86,10 @@ const navSlide = () => {
 function init() {
   navSlide();
   tartalom();
+  setTimeout( ()=>{
+    ScrollTrigger.refresh();
+  },100)
+ 
 }
 
 function scrollAnimacio(belso, kulso) {
@@ -98,7 +102,7 @@ function scrollAnimacio(belso, kulso) {
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 5,
+      x: cikkek.offsetWidth / 4,
       duration: 2,
       opacity: 1,
       color: "white",
@@ -119,13 +123,14 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
+        startTrigger:"500px",
         start: "top 90%",
         end: "top 90%",
         scrub: true,
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 5,
+      x: cikkek.offsetWidth / 4,
       duration: 2,
       opacity: 1,
       color: "white",

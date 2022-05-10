@@ -65,9 +65,6 @@ article {
 }
 .scrollAnimacio div div {
   width: 50%;
-  background: linear-gradient(to left, darkgray 50%, black 50%);
-  background-size: 200% 200%;
-  background-position: left;
   /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
   transition: 900ms;
   opacity: 0;
@@ -77,11 +74,6 @@ article {
 }
 .scrollAnimacio div div p {
   text-align: left;
-}
-.scrollAnimacio div div:hover {
-  background-position: right;
-  color: black;
-  opacity: 1;
 }
 
 /*Navigációs bár*/
