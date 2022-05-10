@@ -210,12 +210,14 @@ html{
 
 .MSZ_copy{
   font-family: var(--font-serif);
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-style: italic;
   line-height: 1.35;
 }
 .MSZ_copy dt{
+  font-style: normal;
   font-weight: bold;
+
 }
 
 .MSZ_btn {
