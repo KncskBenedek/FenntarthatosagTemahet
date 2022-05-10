@@ -11,7 +11,6 @@ function $(elem) {
 
 const hero = QS(".hero");
 const slider = QS(".slider");
-const headline = QS(".headline");
 const navbar = QS(".navbar");
 const navIcon = QS(".navicon");
 const nav = QS(".container");
@@ -20,6 +19,7 @@ const cikkek = QS(".bejegyzes1");
 const scroll = QS(".scroll");
 const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
+var lathato = true;
 
 const linkek = document.querySelectorAll(".container li");
 
@@ -35,20 +35,13 @@ tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
     hero,
     1.2,
     { width: "100%" },
-    { width: "75%", ease: Power2.easeInOut }
+    { width: "85%", ease: Power2.easeInOut }
   )
   .fromTo(
     slider,
     1.2,
     { x: "-100%" },
     { x: "0%", ease: Power2.easeInOut },
-    "-=1.2"
-  )
-  .fromTo(
-    headline,
-    1.2,
-    { x: "-100%" },
-    { x: "10%", ease: Power2.easeInOut },
     "-=1.2"
   )
   .fromTo(
@@ -86,6 +79,7 @@ const navSlide = () => {
 function init() {
   navSlide();
   tartalom();
+  navIcon.addEventListener("click",videoNincs)
   setTimeout( ()=>{
     ScrollTrigger.refresh();
   },100)
@@ -167,5 +161,16 @@ function megjelenit(bevezeto) {
       txt += `<li>${bevezeto[index - 1].bekezdes[key]}</li>`;
     }
     QS(".b" + index).innerHTML = txt;
+  }
+}
+function videoNincs(){
+  if (lathato){
+    hero.style.display = "none";
+    hero.style.transition = "500ms";
+    lathato = false;
+  }else{
+    hero.style.display = "block";
+    hero.style.transition = "500ms";
+    lathato= true;
   }
 }

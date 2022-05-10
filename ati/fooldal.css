@@ -18,7 +18,7 @@ body {
   height: 100vh;
   width: 100%;
   background: linear-gradient(to right, #f4e8c2, #a88952);
-  z-index: -1;
+  z-index: -200;
 }
 article {
   display: flex;
@@ -30,30 +30,12 @@ article {
   height: 60%;
   width: 100%;
   position: relative;
+  
 }
 .hero img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-.headline {
-  position: absolute;
-  top: 75%;
-  left: 0%;
-  font-size: 100px;
-  color: rgb(255, 255, 255);
-  z-index: 100;
-}
-
-.hero::after {
-  content: "";
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.3;
 }
 /*Scroll animációk beállitások*/
 .scrollAnimacio div {
@@ -83,29 +65,29 @@ article {
   body {
     overflow-x: hidden;
   }
-  .headline {
-    top: 0%;
-    left: 0%;
-    font-size: 7vh;
-    color: rgb(255, 255, 255);
-    z-index: 100;
-  }
   article {
     display: flex;
     height: 95vh;
+    position: relative;
+    left: 50%/2;
+    top: 25%;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    z-index: 1;
   }
   .hero {
-    left: 0;
-    top: 10vh;
     position: absolute;
-    width: 50%;
-  }
-  .hero::after {
-    opacity: 0;
+    width: 100%;
+    top: 30%;
   }
   .hero img {
     display: none;
+  }
+  .hero iframe{
+    width: 400px;
+    height: 350px; 
+    margin: auto;
+    
   }
 }
