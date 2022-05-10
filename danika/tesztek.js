@@ -1,50 +1,78 @@
 window.addEventListener("load", init);
-
+const kerdesek = [];
+let helyesValaszok = [];
+let joV = 0;
+let szazalek;
 
 function init() {
+    beolvas();
     const gomb=document.querySelector("#gomb");
-    const jok=[1, 2];
-    gomb.addEventListener("click", function () {radioEll("valasz1", 1);});
-    gomb.addEventListener("click", function () {checkboxEll("valasz2", jok)});
-    gomb.addEventListener("click", function () {radioEll("valasz3", 3);});
-    jok[0]=2;
-    jok[1]=3;
-    gomb.addEventListener("click", function () {checkboxEll("valasz4", jok);});
+    gomb.addEventListener("click", gombEsemeny);
 }
 
-function checkboxEll(hol, jok) {
-    let valaszok = document.querySelectorAll("input[name='"+hol+"']");
-    let valasztottak = [];
-    valaszok.forEach((valasz)=>{
-        if (valasz.checked) {
-            valasztottak.push(valasz.value);
-        }
-    });
-    console.log(valasztottak);
+function beolvas() {
+    let fajl = "json/altIsk.json";
+    fetch(fajl)
+        .then((res) => res.json())
+        .then((data)=>{
+            data.altIsk.forEach((elem)=>{
+                kerdesek.push(elem);
+            });
+            feldolgoz(kerdesek);
+        })
+        .catch((err)=>{
+            console.log(err);
+        });
+}
+
+function feldolgoz(tomb) {
+    const szuloelem=document.querySelector(".dl_tesztdoboz");
     let i=0;
-    while (i<jok.length && Number(valasztottak[i])===Number(jok[i])) {
-        i++;
-    }
-
-    if (!(i<jok.length)) {
-        console.log(hol+" jo");
-    } else {
-        console.log(hol+" hibas");
-    }
+    tomb.forEach((kerdes)=>{
+        for (const key in kerdes) {
+            if (!(key==="helyesV")) {
+                if (key==="kerdes") { szuloelem.innerHTML += `<div>${kerdes[key]}</div>`;}
+                else {
+                    szuloelem.innerHTML += `<input type="radio" value="${kerdes[key]}">${kerdes[key]}<br>`;
+                }
+            }else{
+                helyesValaszok[i]=kerdes[key];
+                i++;
+            }
+        }
+        szuloelem.innerHTML += "<br>";
+    });
 }
 
-function radioEll(hol, helyesV) {
-    let valaszok = document.querySelectorAll("input[name='"+hol+"']");
+
+function radioEll() {
+    let valaszok = document.querySelectorAll("input[type='radio']");
     let valasztott;
+    let i = 0;
     valaszok.forEach((valasz)=>{
         if (valasz.checked) {
             valasztott = valasz.value;
             console.log(valasztott);
-            if (Number(valasztott)===Number(helyesV)) {
-                console.log(hol+" jo");
-            }else{
-                console.log(hol+" rossz");
+            if (valasztott===helyesValaszok[i]) {
+                joV++;
+                console.log("jo");
             }
+            i++;
         }
     }); 
+}
+
+function szazalekSzamitas() {
+    szazalek = joV/helyesValaszok.length*100;
+}
+
+function vege() {
+    szazalekSzamitas();
+    alert(`Az elért pontszámod: ${joV}. Válaszaidat ${szazalek}%-ban válaszoltad meg helyesen!` );
+}
+
+function gombEsemeny() {
+    radioEll();
+    vege();
+    document.querySelector("#gomb").removeEventListener("click", gombEsemeny);
 }

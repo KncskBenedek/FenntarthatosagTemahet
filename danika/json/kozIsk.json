@@ -1,0 +1,83 @@
+{
+    "kozIsk":[
+        {
+            "kerdes":"1. Hogyan dobjuk a szelektívbe a műanyagot?",
+            "v1":"Tisztán, kimosva",
+            "v2":"koszosan",
+            "v3":"mindegy",
+            "helyesV":"Tisztán, kimosva"
+        },
+        {
+            "kerdes":"2. A felsorolás között mi a legkörnyelózetbarátabb közlekedés?0",
+            "v1":"séta",
+            "v2":"vonat",
+            "v3":"autó",
+            "helyesV":"séta"
+        },
+        {
+            "kerdes":"3. Ha szemetet látsz eldobva...0",
+            "v1":"felveszem és kidobom a legközelebb kukába",
+            "v2":"ott hagyom",
+            "v3":"belerúgok",
+            "helyesV":"felveszem és kidobom a legközelebb kukába"
+        },
+        {
+            "kerdes":"4. Mi kerülhet a papír szelektívbe?0",
+            "v1":"újságok, tejes -gyümölcsleves papírdobozok, könyvek",
+            "v2":"hőpapír (nyugta, blokk)",
+            "v3":"olajjal/zsíradékkal szennyezett papír",
+            "helyesV":"újságok, tejes -gyümölcsleves papírdobozok, könyvek"
+        },
+        {
+            "kerdes":"5. Miket komposztálhatunk?",
+            "v1":"zöldség - gyümölcs maradék, tojáshéj",
+            "v2":"nagy ágak, fatörzsek, diófalevér",
+            "v3":"fém, műanyag, vegyszeres dolgok",
+            "helyesV":"zöldség - gyümölcs maradék, tojáshéj"
+        },
+        {
+            "kerdes":"6. Mi a komposzt?",
+            "v1":"szerves anyagok lebomlásának a végterméke",
+            "v2":"szerves és szervetlen anyagok lebomlásának a végterméke",
+            "v3":"szervetlen anyagok lebomlásának a végterméke",
+            "helyesV":"szerves anyagok lebomlásának a végterméke"
+        },
+        {
+            "kerdes":"7. A könyveket....0",
+            "v1":"kiveszem a könyvtárból/elcserélem",
+            "v2":"megveszem drágán a boltban",
+            "v3":"elégetem,ha már nem kell",
+            "helyesV":"kiveszem a könyvtárból/elcserélem"
+        },
+        {
+            "kerdes":"8. Mi az ökologiai lábnyom?0",
+            "v1":"Egy mutató, hogy mekkora mértékben éljük föl természetes erőforrásokat.",
+            "v2":"Az amikor sárba lépünk és ott marad a cipő talpának a lenyomata.",
+            "v3":"Az amikor valaki lápnyomokat hagy az úton",
+            "helyesV":"Egy mutató, hogy mekkora mértékben éljük föl természetes erőforrásokat."
+        },
+        {
+            "kerdes":"9. Az okostelefont...0",
+            "v1":"csak 2-3 évente cserélem",
+            "v2":"évente cserélem",
+            "v3":"amikor van egy jobb akkor azt rögtön megveszem",
+            "helyesV":"csak 2-3 évente cserélem"
+        },
+        {
+            "kerdes":"10. Hova tegyük az üveget?0",
+            "v1":"A színes üveghulladékok közé dobjuk a kupak nélküli boros-, pezsgős, sörös- és röviditalos színesüvegeket, természetesen átöblítés után, tisztán.",
+            "v2":"csak szimplán kidobjuk",
+            "v3":"A fehérüveg-hulladékok közé csak az olyan elöblített üvegeket dobjuk, amelyek átlátszók. Ilyen például a dunsztosüveg, a tejesüveg, bébiételes üveg stb.",
+            "helyesV1":"A színes üveghulladékok közé dobjuk a kupak nélküli boros-, pezsgős, sörös- és röviditalos színesüvegeket, természetesen átöblítés után, tisztán.",
+            "helyesV2":"A fehérüveg-hulladékok közé csak az olyan elöblített üvegeket dobjuk, amelyek átlátszók. Ilyen például a dunsztosüveg, a tejesüveg, bébiételes üveg stb."
+
+        },
+        {
+            "kerdes":"11. Mi a legjobb alternatíva a nejlon zacskókra?0",
+            "v1":"vászon szatyrok",
+            "v2":"papír zacskók",
+            "v3":"erősebb műanyagból készült szatyrok",
+            "helyesV":"vászon szatyrok"
+        }
+    ]
+}
