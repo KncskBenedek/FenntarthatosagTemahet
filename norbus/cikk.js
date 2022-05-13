@@ -37,6 +37,8 @@ function megjelenit(cikkek,classSzam) {
   var cimSzam = 1;
   var cikkSzam =1;
   var alcimSzam = 1;
+  var siker =0;
+  
 
   for (const kulcs in cikkek) {
     let aktualisCikk = cikkek[kulcs];
@@ -75,25 +77,25 @@ function megjelenit(cikkek,classSzam) {
           txt += `<img src= "${aktualisCikk[data]}" alt="kep">`;
           txt += "</div>";
         }else if (data === "szerzoSeged") {
+          siker++;
           var seged =aktualisCikk[data]
           var szerzoszam = seged[0]
-        }
-        if (cikklista.length<szerzoszam) {
-            
-          txt2 = `<article class="${aktualisCikk[data]}">`
-          txt2 += `</article>`
-          console.log(txt2);
-          div = document.createElement('div');
-          div.id = aktualisCikk[data];
-          div.innerHTML = txt2;
-          console.log(txt2);
-          break
-        } else {
-        
+          var cikkSeged =cikklista[szerzoszam]
+          if (siker=>1) {
+            div = document.createElement('div');
+            div.id = aktualisCikk[data];
+            div.innerHTML = cikklista[szerzoszam];
+            document.body.appendChild(div);
+          }
+
           
-        }      
+        }
+        
+
+        
         txt += "</div>";
           }
         } 
         } 
+        
 
