@@ -5,200 +5,440 @@
             "tervezo": "Árokszállási Renáta Andrea",
             "fotosnev": "Gáll Regina",
             "modell": "Árokszállási Renáta Andrea",
-            "eleresiut": "../kepek/gallr/ruha10/39.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "A ruhát a nyári strandszezonra terveztem, formáját tekintve egyszerű, fürdőruha fölé felvehető lenge ruha. Az anyagmaradékból pedig fejkendő készült a Nap erős sugárzása ellen. A ruha Árokszállási Renáta munkája.",
-            "kepek": ["../kepek/gallr/ruha10/39.jpg","../kepek/gallr/ruha10/40.jpg","../kepek/gallr/ruha10/41.jpg"]
+            "kepek": ["../kepek/gallr/ruha10/39.jpg","../kepek/gallr/ruha10/40.jpg","../kepek/gallr/ruha10/41.jpg"],
+            "kicsiKepek": ["../kepek/gallr/ruha10/kicsi/33.jpg","../kepek/gallr/ruha10/kicsi/35.jpg","../kepek/gallr/ruha10/kicsi/36.jpg"],		
+			"kollekcio": "Zero"
         },
         {
             "id": 1,
             "tervezo": "Árokszállási Renáta Andrea",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Árokszállási Renáta Andrea",
-            "eleresiut": "../kepek/fehersz/ruha10/_MG_9437.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "A tervezőt idézve: 'Régi, megunt ingekből nyári öltözéket terveztem.'",
-            "kepek": ["../kepek/fehersz/ruha10/_MG_9437.jpg","../kepek/fehersz/ruha10/_MG_9438.jpg","../kepek/fehersz/ruha10/_MG_9439.jpg","../kepek/fehersz/ruha10/_MG_9440.jpg"]
+            "kepek": ["../kepek/fehersz/ruha10/_MG_9437.jpg","../kepek/fehersz/ruha10/_MG_9438.jpg","../kepek/fehersz/ruha10/_MG_9439.jpg","../kepek/fehersz/ruha10/_MG_9440.jpg"],
+            "kicsiKepek": ["../kepek/fehersz/ruha10/kicsi/43.jpg","../kepek/fehersz/ruha10/kicsi/44.jpg","../kepek/fehersz/ruha10/kicsi/45.jpg","../kepek/fehersz/ruha10/kicsi/46.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 2,
             "tervezo": "Bajusz Gyöngyike",
             "fotosnev": "Gáll Regina",
             "modell": "Bajusz Gyöngyike",
-            "eleresiut": "../kepek/gallr/ruha8/48.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Bajusz Gyöngyike ruhájánál fontos szempont volt, hogy a megvarrásánál egyáltalán ne keletkezzen hulladék. Az anyag téglalapokra lett szétvágva, amiből egy elegáns és könnyed nyári ruha készült.",
-            "kepek": ["../kepek/gallr/ruha8/48.jpg","../kepek/gallr/ruha8/49.jpg","../kepek/gallr/ruha8/50.jpg","../kepek/gallr/ruha8/51.jpg","../kepek/gallr/ruha8/52.jpg"]
+            "kepek": ["../kepek/gallr/ruha8/48.jpg","../kepek/gallr/ruha8/49.jpg","../kepek/gallr/ruha8/50.jpg","../kepek/gallr/ruha8/51.jpg","../kepek/gallr/ruha8/52.jpg"],
+            "kicsiKepek": ["../kepek/gallr/ruha8/kicsi/43.jpg","../kepek/gallr/ruha8/kicsi/44.jpg","../kepek/gallr/ruha8/kicsi/46.jpg","../kepek/gallr/ruha8/kicsi/47.jpg","../kepek/gallr/ruha8/kicsi/48.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 3,
             "tervezo": "Bajusz Gyöngyike",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Bajusz Gyöngyike",
-            "eleresiut": "../kepek/fehersz/ruha8/48.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Mi történhet egy nagyméretű férfi inggel, amit már nem hord a viselője? Darabjaira szétszedve, újragondolva és újrarendezve női felsővé változhat a fenntarthatóság jegyében. A ruha Bajusz Gyöngyike munkája.",
-            "kepek": ["../kepek/fehersz/ruha8/_MG_9426.jpg","../kepek/fehersz/ruha8/_MG_9427.jpg","../kepek/fehersz/ruha8/_MG_9428.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9429.jpg","../kepek/fehersz/ruha8/_MG_9430.jpg","../kepek/fehersz/ruha8/_MG_9431.jpg"]
+            "kepek": ["../kepek/fehersz/ruha8/_MG_9426.jpg","../kepek/fehersz/ruha8/_MG_9427.jpg","../kepek/fehersz/ruha8/_MG_9428.jpg","../kepek/Fehér Szebasztián/ruha8/_MG_9429.jpg","../kepek/fehersz/ruha8/_MG_9430.jpg","../kepek/fehersz/ruha8/_MG_9431.jpg"],
+            "kicsiKepek": ["../kepek/fehersz/ruha8/kicsi/32.jpg","../kepek/fehersz/ruha8/kicsi/33.jpg","../kepek/fehersz/ruha8/kicsi/34.jpg","../kepek/Fehér Szebasztián/ruha8/kicsi/35.jpg","../kepek/fehersz/ruha8/kicsi/36.jpg","../kepek/fehersz/ruha8/kicsi/37.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 4,
             "tervezo": "Bartha Emma Zsuzsanna",
             "fotosnev": "Józsa Anna",
             "modell": "Jeszenszky Luca",
-            "eleresiut": "../kepek/jozsaa/ruha13/33.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Bartha Emma ruhájának elkészítésekor az egyszerűség, és a hulladék nélkül való elkészíthetőség volt a fő szempont. Egyszerűen, egy téglalapból lett kiszabva a ruhadarab. A felső öltözet különlegessége, hogy többféleképpen hordható: a barna oldalával kifele fordítva, de a mintással is egyaránt. Ezen kívül, mivel vállainál cipzár fut, 90 fokkal elfordítva és szétcipzározva is viselhető.",
-            "kepek": ["../kepek/jozsaa/ruha13/33.jpg","../kepek/jozsaa/ruha13/34.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha13/33.jpg","../kepek/jozsaa/ruha13/34.jpg"],
+            "kicsiKepek": ["../kepek/jozsaa/ruha13/kicsi/27.jpg","../kepek/jozsaa/ruha13/kicsi/28.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 5,
             "tervezo": "Bartha Emma Zsuzsanna",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Jeszenszky Luca",
-            "eleresiut": "../kepek/fehersz/ruha3/_MG_9400.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Az ing tervezésekor leginkább az aszimmetria került előtérbe mind színében, mind formájában. Két teljesen különböző ing lett szétbontva, és egy olyan lett létrehozva, mely a geometria témáját is tükrözi, illetve a letisztultság is jellemző rá. Az öltözéket Bartha Emma készítette.",
-            "kepek": ["../kepek/fehersz/ruha3/_MG_9400.jpg","../kepek/fehersz/ruha3/_MG_9401.jpg","../kepek/fehersz/ruha3/_MG_9402.jpg","../kepek/fehersz/ruha3/_MG_9403.jpg"]
+            "kepek": ["../kepek/fehersz/ruha3/_MG_9400.jpg","../kepek/fehersz/ruha3/_MG_9401.jpg","../kepek/fehersz/ruha3/_MG_9402.jpg","../kepek/fehersz/ruha3/_MG_9403.jpg"],
+            "kicsiKepek": ["../kepek/fehersz/ruha3/kicsi/8.jpg","../kepek/fehersz/ruha3/kicsi/9.jpg","../kepek/fehersz/ruha3/kicsi/10.jpg","../kepek/fehersz/ruha3/kicsi/11.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 6,
             "tervezo": "Berecz Lili Blanka",
             "fotosnev": "Józsa Anna",
             "modell": "Berecz Lili Blanka",
-            "eleresiut": "../kepek/jozsaa/ruha3/6.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Berecz Lili ruhája a természet jelenlétét varázsolja körénk, s a modell mozgása teszi igazán élővé, lélegzővé. A díszek korábbról, más projektekből megmaradt darabokból, nyesedékekből készültek. Virágokká komponálva őket, kaptak lehetőséget az újrakezdésre. Segítségükkel egy évek óta szekrényben szomorkodó ruha vált különlegesebbé.",
-            "kepek": ["../kepek/jozsaa/ruha3/6.jpg","../kepek/jozsaa/ruha3/7.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha3/6.jpg","../kepek/jozsaa/ruha3/7.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha3/kicsi/38.jpg","../kepek/jozsaa/ruha3/kicsi/39.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 7,
             "tervezo": "Berecz Lili Blanka",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Berecz Lili Blanka",
-            "eleresiut": "../kepek/fehersz/ruha1/_MG_9393.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Extravagáns, ugyanakkor ízléses felsőrész keszült, ami nőies, és amellett, hogy szinte minden alkaton jól áll, és kényelmet is biztosít viselőjének. Az öltözéket Berecz Lili tervezte.",
-            "kepek": ["../kepek/fehersz/ruha1/_MG_9393.jpg","../kepek/fehersz/ruha1/_MG_9394.jpg","../kepek/fehersz/ruha1/_MG_9395.jpg","../kepek/fehersz/ruha1/_MG_9396.jpg"]
+            "kepek": ["../kepek/fehersz/ruha1/_MG_9393.jpg","../kepek/fehersz/ruha1/_MG_9394.jpg","../kepek/fehersz/ruha1/_MG_9395.jpg","../kepek/fehersz/ruha1/_MG_9396.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha1/kicsi/1.jpg","../kepek/fehersz/ruha1/kicsi/2.jpg","../kepek/fehersz/ruha1/kicsi/3.jpg","../kepek/fehersz/ruha1/kicsi/4.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 8,
             "tervezo": "Buzás Vanda Szonja",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Buzás Vanda Szonja",
-            "eleresiut": "../kepek/fehersz/ruha15/_MG_9470.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Buzás Vanda által megalkotott szett eredetileg egy félig elkészített ruha volt, amit Vanda teljesen szétbontott és újraalkotott. A felső díszítése lehulló darabokból készült, valamint az ujja is, így minden anyag gyakorlatilag szemét volt, amiből valami új keletkezett.",
-            "kepek": ["../kepek/fehersz/ruha15/_MG_9470.jpg","../kepek/fehersz/ruha15/_MG_9471.jpg","../kepek/Fehér Szebasztián/ruha15/_MG_9471.jpg","../kepek/fehersz/ruha15/_MG_9473.jpg","../kepek/Fehér Szebasztián/ruha15/_MG_9474.jpg","../kepek/fehersz/ruha15/_MG_9475.jpg"]
+            "kepek": ["../kepek/fehersz/ruha15/_MG_9470.jpg","../kepek/Fehér Szebasztián/ruha15/_MG_9471.jpg","../kepek/fehersz/ruha15/_MG_9473.jpg","../kepek/Fehér Szebasztián/ruha15/_MG_9474.jpg","../kepek/fehersz/ruha15/_MG_9475.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha15/kicsi/71.jpg","../kepek/fehersz/ruha15/kicsi/72.jpg","../kepek/Fehér Szebasztián/ruha15/kicsi/73.jpg","../kepek/fehersz/ruha15/kicsi/74.jpg","../kepek/Fehér Szebasztián/ruha15/kicsi/75"],
+			"kollekcio": "Zero"
         },
         {
             "id": 9,
             "tervezo": "Buzás Vanda Szonja",
             "fotosnev": "Gáll Regina",
             "modell": "Buzás Vanda Szonja",
-            "eleresiut": "../kepek/gallr/ruha4/64.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Buzás Vandát idézve: 'Ennek a felsőnek az megalkotásakor spontán az akkori érzéseimet és gondolataimat tettem bele, így az itt látható végeredmény tulajdonképpen egy darab belőlem.'",
-            "kepek": ["../kepek/gallr/ruha4/64.jpg","../kepek/gallr/ruha4/65.jpg","../kepek/gallr/ruha4/66.jpg","../kepek/gallr/ruha4/67.jpg"]
+            "kepek": ["../kepek/gallr/ruha4/64.jpg","../kepek/gallr/ruha4/65.jpg","../kepek/gallr/ruha4/66.jpg","../kepek/gallr/ruha4/67.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha4/kicsi/61.jpg","../kepek/gallr/ruha4/kicsi/62.jpg","../kepek/gallr/ruha4/kicsi/63.jpg","../kepek/gallr/ruha4/kicsi/64.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 10,
             "tervezo": "Buzás Vanda Szonja",
             "fotosnev": "Józsa Anna",
             "modell": "Buzás Vanda Szonja",
-            "eleresiut": "../kepek/jozsaa/ruha4/8.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Buzás Vandát idézve: 'Ennek a felsőnek az megalkotásakor spontán az akkori érzéseimet és gondolataimat tettem bele, így az itt látható végeredmény tulajdonképpen egy darab belőlem.'",
-            "kepek": ["../kepek/jozsaa/ruha4/8.jpg","../kepek/jozsaa/ruha4/9.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha4/8.jpg","../kepek/jozsaa/ruha4/9.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha4/kicsi/40.jpg","../kepek/jozsaa/ruha4/kicsi/41.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 11,
             "tervezo": "Fábián Fanni",
             "fotosnev": "Józsa Anna",
             "modell": "Ádámszki Zsuzsanna",
-            "eleresiut": "../kepek/jozsaa/ruha15/37.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Fábián Fanni modellje egy vászonból készült ruha, melyben egy körszoknya és egy egyszerű fűzős felsőrész kapcsolódik egymáshoz.",
-            "kepek": ["../kepek/jozsaa/ruha15/37.jpg","../kepek/jozsaa/ruha15/38.jpg","../kepek/jozsaa/ruha15/39.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha15/37.jpg","../kepek/jozsaa/ruha15/38.jpg","../kepek/jozsaa/ruha15/39.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha15/kicsi/31.jpg","../kepek/jozsaa/ruha15/kicsi/32.jpg","../kepek/jozsaa/ruha15/kicsi/33.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 12,
             "tervezo": "Fábián Fanni",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Ádámszki Zsuzsanna",
-            "eleresiut": "../kepek/fehersz/ruha11/_MG_9441.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "A régi ingből készült női felső egyszerre újszerű és elegánsan hanyag, ahogy a redők egymáson fekszenek kiemeli a derék vonalait. Egy farmerral és magassarkú cipővel igazán látványos viselet. Fábián Fanni munkája.",
-            "kepek": ["../kepek/fehersz/ruha11/_MG_9441.jpg","../kepek/fehersz/ruha11/_MG_9442.jpg","../kepek/fehersz/ruha11/_MG_9443.jpg","../kepek/fehersz/ruha11/_MG_9444.jpg","../kepek/fehersz/ruha11/_MG_9445.jpg"]
+            "kepek": ["../kepek/fehersz/ruha11/_MG_9441.jpg","../kepek/fehersz/ruha11/_MG_9442.jpg","../kepek/fehersz/ruha11/_MG_9443.jpg","../kepek/fehersz/ruha11/_MG_9444.jpg","../kepek/fehersz/ruha11/_MG_9445.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha11/kicsi/47.jpg","../kepek/fehersz/ruha11/kicsi/48.jpg","../kepek/fehersz/ruha11/49.jpg","../kepek/fehersz/ruha11/kicsi/50.jpg","../kepek/fehersz/ruha11/kicsi/51.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 13,
             "tervezo": "Fazekas Anna",
             "fotosnev": "Gáll Regina",
             "modell": "Fazekas Anna",
-            "eleresiut": "../kepek/gallr/ruha7/53.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Fazekas Anna különböző színű geometriai formák használatával színes, érdekes öltözéket hozott létre. Ezek a formák jelennek meg a  felsőn és a nadrágon is, ezzel valami újat és egyedit megalkotva, de mégis felhasználva a régit.",
-            "kepek": ["../kepek/gallr/ruha7/53.jpg","../kepek/gallr/ruha7/54.jpg","../kepek/gallr/ruha7/55.jpg","../kepek/gallr/ruha7/56.jpg"]
+            "kepek": ["../kepek/gallr/ruha7/53.jpg","../kepek/gallr/ruha7/54.jpg","../kepek/gallr/ruha7/55.jpg","../kepek/gallr/ruha7/56.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha7/kicsi/49.jpg","../kepek/gallr/ruha7/kicsi/50.jpg","../kepek/gallr/ruha7/kicsi/51.jpg","../kepek/gallr/ruha7/kicsi/52.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 14,
             "tervezo": "Fazekas Anna",
             "fotosnev": "Gáll Regina",
             "modell": "Fazekas Anna",
-            "eleresiut": "../kepek/gallr/ruha6/57.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Két férfiingből készült könnyed ruhát látunk, amiben az ing alkatrészeit a nem megszokott helyen felhasználva egyszerű, de mégis különleges felső keletkezett. Az öltözéket Fazekas Anna tervezte és készítette.",
-            "kepek": ["../kepek/gallr/ruha6/57.jpg","../kepek/gallr/ruha6/58.jpg","../kepek/gallr/ruha6/59.jpg","../kepek/gallr/ruha6/60.jpg"]
+            "kepek": ["../kepek/gallr/ruha6/57.jpg","../kepek/gallr/ruha6/58.jpg","../kepek/gallr/ruha6/59.jpg","../kepek/gallr/ruha6/60.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha6/kicsi/53.jpg","../kepek/gallr/ruha6/kicsi/54.jpg","../kepek/gallr/ruha6/kicsi/55.jpg","../kepek/gallr/ruha6/kicsi/57.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 15,
             "tervezo": "Fódi Martin Levente",
             "fotosnev": "Józsa Anna",
             "modell": "Heilman Petra",
-            "eleresiut": "../kepek/jozsaa/ruha8/18.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Ezt az öltözéket a túlméretezett válltömés jellemzi, melyet a szakma nagyjai ihlették, de a tervező, Fódi Martin, a saját képére formált.",
-            "kepek": ["../kepek/jozsaa/ruha8/18.jpg","../kepek/jozsaa/ruha8/19.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha8/18.jpg","../kepek/jozsaa/ruha8/19.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha8/kicsi/10.jpg","../kepek/jozsaa/ruha8/kicsi/11.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 16,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Gáll Regina",
             "modell": "Horváth Dorina",
-            "eleresiut": "../kepek/gallr/ruha3/68.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "A tervező, Hoffmann Dóra a zero waste irányt követve a megújulás, letisztultság vonalát kísérte végig a tervezésben és a kivitelezésben. A kibontakozó geometrikus formavilág és az egyhangú, sötét természet adta földszín tökéletes ellentétet nyújt a térmészet és a mesterséges világ között.",
-            "kepek": ["../kepek/gallr/ruha3/68.jpg","../kepek/gallr/ruha3/69.jpg","../kepek/gallr/ruha3/70.jpg"]
+            "kepek": ["../kepek/gallr/ruha3/68.jpg","../kepek/gallr/ruha3/69.jpg","../kepek/gallr/ruha3/70.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha3/kicsi/65.jpg","../kepek/gallr/ruha3/kicsi/65.jpg","../kepek/gallr/ruha3/kicsi/68.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 17,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Józsa Anna",
             "modell": "Horváth Dorina",
-            "eleresiut": "../kepek/jozsaa/ruha2/4.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "1. ing: Diagonális vonalvezetést követő ingruha, amely a szögletességet megfűszerezve válik egyenletlen egyenletességgé. Hoffmann Dóra munkája.",
-            "kepek": ["../kepek/jozsaa/ruha2/4.jpg","../kepek/jozsaa/ruha2/5.jpg"]
+            "kepek": ["../kepek/jozsaa/ruha2/4.jpg","../kepek/jozsaa/ruha2/5.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha2/kicsi/34.jpg","../kepek/jozsaa/ruha2/kicsi/37.jpg"],
+			"kollekcio": "Kreativ"
         },
         {
             "id": 18,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Horváth Dorina",
-            "eleresiut": "../kepek/fehersz/ruha4/_MG_9404.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "2. ing: A kámzsanyakkal ellátott, ki- és átfordított elegáns blúzfelső a játékosságot kedvelő és a különleges darabokat bátran viselő hölgyek számára készült. Az öltözéket Hoffmann Dóra tervezte és készítette.",
-            "kepek": ["../kepek/fehersz/ruha4/_MG_9404.jpg","../kepek/fehersz/ruha4/_MG_9405.jpg","../kepek/fehersz/ruha4/_MG_9406.jpg","../kepek/fehersz/ruha4/_MG_9407.jpg"]
+            "kepek": ["../kepek/fehersz/ruha4/_MG_9404.jpg","../kepek/fehersz/ruha4/_MG_9405.jpg","../kepek/fehersz/ruha4/_MG_9406.jpg","../kepek/fehersz/ruha4/_MG_9407.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha4/kicsi/12.jpg","../kepek/fehersz/ruha4/kicsi/13.jpg","../kepek/fehersz/ruha4/kicsi/14.jpg","../kepek/fehersz/ruha4/kicsi/15.jpg"],
+			"kollekcio": "Zero"
         },
         {
             "id": 19,
             "tervezo": "Juhász Nóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Juhász Nóra",
-            "eleresiut": "../kepek/fehersz/ruha6/_MG_9411.jpg",
             "tovabboldalra": "../bebe/ruhaBemutato.html",
             "szoveg": "Juhász Nóra ruhája különböző méretű tèglalapokból lett összevarva. Inspirációs tèmaként az èpületek ès a futónövènyek szolgáltak.",
-            "kepek": ["../kepek/fehersz/ruha6/_MG_9411.jpg","../kepek/fehersz/ruha6/_MG_9414.jpg","../kepek/fehersz/ruha6/_MG_9415.jpg"]
+            "kepek": ["../kepek/fehersz/ruha6/_MG_9411.jpg","../kepek/fehersz/ruha6/_MG_9414.jpg","../kepek/fehersz/ruha6/_MG_9415.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha6/kicsi/19.jpg","../kepek/fehersz/ruha6/kicsi/20.jpg","../kepek/fehersz/ruha6/kicsi/21.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 20,
+            "tervezo": "Kertész Krisztina",
+            "fotosnev": "Gáll Regina",
+            "modell": "Kertész Krisztina",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "'Számomra a környezetvédelem egyik fontos eleme mentén képzeltem el a nullahulladékos ruhát, miszerint már meglévő, de nem hordott ruhadarabomat alakítottam át egy leheletnyit. ' - Kertész Krisztina, a tervező.",
+            "kepek": ["../kepek/gallr/ruha9/42.jpg","../kepek/gallr/ruha9/43.jpg","../kepek/gallr/ruha9/44.jpg","../kepek/gallr/ruha9/45.jpg","../kepek/gallr/ruha9/46.jpg","../kepek/gallr/ruha9/47.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha9/kicsi/37.jpg","../kepek/gallr/ruha9/kicsi/38.jpg","../kepek/gallr/ruha9/kicsi/39.jpg","../kepek/gallr/ruha9/kicsi/40.jpg","../kepek/gallr/ruha9/kicsi/41.jpg","../kepek/gallr/ruha9/kicsi/42.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 21,
+            "tervezo": "Kertész Krisztina",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Kertész Krisztina",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "'Szeretem az ujjatlan és hosszú ujjú felsőket egyaránt, ezért kombináltam az inget ezen ízlésem szerint, s természetesen egy kicsit a geometrikus alakzatok is megihlettek a folyamat közben.' Tervező: Kertész Krisztina",
+            "kepek": ["../kepek/fehersz/ruha9/_MG_9432.jpg","../kepek/fehersz/ruha9/_MG_9433.jpg","../kepek/fehersz/ruha9/_MG_9434.jpg","../kepek/fehersz/ruha9/_MG_9435.jpg","../kepek/fehersz/ruha9/_MG_9436.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha9/kicsi/38.jpg","../kepek/fehersz/ruha9/kicsi/39.jpg","../kepek/fehersz/ruha9/kicsi/40.jpg","../kepek/fehersz/ruha9/kicsi/41.jpg","../kepek/fehersz/ruha9/kicsi/42.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 22,
+            "tervezo": "Mészáros Mercédesz Beatrix",
+            "fotosnev": "Józsa Anna",
+            "modell": "Lövei Lejla",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Ezt a könnyed esésű szatén ruhát a  hozzáillő ujjatlan kabáttal Mészáros Mercédesz tervezte. Ideális viselet rendezvényekre és munkába is, magassarkúval párosítva.",
+            "kepek": ["../kepek/jozsaa/ruha14/35.jpg","../kepek/jozsaa/ruha14/36.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha14/kicsi/29.jpg","../kepek/jozsaa/ruha14/kicsi/30.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 23,
+            "tervezo": "Mészáros Mercédesz Beatrix",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Lövei Lejla",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Egyszerre fiatalos és elegáns, részben formakövető kétrészes összeállítás, melyben mind a felső, mind a szoknya részének állítható a mérete, igazodva az azt viselőhöz. Az öltözéket Mészáros Mercédesz tervezte.",
+            "kepek": ["../kepek/fehersz/ruha13/_MG_9454.jpg","../kepek/fehersz/ruha13/_MG_9456.jpg","../kepek/fehersz/ruha13/_MG_9457.jpg","../kepek/fehersz/ruha13/_MG_9458.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha13/kicsi/58.jpg","../kepek/fehersz/ruha13/kicsi/59.jpg","../kepek/fehersz/ruha13/kicsi/60.jpg","../kepek/fehersz/ruha13/kicsi/61.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 24,
+            "tervezo": "Nagy Dominika Anna",
+            "fotosnev": "Józsa Anna",
+            "modell": "Nagy Dominika Anna",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Nagy Dominika által tervezett ruhánál  a szabásminták helyes, átgondolt elrendezése által nem keletkezett hulladék. A ruha csupán egy körből és körcikkekből lett  összeállítva, a fazonja, stílusa a középkor divatját gondolja újra.",
+            "kepek": ["../kepek/jozsaa/ruha1/1.jpg","../kepek/jozsaa/ruha1/2.jpg","../kepek/jozsaa/ruha1/3.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha1/kicsi/1.jpg","../kepek/jozsaa/ruha1/kicsi/12.jpg","../kepek/jozsaa/ruha1/kicsi/23.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 25,
+            "tervezo": "Nagy Dominika Anna",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Nagy Dominika Anna",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Nagy Dominika ingét főképp az asszimetria jellemzi. Emellett a geometrikusság is felelhető benne, ahogy a blúz alja háromszög formákban végződve lépcsőzetesen halad körbe. Ezt ellensúlyozza az ejtett nyakvonal mely nőiesebbé, kifinomultabbá teszi a darabot.",
+            "kepek": ["../kepek/fehersz/ruha2/_MG_9397.jpg","../kepek/fehersz/ruha2/_MG_9398.jpg","../kepek/fehersz/ruha2/_MG_9399.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha2/kicsi/5.jpg","../kepek/fehersz/ruha2/kicsi/6.jpg","../kepek/fehersz/ruha2/kicsi/7.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 26,
+            "tervezo": "Nagy Flóra",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Nagy Flóra",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "",
+            "kepek": ["../kepek/fehersz/ruha12/_MG_9446.jpg","../kepek/fehersz/ruha12/_MG_9447.jpg","../kepek/fehersz/ruha12/_MG_9448.jpg","../kepek/fehersz/ruha12/_MG_9449.jpg","../kepek/fehersz/ruha12/_MG_9450.jpg","../kepek/fehersz/ruha12/_MG_9452.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha12/kicsi/52.jpg","../kepek/fehersz/ruha12/kicsi/53.jpg","../kepek/fehersz/ruha12/kicsi/54.jpg","../kepek/fehersz/ruha12/kicsi/55.jpg","../kepek/fehersz/ruha12/kicsi/56.jpg","../kepek/fehersz/ruha12/kicsi/57.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 27,
+            "tervezo": "Nagy Flóra",
+            "fotosnev": "Józsa Anna",
+            "modell": "Nagy Flóra",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "'Szeretném megmutatni azt, hogy pár ing felhasználásával és a képzeletünk elengedésével milyen érdekes dolgok születhetnek. Próbáltam a saját vonalamat követni, mégis valami olyat csinálni, amit még én nem láttam.' - tervező: Nagy Flóra",
+            "kepek": ["../kepek/jozsaa/ruha7/16.jpg","../kepek/jozsaa/ruha7/17.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha7/kicsi/8.jpg","../kepek/jozsaa/ruha7/kicsi/9.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 28,
+            "tervezo": "Nagy Hanna Napsugár",
+            "fotosnev": "Gáll Regina és Józsa Anna",
+            "modell": "Nagy Hanna Napsugár",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Nagy Hanna Napsugár által tervezett ruha célja az volt,hogy kényelmes legyen és könnyen lehessen benne mozogni, így akár fellépésekre is lehessen használni.",
+            "kepek": ["../kepek/gallr/ruha1/1.jpg","../kepek/gallr/ruha1/2.jpg","../kepek/gallr/ruha1/3.jpg","../kepek/gallr/ruha1/4.jpg","../kepek/gallr/ruha1/5.jpg","../kepek/gallr/ruha1/6.jpg","../kepek/gallr/ruha1/7.jpg","../kepek/gallr/ruha1/8.jpg","../kepek/gallr/ruha1/9.jpg","../kepek/gallr/ruha1/10.jpg","../kepek/gallr/ruha1/11.jpg","../kepek/gallr/ruha1/12.jpg","../kepek/gallr/ruha1/13.jpg","../kepek/gallr/ruha1/40.jpg","../kepek/gallr/ruha1/41.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha1/kicsi/1.jpg","../kepek/gallr/ruha1/kicsi/2.jpg","../kepek/gallr/ruha1/kicsi/3.jpg","../kepek/gallr/ruha1/kicsi/4.jpg","../kepek/gallr/ruha1/kicsi/5.jpg","../kepek/gallr/ruha1/kicsi/12.jpg","../kepek/gallr/ruha1/kicsi/23.jpg","../kepek/gallr/ruha1/kicsi/34.jpg","../kepek/gallr/ruha1/kicsi/45.jpg","../kepek/gallr/ruha1/kicsi/56.jpg","../kepek/gallr/ruha1/kicsi/67.jpg","../kepek/gallr/ruha1/kicsi/76.jpg","../kepek/gallr/ruha1/kicsi/77.jpg","../kepek/gallr/ruha1/kicsi/35.jpg","../kepek/gallr/ruha1/kicsi/36.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 29,
+            "tervezo": "Nagy Hanna Napsugár",
+            "fotosnev": "Gáll Regina",
+            "modell": "Nagy Hanna Napsugár",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Egy lazább, de mégis csinos ruha kialakítása volt a cél, amit akár ténylegesen fel lehet majd venni a mindennapokra, de akár egy eseményre is. Az öltözéket Nagy Hanna Napsugár készítette.",
+            "kepek": ["../kepek/gallr/ruha2/71.jpg","../kepek/gallr/ruha2/72.jpg","../kepek/gallr/ruha2/73.jpg","../kepek/gallr/ruha2/74.jpg","../kepek/gallr/ruha2/75.jpg","../kepek/gallr/ruha2/76.jpg","../kepek/gallr/ruha2/77.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha2/kicsi/69.jpg","../kepek/gallr/ruha2/kicsi/70.jpg","../kepek/gallr/ruha2/kicsi/71.jpg","../kepek/gallr/ruha2/kicsi/72.jpg","../kepek/gallr/ruha2/kicsi/73.jpg","../kepek/gallr/ruha2/kicsi/74.jpg","../kepek/gallr/ruha2/kicsi/75.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 30,
+            "tervezo": "Nagy Hanna Napsugár",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Nagy Hanna Napsugár",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Egy lazább, de mégis csinos ruha kialakítása volt a cél, amit akár ténylegesen fel lehet majd venni a mindennapokra, de akár egy eseményre is. Az öltözéket Nagy Hanna Napsugár készítette.",
+            "kepek": ["../kepek/fehersz/ruha7/_MG_9416.jpg","../kepek/fehersz/ruha7/_MG_9417.jpg","../kepek/fehersz/ruha7/_MG_9418.jpg","../kepek/fehersz/ruha7/_MG_9419.jpg","../kepek/fehersz/ruha7/_MG_9420.jpg","../kepek/fehersz/ruha7/_MG_9421.jpg","../kepek/fehersz/ruha7/_MG_9422.jpg","../kepek/fehersz/ruha7/_MG_9423.jpg","../kepek/fehersz/ruha7/_MG_9424.jpg","../kepek/fehersz/ruha7/_MG_9425.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha7/kicsi/22.jpg","../kepek/fehersz/ruha7/kicsi/23.jpg","../kepek/fehersz/ruha7/kicsi/24.jpg","../kepek/fehersz/ruha7/kicsi/25.jpg","../kepek/fehersz/ruha7/kicsi/26.jpg","../kepek/fehersz/ruha7/kicsi/27.jpg","../kepek/fehersz/ruha7/kicsi/28.jpg","../kepek/fehersz/ruha7/kicsi/29.jpg","../kepek/fehersz/ruha7/kicsi/30.jpg","../kepek/fehersz/ruha7/kicsi/31.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 31,
+            "tervezo": "Novák Nóra",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Sárácz Tijáná",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Viharkabát /upcycling esőkabát/ A műanyag oldhatatlansága, le nem bomlósága tökéletesen párhuzamba állítható a dohánytermékek rendszeres használatával. Mindkét esetben az ember a fogyasztó ki a testét és a földjét is szennyezi. A műanyag lebomlása több száz évbe telik, a kátrány a tüdőben lerakódva akár évek múltán is kimutatható. Novák Nóra munkája.",
+            "kepek": ["../kepek/fehersz/ruha14/_MG_9459.jpg","../kepek/fehersz/ruha14/_MG_9461.jpg","../kepek/fehersz/ruha14/_MG_9462.jpg","../kepek/fehersz/ruha14/_MG_9463.jpg","../kepek/fehersz/ruha14/_MG_9464.jpg","../kepek/fehersz/ruha14/_MG_9465.jpg","../kepek/fehersz/ruha14/_MG_9466.jpg","../kepek/fehersz/ruha14/_MG_9468.jpg","../kepek/fehersz/ruha14/_MG_9469.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha14/kicsi/62.jpg","../kepek/fehersz/ruha14/kicsi/63.jpg","../kepek/fehersz/ruha14/kicsi/64.jpg","../kepek/fehersz/ruha14/kicsi/65.jpg","../kepek/fehersz/ruha14/kicsi/66.jpg","../kepek/fehersz/ruha14/kicsi/67.jpg","../kepek/fehersz/ruha14/kicsi/68.jpg","../kepek/fehersz/ruha14/kicsi/69.jpg","../kepek/fehersz/ruha14/kicsi/70.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 32,
+            "tervezo": "Szoboszlai Bella",
+            "fotosnev": "Gáll Regina",
+            "modell": "Szoboszlai Bella",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Az élénk színek es merész szabásvonalak az élet változatosságát és lendületességet tükrözik. Az öltözék Szoboszali Bella munkája.",
+            "kepek": ["../kepek/gallr/ruha11/14.jpg","../kepek/gallr/ruha11/15.jpg","../kepek/gallr/ruha11/16.jpg","../kepek/gallr/ruha11/17.jpg","../kepek/gallr/ruha11/18.jpg","../kepek/gallr/ruha11/19.jpg","../kepek/gallr/ruha11/20.jpg","../kepek/gallr/ruha11/21.jpg","../kepek/gallr/ruha11/22.jpg","../kepek/gallr/ruha11/23.jpg","../kepek/gallr/ruha11/24.jpg","../kepek/gallr/ruha11/25.jpg","../kepek/gallr/ruha11/26.jpg","../kepek/gallr/ruha11/27.jpg","../kepek/gallr/ruha11/28.jpg","../kepek/gallr/ruha11/29.jpg","../kepek/gallr/ruha11/30.jpg","../kepek/gallr/ruha11/31.jpg","../kepek/gallr/ruha11/32.jpg","../kepek/gallr/ruha11/33.jpg","../kepek/gallr/ruha11/34.jpg","../kepek/gallr/ruha11/35.jpg","../kepek/gallr/ruha11/36.jpg","../kepek/gallr/ruha11/37.jpg","../kepek/gallr/ruha11/38.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha11/kicsi/6.jpg","../kepek/gallr/ruha11/kicsi/7.jpg","../kepek/gallr/ruha11/kicsi/8.jpg","../kepek/gallr/ruha11/kicsi/9.jpg","../kepek/gallr/ruha11/kicsi/10.jpg","../kepek/gallr/ruha11/kicsi/11.jpg","../kepek/gallr/ruha11/kicsi/12.jpg","../kepek/gallr/ruha11/kicsi/13.jpg","../kepek/gallr/ruha11/kicsi/14.jpg","../kepek/gallr/ruha11/kicsi/15.jpg","../kepek/gallr/ruha11/kicsi/16.jpg","../kepek/gallr/ruha11/kicsi/17.jpg","../kepek/gallr/ruha11/kicsi/18.jpg","../kepek/gallr/ruha11/kicsi/19.jpg","../kepek/gallr/ruha11/kicsi/20.jpg","../kepek/gallr/ruha11/kicsi/21.jpg","../kepek/gallr/ruha11/kicsi/22.jpg","../kepek/gallr/ruha11/kicsi/23.jpg","../kepek/gallr/ruha11/kicsi/24.jpg","../kepek/gallr/ruha11/kicsi/25.jpg","../kepek/gallr/ruha11/kicsi/26.jpg","../kepek/gallr/ruha11/kicsi/27.jpg","../kepek/gallr/ruha11/kicsi/28.jpg","../kepek/gallr/ruha11/kicsi/29.jpg","../kepek/gallr/ruha11/kicsi/30.jpg","../kepek/gallr/ruha11/kicsi/31.jpg","../kepek/gallr/ruha11/kicsi/32.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 33,
+            "tervezo": "Szoboszlai Bella",
+            "fotosnev": "Józsa Anna",
+            "modell": "Szoboszlai Bella",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "A tervező, Szoboszlai Bella szándéka szerint a bohókás ráncok és hajtások a kiszámíthatatlanság csodáját rejtik.",
+            "kepek": ["../kepek/jozsaa/ruha5/10.jpg","../kepek/jozsaa/ruha5/11.jpg","../kepek/jozsaa/ruha5/12.jpg","../kepek/jozsaa/ruha5/13.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha5/kicsi/2.jpg","../kepek/jozsaa/ruha5/kicsi/3.jpg","../kepek/jozsaa/ruha5/kicsi/4.jpg","../kepek/jozsaa/ruha5/kicsi/5.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 34,
+            "tervezo": "Szórád Nikolett",
+            "fotosnev": "Józsa Anna",
+            "modell": "Bencze Rubina",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Szórád Nikolett által tervezett összeállitást a fekete és rózsaszín harmoniája ihlette, melyet egy pillangós párnahuzatból készült fűző koronáz meg.",
+            "kepek": ["../kepek/jozsaa/ruha9/22.jpg","../kepek/jozsaa/ruha9/23.jpg","../kepek/jozsaa/ruha9/24.jpg","../kepek/jozsaa/ruha9/25.jpg","../kepek/jozsaa/ruha9/26.jpg","../kepek/jozsaa/ruha9/27.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha9/kicsi/15.jpg","../kepek/jozsaa/ruha9/kicsi/16.jpg","../kepek/jozsaa/ruha9/kicsi/17.jpg","../kepek/jozsaa/ruha9/kicsi/18.jpg","../kepek/jozsaa/ruha9/kicsi/19.jpg","../kepek/jozsaa/ruha9/kicsi/20.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 35,
+            "tervezo": "Szórád Nikolett",
+            "fotosnev": "Józsa Anna",
+            "modell": "Bencze Rubina",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Ezt az ujrahasznosított inget a levehető ujjrész teszi igazán érdekessé melynek célja hogy izgalmasabb összeállításokat alkothassunk. Visszaköszön benne a rózsaszín szín és minta találkozása. Szórád Nikolett munkája.",
+            "kepek": ["../kepek/jozsaa/ruha12/30.jpg","../kepek/jozsaa/ruha12/31.jpg","../kepek/jozsaa/ruha12/32.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha12/kicsi/25.jpg","../kepek/jozsaa/ruha12/kicsi/26.jpg","../kepek/jozsaa/ruha12/kicsi/27.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 36,
+            "tervezo": "Tóth Dávid",
+            "fotosnev": "Józsa Anna",
+            "modell": "Buzás Vanda",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "Tóth Dávid által tervezett öltözék egy könnyed nyári nadrág és blúz, melyet a művész  szülővárosa, Zalaegerszeg inspirált.",
+            "kepek": ["../kepek/jozsaa/ruha10/20.jpg","../kepek/jozsaa/ruha10/21.jpg"],
+            "kicsiKepek":["../kepek/jozsaa/ruha10/kicsi/13.jpg","../kepek/jozsaa/ruha10/kicsi/14.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 37,
+            "tervezo": "Wertheim Loretta",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Wertheim Loretta",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "A kifutón látható ruha egy upcycle koncepcióval készült öltözék, a tervező, Wertheim Loretta, egy kidobásra szánt ruhát alakított át egy hordható, elegáns estélyi ruhadarabbá.",
+            "kepek": ["../kepek/fehersz/ruha17/_MG_9487.jpg","../kepek/fehersz/ruha17/_MG_9488.jpg","../kepek/fehersz/ruha17/_MG_9489.jpg","../kepek/fehersz/ruha17/_MG_9491.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha17/kicsi/80.jpg","../kepek/fehersz/ruha17/kicsi/81.jpg","../kepek/fehersz/ruha17/kicsi/82.jpg","../kepek/fehersz/ruha17/kicsi/83.jpg"],
+			"kollekcio": "Kreativ"
+        },
+        {
+            "id": 38,
+            "tervezo": "Wertheim Loretta",
+            "fotosnev": "Gáll Regina",
+            "modell": "Wertheim Loretta",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "A többféle mintázatú ingdarabból készült, ezek összeollózott egysége által létrejött felsőt, mely a színek harmonikus kombinációját és az aszimmetriát egyarát magában hordozza, Werheim Loretta készítette.",
+            "kepek": ["../kepek/gallr/ruha5/61.jpg","../kepek/gallr/ruha5/62.jpg","../kepek/gallr/ruha5/63.jpg"],
+            "kicsiKepek":["../kepek/gallr/ruha5/kicsi/58.jpg","../kepek/gallr/ruha5/kicsi/59.jpg","../kepek/gallr/ruha5/kicsi/60.jpg"],
+			"kollekcio": "Zero"
+        },
+        {
+            "id": 39,
+            "tervezo": "Balla Robin",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "",
+            "tovabboldalra": "../bebe/ruhaBemutato.html",
+            "szoveg": "",
+            "kepek": ["../kepek/fehersz/ruha18/_MG_9492.jpg","../kepek/fehersz/ruha18/_MG_9493.jpg","../kepek/fehersz/ruha18/_MG_9494.jpg","../kepek/fehersz/ruha18/_MG_9495.jpg","../kepek/fehersz/ruha18/_MG_9496.jpg","../kepek/fehersz/ruha18/_MG_9497.jpg","../kepek/fehersz/ruha18/_MG_9498.jpg"],
+            "kicsiKepek":["../kepek/fehersz/ruha18/kicsi/84.jpg","../kepek/fehersz/ruha18/kicsi/85.jpg","../kepek/fehersz/ruha18/kicsi/86.jpg","../kepek/fehersz/ruha18/kicsi/87.jpg","../kepek/fehersz/ruha18/kicsi/88.jpg","../kepek/fehersz/ruha18/kicsi/89.jpg","../kepek/fehersz/ruha18/kicsi/90.jpg"],
+			"kollekcio": "Kreativ"
         }
     ]
 }
