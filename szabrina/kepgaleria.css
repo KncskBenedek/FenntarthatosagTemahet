@@ -21,7 +21,20 @@ html{
   min-width: fit-content;
 }
 
-/*-----------------------Menü-----------------------*/
+::-webkit-scrollbar {
+  width: auto;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c364f; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #15b374; 
+}
 
 /*-----------------------header-----------------------*/
 .MSZ_header{
@@ -58,7 +71,6 @@ html{
 }
 .MSZ_menu button{
   cursor: pointer;
-  margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -271,6 +283,11 @@ footer{
   }
   .MSZ_headTarolo{
     grid-template-columns: 1fr;
+  }
+  .MSZ_menu{
+    grid-template-columns: auto;
+    width: 50%;
+    padding: 20px;
   }
 }
 @media (min-width: 600px) {

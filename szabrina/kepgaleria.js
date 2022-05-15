@@ -10,7 +10,7 @@ let slideIndex = 0;
 function MSZ_init(){
     MSZ_slider();
     MSZ_slider2();
-    jsonbolOlvas();
+    CLASS("zero").addEventListener("click",valaszt);
   }
 
 
@@ -37,6 +37,11 @@ function MSZ_slider2() {
   setTimeout(MSZ_slider2, 2000);
 }
 
+function valaszt(){
+  console.log(event.target);
+  event.target.onclick = jsonbolOlvas();
+  event.target.removeEventListener("click",valaszt);
+}
 
 function MSZ_kepbetolt(data) {
   console.log(data);
@@ -46,14 +51,17 @@ function MSZ_kepbetolt(data) {
       var galeriaDIV = document.querySelector("#MSZ_galeria");
 
       for (const key in data.kepek) {
-          var clone = tDIV.content.cloneNode(true);
-          var td = clone.querySelectorAll("span");
-          td[0].textContent = data.kepek[key].tervezo;
-          td[1].textContent = data.kepek[key].fotosnev;
-          clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].kicsiKepek[0]})`;
-          clone.querySelector(".MSZ_btn").id = data.kepek[key].id;
-          //clone.querySelector("a").href = data.kepek[key].tovabboldalra;
-          galeriaDIV.appendChild(clone);
+          if(data.kepek[key].kollekcio=="Zero"){
+            var clone = tDIV.content.cloneNode(true);
+            var td = clone.querySelectorAll("span");
+            td[0].textContent = data.kepek[key].tervezo;
+            td[1].textContent = data.kepek[key].fotosnev;
+            clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].kicsiKepek[0]})`;
+            clone.querySelector(".MSZ_btn").id = data.kepek[key].id;
+            //clone.querySelector("a").href = data.kepek[key].tovabboldalra;
+            galeriaDIV.appendChild(clone); 
+        }  
+        } 
       }
       console.log(document.querySelectorAll(".MSZ_btn"));
       const gombTomb = document.querySelectorAll(".MSZ_btn");
@@ -67,7 +75,6 @@ function MSZ_kepbetolt(data) {
           });
       });
   }
-}
 
 function jsonbolOlvas(){
   fetch('kepek.json')
