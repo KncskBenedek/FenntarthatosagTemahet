@@ -6,6 +6,20 @@ body {
 
 }
 
+
+
+#animacio {
+    /*
+      All of the base styles have
+      moved to the “CSS” tab above.
+    */
+    transition: transform 250ms;
+  }
+  
+  #animacio:hover {
+    transform: translateY(-10px);
+  }
+
 /*Navig�ci�s b�r*/
 .navbar {
     background-color: black;
