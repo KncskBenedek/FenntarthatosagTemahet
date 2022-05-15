@@ -17,97 +17,73 @@
 
 html{
   width: 100%;
-  background: linear-gradient(to right, #f4e8c2, #a88952);
+  background: linear-gradient(to right, #f4e8c2, #2c364f);
   min-width: fit-content;
 }
 
 /*-----------------------Menü-----------------------*/
-.navbar {
-    background-color: black;
-    height: 4vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    grid-area: na;
-    border: 2px solid black;
-    width: auto;
-  }
-  
-  .navbar h1 {
-    color: white;
-  }
-  .navicon {
-    display: none;
-    cursor: pointer;
-  }
-  .navicon div {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px;
-    transition: 500ms;
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 60%;
-  }
-  .container li {
-    list-style-type: none;
-  }
-  .container a {
-    position: relative;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: 500ms;
-  }
-  .container a:after {
-    content: "";
-    position: absolute;
-    background-color: #ffffff;
-    height: 3px;
-    width: 0%;
-    left: 0;
-    bottom: -7px;
-    transition: 0.3s;
-  }
-  .container a:hover:after {
-    transition: 500ms;
-    width: 100%;
-    text-decoration: none;
-  }
-  .container a:hover {
-    font-size: 18px;
-    color: #ebd7b4;
-    transition: 500ms;
-  }
+
 /*-----------------------header-----------------------*/
 .MSZ_header{
     grid-area: hea;
     width: auto;
     padding-top: 60px;
     padding-bottom: 40px;
-    background: linear-gradient(to right, #a7a18b, #927646);
+    background: linear-gradient(to right, #a7a18b, #2c364f);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1), 0 40px 40px rgba(0, 0, 0, 0.1), 0 80px 80px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
-}
+ 
 
-
-.MSZ_slide{
-  display: none;
 }
-.MSZ_slide_keret{
+.MSZ_headTarolo{
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.MSZ_slide-container{
   height: 100%;
   width: 300px;
-  background-color: rgba(255, 255, 255, 0);
+  margin: auto;
+}
+.MSZ_slide-container2{
+  height: 100%;
+  width: 300px;
+  margin: auto;
+}
+.MSZ_menu{
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 80px;
+}
+.MSZ_menu button{
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #2c364f;
+  border: none;
+  width: 100%;
+}
+.MSZ_slide2{
+  display: none;
+}
+.MSZ_slide{
+  display: none;
 }
 .MSZ_slide_keret img{
   width: 100%;
   vertical-align: middle;
 
 }
-
+.MSZ_slide_keret2 img{
+  width: 100%;
+  vertical-align: middle;
+}
 
 .active {
   background-color: #717171;
@@ -145,7 +121,6 @@ html{
   padding: 1rem;
   max-width: 1400px;
   margin: 0 auto;
-  font-family: var(--font-sans);
 }
 
 .MSZ_kartya {
@@ -153,12 +128,12 @@ html{
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: 1rem;
   width: 100%;
   height: 500px;
   text-align: center;
   color: whitesmoke;
-  background-color: whitesmoke;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
 
@@ -170,7 +145,6 @@ html{
   top: 0;
   left: 0;
   background-size: cover;
-
   transition: transform calc(var(--d) * 1.5) var(--e);
   pointer-events: none;
 }
@@ -209,27 +183,24 @@ html{
 }
 
 .MSZ_copy{
-  font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-style: italic;
   line-height: 1.35;
 }
 .MSZ_copy dt{
-  font-style: normal;
   font-weight: bold;
-
+  text-transform: uppercase;
 }
 
 .MSZ_btn {
   cursor: pointer;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.025rem;
   text-transform: uppercase;
   color: white;
-  background-color: black;
+  background-color: #2c364f;
   border: none;
 }
 .MSZ_btn :hover {
@@ -290,26 +261,57 @@ footer{
   }
   body{
     width: 100%;
+    font-size: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  .MSZ_kartya {
+    width: 90%;
+  }
+  .MSZ_headTarolo{
+    grid-template-columns: 1fr;
   }
 }
 @media (min-width: 600px) {
   #MSZ_galeria {
     grid-template-columns: repeat(2, 1fr);
   }
-  #MSZ_kartya {
-    height: 350px;
-  }
 }
 @media (min-width: 800px) {
   #MSZ_galeria {
     grid-template-columns: repeat(4, 1fr);
   }
+  .MSZ_kartya:hover,
+  .MSZ_kartya:focus-within {
+      align-items: center;
+    }
+    .MSZ_kartya:hover:before,
+  .MSZ_kartya:focus-within:before {
+      transform: translateY(-4%);
+    }
+    .MSZ_kartya:hover:after,
+  .MSZ_kartya:focus-within:after {
+      transform: translateY(-50%);
+    }
+    .card:hover .content,
+  .card:focus-within .content {
+      transform: translateY(0);
+    }
+    .card:hover .content > *:not(.title),
+  .card:focus-within .content > *:not(.title) {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc(var(--d) / 8);
+    }
+  
+    .MSZ_kartya:focus-within:before, .MSZ_kartya:focus-within:after,
+  .MSZ_kartya:focus-within .content,
+  .MSZ_kartya:focus-within .content > *:not(.title) {
+      transition-duration: 0s;
+    }
+    .MSZ_kartya:after {
+      transform: translateY(0);
+    }
+    
 }
-@media (hover: hover) and (min-width: 600px) {
-  .MSZ_kartya:after {
-    transform: translateY(0);
-  }
-}
-
-/*------------------------------------------*/
-
