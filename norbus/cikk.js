@@ -1,17 +1,27 @@
-window.addEventListener("load", init())
+window.addEventListener("load", init);
+localStorage.setItem("elem", "a kurva js");
 
-var cikklista = []
+var jsonAdat = [];
 
 function init() {
   tartalom();
-
-  //document.getElementById("tiszta").addEventListener("click", function() { document.getElementById("tiszta").innerHTML = "";});
-  
+  ok();
 }
 
+function ok () {
+  for (let index = 0; index <10; index++) {
+    ID(index).addEventListener("click", asd);
+  }
+
+}
+function asd () {
+  let index = parseInt(event.target.id);
+  localStorage.setItem("egycikk",JSON.stringify(jsonAdat[index]));// jsonAdat[index]);
+  window.location.assign("cikk.html");
+};
 
 function ID(elem) {
-  document.getElementById(elem);
+  return document.getElementById(elem);
 }
 
 
@@ -25,26 +35,19 @@ function tartalom(){
   fetch("ujForras.json")
     .then((response) => response.json())
     .then((data) => {
+      jsonAdat = data.cikkek;
       megjelenit(data.cikkek);
     })
     .catch((err) => console.log("hiba", err));
 }
 
-function megjelenit(cikkek,classSzam) {
+function megjelenit(cikkek) {
   var cikkekSzama = 1;
-  var cikklista =[]
-  var cikkekSzamaSeged =1
-  var cimSzam = 1;
-  var cikkSzam =1;
-  var alcimSzam = 1;
-  var siker =0;
-  
 
   for (const kulcs in cikkek) {
     let aktualisCikk = cikkek[kulcs];
     let txt = "";
-    let txt2 = ""
-    txt += `<div class = "${cikkekSzama}">`;
+    //txt += `<div class = "${cikkekSzama}">`;
     cikkekSzama++;
     for (const data in aktualisCikk) {
         if(data === "cim") {
@@ -62,8 +65,7 @@ function megjelenit(cikkek,classSzam) {
         } else if (data === "szerzo") {
           txt += `<div class = "szerzo">`;
           txt += `<p=>${aktualisCikk[data]}</p>`;
-          txt += "</div>";
-          cikklista.push(txt); 
+          txt += "</div>"; 
         }else if (data === "link") {
           txt += `<div class = "link">`;
           txt += `<a href="${aktualisCikk[data]}">Forrás</a>`;
@@ -76,26 +78,12 @@ function megjelenit(cikkek,classSzam) {
           txt += `<div class = "kep">`;
           txt += `<img src= "${aktualisCikk[data]}" alt="kep">`;
           txt += "</div>";
-        }else if (data === "szerzoSeged") {
-          siker++;
-          var seged =aktualisCikk[data]
-          var szerzoszam = seged[0]
-          var cikkSeged =cikklista[szerzoszam]
-          if (siker=>1) {
-            div = document.createElement('div');
-            div.id = aktualisCikk[data];
-            div.innerHTML = cikklista[szerzoszam];
-            document.body.appendChild(div);
+        }
+        //txt += "</div>";
           }
-
-          
         }
         
-
         
-        txt += "</div>";
-          }
-        } 
         } 
         
 
