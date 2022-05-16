@@ -42,6 +42,28 @@ article {
   width: 100%;
   object-fit: cover;
 }
+/*Stagger animáció készítése*/
+.adatAnimacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.staggeran {
+  width: 420px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.kocka {
+  border: 1px solid white;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
 /*Scroll animációk beállitások*/
 .scrollAnimacio div {
   height: auto;

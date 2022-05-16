@@ -18,30 +18,45 @@
 }
 
 .alapKiskepek{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+ /*  grid-template-columns: 1fr 1fr 1fr; */
+/*  grid-template-areas: "img img img"; */
+flex-direction: row;
+justify-content: center;
+
 }
 
 .ketKisKep{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+ /*  display: grid;
+   grid-template-columns: 1fr 1fr; 
+  grid-template-areas: "img img"; */
+  display: flex;
+ flex-direction: row;
+ justify-content: center;
 }
 
 #kisLeptetoCont{
+  display: flex;
+  flex-direction: row;
   margin: 10px;
-  border: 1px solid rgb(121, 121, 121);
+ /*  border: 1px solid rgb(121, 121, 121);
+   width: 50%; */ 
 }
 #kisKepek img{
-  width: 100%;
-  padding: 10px;
-  height: 100%;
+  grid-area: img;
+  overflow: hidden;
+  padding: 3px;
+  height: 12vw;
+  width: 9vw;
 }
 
 #nagyKep{
   overflow: hidden;
-  width: 50vw;
-  height: 70vw;
+  width: 495px;
+  height: 740px;
 }
 
-
-
+button{
+  position: relative;
+  top: 40%;
+}

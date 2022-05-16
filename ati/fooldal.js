@@ -20,6 +20,12 @@ const scroll = QS(".scroll");
 const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
 const content = QS(".content");
+const staggeran = QS(".staggeran");
+const adatAnimacio = QS(".adatAnimacio");
+var szazalekok = [];
+var szovegek = [];
+
+let szamSzazalek = 0;
 var lathato = true;
 
 const linkek = document.querySelectorAll(".container li");
@@ -31,35 +37,54 @@ scrollAnimacio(".b2", tesztek);
 scrollAnimacio(".b3", galeria);
 
 // föóldal anímációk
-tl.fromTo(hero, 1, { height: "0%" }, { height: "80%", ease: Power2.easeInOut })
-  .fromTo(
-    hero,
-    1.2,
-    { width: "100%" },
-    { width: "85%", ease: Power2.easeInOut }
-  )
-  .fromTo(
-    slider,
-    1.2,
-    { x: "-100%" },
-    { x: "0%", ease: Power2.easeInOut },
-    "-=1.2"
-  )
-  .fromTo(
-    navbar,
-    1.2,
-    { y: "-100%" },
-    { y: "0%", ease: Power2.easeInOut },
-    "-=1.2"
-  )
-  .fromTo(
-    footer,
-    1.2,
-    { y: "100%" },
-    { y: "0%", ease: Power2.easeInOut },
-    "-=1.2"
-  );
 
+function init() {
+  beuszasok();
+  navSlide();
+  tartalom();
+  generalas();
+  navIcon.addEventListener("click", videoNincs);
+  //animacioPirosa();
+  adatLeptetes();
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}
+function beuszasok() {
+  tl.fromTo(
+    hero,
+    1,
+    { height: "0%" },
+    { height: "80%", ease: Power2.easeInOut }
+  )
+    .fromTo(
+      hero,
+      1.2,
+      { width: "100%" },
+      { width: "85%", ease: Power2.easeInOut }
+    )
+    .fromTo(
+      slider,
+      1.2,
+      { x: "-100%" },
+      { x: "0%", ease: Power2.easeInOut },
+      "-=1.2"
+    )
+    .fromTo(
+      navbar,
+      1.2,
+      { y: "-100%" },
+      { y: "0%", ease: Power2.easeInOut },
+      "-=1.2"
+    )
+    .fromTo(
+      footer,
+      1.2,
+      { y: "100%" },
+      { y: "0%", ease: Power2.easeInOut },
+      "-=1.2"
+    );
+}
 const navSlide = () => {
   navIcon.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -77,15 +102,6 @@ const navSlide = () => {
   });
 };
 
-function init() {
-  navSlide();
-  tartalom();
-  navIcon.addEventListener("click", videoNincs);
-  setTimeout(() => {
-    ScrollTrigger.refresh();
-  }, 100);
-}
-
 function scrollAnimacio(belso, kulso) {
   if (window.innerWidth <= 770) {
     gsap.to(belso, {
@@ -96,7 +112,7 @@ function scrollAnimacio(belso, kulso) {
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 4,
+      x: kulso.offsetWidth / 4,
       duration: 2,
       opacity: 1,
       color: "#2c364f;",
@@ -117,14 +133,13 @@ function scrollAnimacio(belso, kulso) {
     gsap.to(belso, {
       scrollTrigger: {
         trigger: belso,
-        startTrigger: "500px",
         start: "top 90%",
         end: "top 90%",
         scrub: true,
         markers: true,
         toggleActions: "restart none reverse none",
       },
-      x: cikkek.offsetWidth / 4,
+      x: kulso.offsetWidth / 4,
       duration: 2,
       opacity: 1,
       color: "#2c364f;",
@@ -143,20 +158,83 @@ function scrollAnimacio(belso, kulso) {
     });
   }
 }
+
+function generalas() {
+  for (var index = 0; index < 64; index++) {
+    staggeran.innerHTML += `<div class="kocka"></div>`;
+  }
+
+  fetch("ati/fooldal.json")
+    .then((response) => response.json())
+    .then((data) => {
+      adatTarolas(data.adatok);
+    })
+    .catch((err) => console.log("hiba", err));
+}
+function adatTarolas(jsonName) {
+  for (let index = 0; index < jsonName.length; index++) {
+    szovegek.push(jsonName[index].szoveg);
+    //console.log(jsonName[index].szazalek);
+    szazalekok.push(jsonName[index].szazalek);
+  }
+  console.log(szovegek);
+  console.log(szazalekok);
+  animacioPirosa();
+  //}
+}
+function animacioPirosa() {
+  eddig = Math.floor(64 * (szazalekok[4] / 100));
+  //console.log(szamSzazalek);
+
+  let targets = gsap.utils.toArray(".kocka").slice(0, eddig);
+
+  gsap.to(targets, {
+    scale: 0.4,
+    background: "red",
+    duration: 2,
+    stagger: {
+      each: 0.1,
+    },
+    scrollTrigger: {
+      trigger: staggeran,
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "play none reverse none",
+    },
+  });
+}
+function adatLeptetes() {
+  setInterval(() => {
+    tl.fromTo(
+      adatAnimacio,
+      1.5,
+      { x: "0%" },
+      { x: "-100%", ease: Power2.easeInOut }
+    ).fromTo(
+      adatAnimacio,
+      1.5,
+      { x: "-100%" },
+      { x: "0%", ease: Power2.easeInOut },
+      "+=3"
+    );
+  }, 5000);
+}
+
 function tartalom() {
   fetch("ati/fooldal.json")
     .then((response) => response.json())
     .then((data) => {
-      megjelenit(data.bevezeto);
+      megjelenitBevezeto(data.bevezeto);
     })
     .catch((err) => console.log("hiba", err));
 }
-function megjelenit(bevezeto) {
-  for (let index = 1; index < bevezeto.length + 1; index++) {
+function megjelenitBevezeto(jsonName) {
+  for (let index = 1; index < jsonName.length + 1; index++) {
     txt = "";
-    txt += `<h3>${bevezeto[index - 1].cim}</h3>`;
-    for (const key in bevezeto[index - 1].bekezdes) {
-      txt += `<li>${bevezeto[index - 1].bekezdes[key]}</li>`;
+    txt += `<h3>${jsonName[index - 1].cim}</h3>`;
+    for (const key in jsonName[index - 1].bekezdes) {
+      txt += `<li>${jsonName[index - 1].bekezdes[key]}</li>`;
     }
     QS(".b" + index).innerHTML = txt;
   }
