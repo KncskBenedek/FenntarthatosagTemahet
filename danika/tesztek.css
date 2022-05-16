@@ -14,11 +14,20 @@ article, div{
     border-radius: 10px;
 }
 
+.dl_tesztnev:hover{
+    cursor: pointer;
+    color: white;
+}
+
 .dl_tesztdoboz{
     margin-bottom: 10px;
     background-color: azure;
     border: none;
     border-radius: 5px;
+}
+
+h1{
+    text-align: center;
 }
 
 .t_tipus{
@@ -27,7 +36,7 @@ article, div{
     margin-bottom: 10px;
 }
 
-#gomb{
+.gombok{
     display: block;
     margin: auto;
     font-size: 17px;
@@ -37,7 +46,7 @@ article, div{
     border-radius: 5px;
 }
 
-#gomb:hover{
+.gombok:hover{
     background-color: rgb(75, 115, 190);
     border-color: rgb(75, 115, 190);
     cursor: pointer;

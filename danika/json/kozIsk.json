@@ -66,7 +66,7 @@
                     "helyesV":"csak 2-3 évente cserélem"
                 },
                 {
-                    "kerdes":"11. Mi a legjobb alternatíva a nejlon zacskókra?",
+                    "kerdes":"10. Mi a legjobb alternatíva a nejlon zacskókra?",
                     "v1":"vászon szatyrok",
                     "v2":"papír zacskók",
                     "v3":"erősebb műanyagból készült szatyrok",
@@ -77,7 +77,7 @@
         {
             "checkbox" :[
                 {
-                    "kerdes":"10. Hova tegyük az üveget?",
+                    "kerdes":"11. Hova tegyük az üveget?",
                     "v1":"A színes üveghulladékok közé dobjuk a kupak nélküli boros-, pezsgős, sörös- és röviditalos színesüvegeket, természetesen átöblítés után, tisztán.",
                     "v2":"csak szimplán kidobjuk",
                     "v3":"A fehérüveg-hulladékok közé csak az olyan elöblített üvegeket dobjuk, amelyek átlátszók. Ilyen például a dunsztosüveg, a tejesüveg, bébiételes üveg stb.",
