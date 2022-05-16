@@ -6,11 +6,16 @@ localStorage.getItem("aktualis");
     jobra gomb
     kisképre kattintva nagyképként kiemel
 */
+var lepteto = 0;
+var vege = 2;
 function ID(elem) {
     return document.getElementById(elem);
 }
 function $(elem) {
     return document.querySelector(elem);
+}
+function QS(elem){
+    return document.querySelectorAll(elem);
 }
 const kepekArr = [];
 window.addEventListener("load", function () {
@@ -35,13 +40,16 @@ window.addEventListener("load", function () {
     //slide elemek, kepek elemek
     
     let hossz = ruhaJson.kepek.length;
+
+    //console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa "+ruhaJson.kepek.length);
+
     for (let index = 0; index < hossz; index++) {
         kepekArr.push(ruhaJson.kepek[index]);
         if (index === 0) {
-            indicators += `<li data-target="#nagyKep" data-slide-to="${index}" class="active"></li>`;
+            indicators += `<li data-target="#nagyKep" data-slide-to="${index}" class="ind active"></li>`;
             kepek += `<div class="carousel-item active"><img src="${ruhaJson.kepek[index]}" alt="Los Angeles" /></div>`;
         } else {
-            indicators += `<li data-target="#nagyKep" data-slide-to="${index}"></li>`;
+            indicators += `<li data-target="#nagyKep" data-slide-to="${index}" class="ind"></li>`;
             kepek += `<div class="carousel-item"><img src="${ruhaJson.kepek[index]}" class="belsoNagyKep" alt="Los Angeles" /></div>`;
         }
 
@@ -55,13 +63,16 @@ window.addEventListener("load", function () {
           <a class="carousel-control-next" href="#nagyKep" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>`;
-    console.log(indicators);
-    console.log(kepek);
-    console.log(gombok);
+
     let nagykep = indicators + kepek + gombok;
     ID("nagyKep").innerHTML += nagykep;
-    console.log(kepekArr);
+   
     kezd(kepekArr);
+    let ho = kepekArr.length === 2? 2: 3;
+    for (let index = 0; index < ho; index++) {
+        ID(`kisKep${index}`).addEventListener("click", nagyKepLesz);
+    }
+
 }
 });
 
@@ -72,9 +83,9 @@ function kezd(tombKepek){
     }else{
         alsoKepek = `<div id="kisLeptetoCont"> <div class="gomb"><button id="bal"><<</button> </div><div id="kisKepek" class="alapKiskepek">`;
     }
-    let meddig = alsoKepek.length === 2?2:3;
+    let meddig = tombKepek.length === 2?2:3;
     for (let index = 0; index < meddig; index++) {
-        alsoKepek+= `<div> <img src="${tombKepek[index]}"></div>`;
+        alsoKepek+= `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi"></div>`;
     }    
     if(tombKepek.length <=3){
     alsoKepek += `</div></div> `;
@@ -82,5 +93,85 @@ function kezd(tombKepek){
     }else{
         alsoKepek += `</div> <div class="gomb"> <button id="jobb">>></button> </div> </div> `;
     }
-    ID("kepekContainer").innerHTML += alsoKepek;
+    ID("leiras").innerHTML += alsoKepek;
+
+    ID("jobb").addEventListener("click", jobbra);
+    ID("bal").addEventListener("click", balra);
+    
 }
+
+function balra() {
+    let n = lepteto;
+    
+    for (let index = 0; index < 3; index++) {
+        lepteto++;
+        console.log("amit felvesz: "+lepteto);
+        if(lepteto < kepekArr.length){
+            ID("kisKep"+index).src = kepekArr[lepteto];
+            if(index === 0){
+                console.log("belép"+lepteto);
+                n = lepteto;
+            }
+        }else{
+            lepteto = 0;
+            if(index === 0){
+                console.log("belép"+lepteto);
+                n = lepteto;
+            }
+            ID("kisKep"+index).src = kepekArr[lepteto];
+        }
+    }
+    vege = lepteto
+    lepteto = n;
+    console.log(lepteto +", "+ vege);
+}
+
+function jobbra() {
+    let n = 0;
+    for (let index = 2; index>=0 ; index--) {
+        vege--;
+        if(vege >= 0){
+            ID("kisKep"+index).src = kepekArr[vege];
+            if(index === 2){
+                console.log("belép"+vege);
+                n = vege;
+            }
+        }else{
+            vege = kepekArr.length-1;
+            if(index === 2){
+                console.log("belép"+vege);
+                n = vege;
+            }
+            ID("kisKep"+index).src = kepekArr[vege];
+        }
+    }
+    lepteto = vege
+    vege = n;
+    console.log(lepteto +", "+ vege);
+}
+
+function nagyKepLesz(){
+    
+    let ut = event.target.src;
+    let i = 0;
+    let alapUt = kepekArr[i].replace("..", "");
+    while(!(ut.includes(alapUt))){
+        i++;
+        alapUt = kepekArr[i].replace("..", "");
+    }
+    if(i < kepekArr.length){
+        console.log("Assaasd");
+       // console.log(indicators);
+        fag();
+        QS(".carousel-item")[i].className = "carousel-item active";
+        QS(".ind")[i].className = "ind active"
+    }
+}
+function fag (){
+    for (let index = 0; index < kepekArr.length; index++) {
+        QS(".ind")[index].className = "ind";
+        QS(".carousel-item")[index].className = "carousel-item"; 
+    }
+          
+    }
+
