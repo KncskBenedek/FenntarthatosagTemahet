@@ -43,6 +43,11 @@ article {
   object-fit: cover;
 }
 /*Stagger animáció készítése*/
+.adatAnimacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .staggeran {
   width: 420px;
   height: 200px;

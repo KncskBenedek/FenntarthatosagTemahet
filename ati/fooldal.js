@@ -21,6 +21,11 @@ const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
 const content = QS(".content");
 const staggeran = QS(".staggeran");
+const adatAnimacio = QS(".adatAnimacio");
+var szazalekok = [];
+var szovegek = [];
+
+let szamSzazalek = 0;
 var lathato = true;
 
 const linkek = document.querySelectorAll(".container li");
@@ -32,6 +37,19 @@ scrollAnimacio(".b2", tesztek);
 scrollAnimacio(".b3", galeria);
 
 // föóldal anímációk
+
+function init() {
+  beuszasok();
+  navSlide();
+  tartalom();
+  generalas();
+  navIcon.addEventListener("click", videoNincs);
+  //animacioPirosa();
+  adatLeptetes();
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}
 function beuszasok() {
   tl.fromTo(
     hero,
@@ -83,18 +101,6 @@ const navSlide = () => {
     navIcon.classList.toggle("toggle");
   });
 };
-
-function init() {
-  beuszasok();
-  navSlide();
-  tartalom();
-  navIcon.addEventListener("click", videoNincs);
-  generalas();
-  animacioPirosa();
-  setTimeout(() => {
-    ScrollTrigger.refresh();
-  }, 100);
-}
 
 function scrollAnimacio(belso, kulso) {
   if (window.innerWidth <= 770) {
@@ -161,22 +167,26 @@ function generalas() {
   fetch("ati/fooldal.json")
     .then((response) => response.json())
     .then((data) => {
-      adatMegjelenites(data.adatok);
+      adatTarolas(data.adatok);
     })
     .catch((err) => console.log("hiba", err));
 }
-function adatMegjelenites(jsonName) {
+function adatTarolas(jsonName) {
   for (let index = 0; index < jsonName.length; index++) {
-    txt = "";
-    txt += `<h3>${jsonName[index].szoveg}</h3>`;
-
-    QS(".adatok").innerHTML = txt;
-    //var szamSzazalek = Number("0" + jsonName[index].sza);
+    szovegek.push(jsonName[index].szoveg);
+    //console.log(jsonName[index].szazalek);
+    szazalekok.push(jsonName[index].szazalek);
   }
+  console.log(szovegek);
+  console.log(szazalekok);
+  animacioPirosa();
+  //}
 }
-
 function animacioPirosa() {
-  let targets = gsap.utils.toArray(".kocka").slice(0, 64 /** szamSzazalek*/);
+  eddig = Math.floor(64 * (szazalekok[4] / 100));
+  //console.log(szamSzazalek);
+
+  let targets = gsap.utils.toArray(".kocka").slice(0, eddig);
 
   gsap.to(targets, {
     scale: 0.4,
@@ -193,6 +203,22 @@ function animacioPirosa() {
       toggleActions: "play none reverse none",
     },
   });
+}
+function adatLeptetes() {
+  setInterval(() => {
+    tl.fromTo(
+      adatAnimacio,
+      1.5,
+      { x: "0%" },
+      { x: "-100%", ease: Power2.easeInOut }
+    ).fromTo(
+      adatAnimacio,
+      1.5,
+      { x: "-100%" },
+      { x: "0%", ease: Power2.easeInOut },
+      "+=3"
+    );
+  }, 5000);
 }
 
 function tartalom() {
