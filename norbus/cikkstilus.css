@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
 
 
+
+#egycikk * {
+    padding: 20px;
+}
+
 body {
     margin :auto;
 
@@ -8,15 +13,11 @@ body {
 
 
 
-#animacio {
-    /*
-      All of the base styles have
-      moved to the “CSS” tab above.
-    */
+.animacio {
     transition: transform 250ms;
   }
   
-  #animacio:hover {
+  .animacio:hover {
     transform: translateY(-10px);
   }
 
