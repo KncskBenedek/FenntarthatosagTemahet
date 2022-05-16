@@ -24,8 +24,24 @@
   ],
   "adatok": [
     {
-      "szoveg": "asdasdasdasdsa",
-      "szazalek": "76"
+      "szoveg": "Szoveg1",
+      "szazalek": "10"
+    },
+    {
+      "szoveg": "Szoveg2",
+      "szazalek": "20"
+    },
+    {
+      "szoveg": "Szoveg3",
+      "szazalek": "30"
+    },
+    {
+      "szoveg": "Szoveg4",
+      "szazalek": "40"
+    },
+    {
+      "szoveg": "Szoveg5",
+      "szazalek": "50"
     }
   ]
 }
