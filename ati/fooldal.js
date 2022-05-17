@@ -86,7 +86,7 @@ function beuszasok() {
     );
 }
 //const navSlide = () => {
-  function navSlide () {
+function navSlide() {
   navIcon.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 
@@ -101,7 +101,7 @@ function beuszasok() {
     });
     navIcon.classList.toggle("toggle");
   });
-};
+}
 
 function scrollAnimacio(belso, kulso) {
   if (window.innerWidth <= 770) {
@@ -160,7 +160,7 @@ function scrollAnimacio(belso, kulso) {
   }
 }
 function kepTartalom() {
-  fetch("szabrina/kepek.json")
+  fetch("../szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
       kepGaleria(data.kepek);
@@ -177,7 +177,7 @@ function kepGaleria(jsonName) {
   setInterval(() => {
     randomIndex = Math.floor(Math.random() * jsonName.length);
     console.log(randomIndex);
-    
+
     ID("kep1").style.opacity = "0";
     ID("kep1").style.transitionDuration = "500ms";
     ID("kep2").style.opacity = "0";
@@ -192,8 +192,6 @@ function kepGaleria(jsonName) {
       ID("kep2").style.opacity = "1";
       ID("kep2").style.transitionDuration = "500ms";
     }, 550);
-   
-    
   }, 5000);
 }
 
