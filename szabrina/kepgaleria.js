@@ -10,7 +10,8 @@ let slideIndex = 0;
 function MSZ_init() {
   MSZ_slider();
   MSZ_slider2();
-  CLASS("zero").addEventListener("click", valaszt);
+  CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero") });
+  CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ") });
 }
 
 
@@ -37,21 +38,27 @@ function MSZ_slider2() {
   setTimeout(MSZ_slider2, 2000);
 }
 
-function valaszt() {
+/* function valaszt() {
   console.log(event.target);
   event.target.onclick = jsonbolOlvas();
-  event.target.removeEventListener("click", valaszt);
 }
+function valaszt2() {
+  console.log(event.target);
+  event.target.onclick = jsonbolOlvas2();
+} */
 
-function MSZ_kepbetolt(data) {
+function MSZ_kepbetolt(data, koll) {
   console.log(data);
-
+  document.querySelector("#MSZ_galeria").innerHTML = "";
   if ("content" in document.createElement("template")) {
     var tDIV = document.querySelector("#MSZ_tarolo");
     var galeriaDIV = document.querySelector("#MSZ_galeria");
 
+
+
     for (const key in data.kepek) {
-      if (data.kepek[key].kollekcio == "Zero") {
+      console.log(data.kepek[key].kollekcio)
+      if (data.kepek[key].kollekcio == koll) {
         var clone = tDIV.content.cloneNode(true);
         var td = clone.querySelectorAll("span");
         td[0].textContent = data.kepek[key].tervezo;
@@ -76,10 +83,13 @@ function MSZ_kepbetolt(data) {
   });
 }
 
-function jsonbolOlvas() {
+
+
+
+function jsonbolOlvas(koll) {
   fetch('kepek.json')
     .then(response => response.json())
-    .then(data => MSZ_kepbetolt(data));
+    .then(data => MSZ_kepbetolt(data, koll));
 }
 
 function kattint(aktKep) {
