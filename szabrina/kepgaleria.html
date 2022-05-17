@@ -1,83 +1,91 @@
 <!DOCTYPE html>
 <html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="kepgaleria.css" />
+    <script src="kepgaleria.js"></script>
+    <title>Fentarthatósági témahét Számalk-Szalézi 2022</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css" />
-  <link rel="stylesheet" href="kepgaleria.css" />
-  <script src="kepgaleria.js"></script>
-  <title>Fentarthatósági témahét Számalk-Szalézi 2022</title>
-</head>
+  <body>
+    <main class="MSZ_main">
+      <nav class="navbar">
+        <h1>logo</h1>
+        <ul class="container">
+          <li><a href="../index.html">Főoldal</a></li>
+          <li><a href="../norbus/cikkek.html">Cikkek</a></li>
+          <li><a href="../danika/tesztek.html">Teszt kérdések</a></li>
+          <li><a href="kepgaleria.html">Galéria</a></li>
+          <li><a href="../jatek/jatek.html">Játék</a></li>
+        </ul>
+        <div class="navicon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
 
-<body>
-  <main class="MSZ_main">
-    <nav class="navbar">
-      <h1>logo</h1>
-      <ul class="container">
-        <li><a href="../index.html">Főoldal</a></li>
-        <li><a href="../norbus/cikkek.html">Cikkek</a></li>
-        <li><a href="../danika/tesztek.html">Teszt kérdések</a></li>
-        <li><a href="kepgaleria.html">Galéria</a></li>
-        <li><a href="../jatek/jatek.html">Játék</a></li>
-      </ul>
-      <div class="navicon">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
+      <header class="MSZ_header">
+        <div id="MSZ_headTarolo">
+          <div id="MSZ_slide-container">
+            <div class="MSZ_slide">
+              <div class="MSZ_slide_keret">
+                <img
+                  src="../kepek/gallr/ruha10/39.jpg"
+                  id="slideKep"
+                  alt="kep"
+                />
+              </div>
+            </div>
+          </div>
 
-    <header class="MSZ_header">
-      <div id="MSZ_headTarolo">
-        <div id="MSZ_slide-container">
-          <div class="MSZ_slide fade">
-            <div class="MSZ_slide_keret">
-              <img src="../kepek/gallr/ruha10/39.jpg" id="slideKep" alt="kep" />
+          <div class="MSZ_menu">
+            <button class="zero">Zero</button>
+            <button class="kreativ">Kreatív</button>
+          </div>
+          <div id="MSZ_slide-container2">
+            <div class="MSZ_slide2">
+              <div class="MSZ_slide_keret2">
+                <img
+                  src="../kepek/fehersz/ruha10/image1.jpg"
+                  id="slideKep2"
+                  alt="kep"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </header>
 
-        <div class="MSZ_menu">
-          <button class="zero">Zero</button>
-          <button class="kreativ">Kreatív</button>
+      <article class="MSZ_article">
+        <div id="szoveg">
+          <div class="cim"></div>
+          <div class="sz"><h3>Kérlek válassz témát!</h3></div>
+          <div class="felsorol"></div>
+          <div class="sz2"></div>
         </div>
-        <div id="MSZ_slide-container2">
-          <div class="MSZ_slide2 fade">
-            <div class="MSZ_slide_keret2">
-              <img src="../kepek/fehersz/ruha10/_MG_9437.jpg" id="slideKep2" alt="kep" />
+        <div id="MSZ_galeria"></div>
+
+        <template id="MSZ_tarolo">
+          <div class="MSZ_kartya">
+            <div class="MSZ_content">
+              <dl class="MSZ_copy">
+                <dt>Tervező:</dt>
+                <dd><span></span></dd>
+                <br />
+                <dt>Fotós neve:</dt>
+                <dd><span></span></dd>
+              </dl>
+              <br />
+              <button class="MSZ_btn">Tovább az oldalra</button>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-
-    <article class="MSZ_article">
-      <div id="szoveg">
-
-      </div>
-      <div id="MSZ_galeria">
-      </div>
-
-      <template id="MSZ_tarolo">
-        <div class="MSZ_kartya">
-          <div class="MSZ_content">
-            <dl class="MSZ_copy">
-              <dt>Tervező:</dt>
-              <dd><span>XY</span></dd>
-              <br>
-              <dt>Fotós neve:</dt>
-              <dd><span>ZX</span></dd>
-            </dl>
-            <br>
-            <button class="MSZ_btn">Tovább az oldalra</button>
-          </div>
-        </div>
-      </template>
-    </article>
-    <footer>Fentarthatósági témahét Számalk-Szalézi 2022</footer>
-  </main>
-</body>
-
+        </template>
+      </article>
+      <footer>Fentarthatósági témahét Számalk-Szalézi 2022</footer>
+    </main>
+  </body>
 </html>
