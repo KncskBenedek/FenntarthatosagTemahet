@@ -15,6 +15,30 @@ let sorhossz = 4;
 
 window.addEventListener("load", jatekKezd);
 
+function init() {
+    
+}
+
+
+function scrollJatek() {
+
+    tlegycikk.fromTo(ID("jatek"), 0, { y: "0%" }, { y: "-200%" });
+  
+    gsap.to(ID("jatek"), {
+      scrollTrigger: {
+        trigger: ID("jatek"),
+        start: "top 90%",
+        end: "top 90%",
+        markers: false,
+        toggleActions: "restart none reverse none",
+      },
+      y:"0%",
+      duration:4
+    })
+  
+  }
+
+
 function megfordit() {
     let id = event.target.id;
     if (hol.length <= 1) {
