@@ -46,26 +46,23 @@ html{
     background: linear-gradient(to right, #a7a18b, #2c364f);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1), 0 40px 40px rgba(0, 0, 0, 0.1), 0 80px 80px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-.MSZ_slide{
-  display: none;
-}
 .MSZ_slide_keret{
-  height: 100%;
   width: 300px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0);
 }
 
-.MSZ_headTarolo{
+#MSZ_headTarolo{
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.MSZ_slide-container{
-  height: 100%;
+#MSZ_slide-container{
   width: 300px;
+  height: 100%;
   margin: auto;
 }
-.MSZ_slide-container2{
+#MSZ_slide-container2{
   height: 100%;
   width: 300px;
   margin: auto;
@@ -89,17 +86,16 @@ html{
   border: none;
   width: 100%;
 }
-.MSZ_slide2{
+/*.MSZ_slide2{
   display: none;
 }
 .MSZ_slide{
   display: none;
-}
+}*/
 
 .MSZ_slide_keret img{
   width: 100%;
   vertical-align: middle;
-
 }
 
 .MSZ_slide_keret2 img{
@@ -281,32 +277,12 @@ html{
 footer{
   grid-area: fo;
 }
-@media (hover: hover) and (max-width: 2000px) {
-  .MSZ_kartya:after {
-    transform: translateY(0);
-  }
-}
 @media (min-width: 400px) {
   #MSZ_galeria {
     grid-template-columns: repeat(1, 1fr);
   }
   article{
     font-size: 10%;
-  }
-}
-
-@media (max-width: 800px) {
-  .MSZ_kartya {
-    width: 90%;
-  }
-  .MSZ_headTarolo{
-    grid-template-columns: 1fr;
-  }
-  .MSZ_menu{
-    grid-template-columns: auto;
-    width: 50%;
-    padding: 5%;
-    grid-gap:20px;
   }
 }
 @media (min-width: 600px) {
@@ -318,12 +294,28 @@ footer{
   #MSZ_galeria {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+}
+@media (max-width: 800px) {
+  .MSZ_kartya {
+    width: 90%;
+  }
+  #MSZ_headTarolo{
+    grid-template-columns: 1fr;
+  }
+  .MSZ_menu{
+    grid-template-columns: auto;
+    width: 50%;
+    padding: 5%;
+    grid-gap:20px;
+  }
 }
 @media (min-width: 1000px) {
   #MSZ_galeria {
     grid-template-columns: repeat(4, 1fr);
+  }   
+}
+@media (hover: hover) and (max-width: 2000px) {
+  .MSZ_kartya:after {
+    transform: translateY(0);
   }
-  
-    
 }

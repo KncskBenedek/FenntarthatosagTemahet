@@ -1,4 +1,3 @@
-
 window.addEventListener("load", MSZ_init);
 
 function CLASS(nev) {
@@ -8,44 +7,38 @@ function CLASS(nev) {
 let slideIndex = 0;
 
 function MSZ_init() {
-  MSZ_slider();
-  MSZ_slider2();
   CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero") });
   CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ") });
+  slJson();
+  slJson2();
 }
 
-
-function MSZ_slider() {
-  let i;
-  let slides = document.getElementsByClassName("MSZ_slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(MSZ_slider, 2000);
+function MSZ_slideBetolt(kep) {
+  let index = 1;
+  setInterval(() => {
+    let kepTomb = kep[index].kepek;
+    if (kep[index].kollekcio == "Zero") {
+      document.getElementById("slideKep").src = kepTomb[0];
+    }
+    index++;
+    if (index >= kep.length - 1) {
+      index = 0;
+    }
+  }, 1000);
 }
-function MSZ_slider2() {
-  let i;
-  let slides = document.getElementsByClassName("MSZ_slide2");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(MSZ_slider2, 2000);
+function MSZ_slideBetolt2(kep) {
+  let index = 1;
+  setInterval(() => {
+    let kepTomb = kep[index].kepek;
+    if (kep[index].kollekcio == "Kreativ") {
+      document.getElementById("slideKep2").src = kepTomb[0];
+    }
+    index++;
+    if (index >= kep.length - 1) {
+      index = 0;
+    }
+  }, 1000);
 }
-
-/* function valaszt() {
-  console.log(event.target);
-  event.target.onclick = jsonbolOlvas();
-}
-function valaszt2() {
-  console.log(event.target);
-  event.target.onclick = jsonbolOlvas2();
-} */
 
 function MSZ_kepbetolt(data, koll) {
   console.log(data);
@@ -54,10 +47,7 @@ function MSZ_kepbetolt(data, koll) {
     var tDIV = document.querySelector("#MSZ_tarolo");
     var galeriaDIV = document.querySelector("#MSZ_galeria");
 
-
-
     for (const key in data.kepek) {
-      console.log(data.kepek[key].kollekcio)
       if (data.kepek[key].kollekcio == koll) {
         var clone = tDIV.content.cloneNode(true);
         var td = clone.querySelectorAll("span");
@@ -84,12 +74,20 @@ function MSZ_kepbetolt(data, koll) {
 }
 
 
-
-
 function jsonbolOlvas(koll) {
   fetch('kepek.json')
     .then(response => response.json())
     .then(data => MSZ_kepbetolt(data, koll));
+}
+function slJson() {
+  fetch('kepek.json')
+    .then(response => response.json())
+    .then(adat => MSZ_slideBetolt(adat.kepek));
+}
+function slJson2() {
+  fetch('kepek.json')
+    .then(response => response.json())
+    .then(adat => MSZ_slideBetolt2(adat.kepek));
 }
 
 function kattint(aktKep) {
@@ -98,5 +96,3 @@ function kattint(aktKep) {
   //ezzel lépek a következő oldalra
   window.location.assign(aktKep.tovabboldalra);
 }
-
-
