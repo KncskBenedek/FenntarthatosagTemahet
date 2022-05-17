@@ -85,7 +85,8 @@ function beuszasok() {
       "-=1.2"
     );
 }
-const navSlide = () => {
+//const navSlide = () => {
+  function navSlide () {
   navIcon.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
 

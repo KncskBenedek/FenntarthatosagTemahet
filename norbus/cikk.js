@@ -1,16 +1,32 @@
 window.addEventListener("load", init);
 
 jsonAdat = []
-
+const tl = gsap.timeline();
 function init() {
   tartalom();
+  scrollCikk();
 }
 
 function clikkHozzaadas() {
   for (let index = 0; index < 10; index++) {
     ID(index).addEventListener("click", clikkTarolas);
   }
+
 }
+
+function scrollCikk () {
+  gsap.to($(".scrollanimacio"),{
+    scrollTrigger: {
+      trigger: $(".scrollanimacio"),
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "restart none reverse none",
+    },
+    
+  })
+}
+
 function clikkTarolas() {
   let index = parseInt(event.currentTarget.id);
   localStorage.setItem("cikkek", JSON.stringify(jsonAdat[index])); // jsonAdat[index]);

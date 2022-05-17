@@ -21,6 +21,9 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
+body, html{
+  overflow-x: hidden;
+}
 
 .navbar {
   background-color: #15b374;
