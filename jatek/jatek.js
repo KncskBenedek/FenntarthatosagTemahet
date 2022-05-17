@@ -13,16 +13,19 @@ const kepek = ["kep1.jpg", "kep1.jpg", "kep2.jpg", "kep2.jpg", "kep3.jpg", "kep3
 let sorhossz = 4;
 
 
-window.addEventListener("load", jatekKezd);
+const tlJatek = gsap.timeline();
 
-function init() {
-    
+window.addEventListener("load", init);
+
+
+function init () {
+    jatekKezd();
+    scrollJatek();
 }
-
 
 function scrollJatek() {
 
-    tlegycikk.fromTo(ID("jatek"), 0, { y: "0%" }, { y: "-200%" });
+    tlJatek.fromTo(ID("jatek"), 0, { y: "0%" }, { y: "-200%" });
   
     gsap.to(ID("jatek"), {
       scrollTrigger: {
@@ -33,7 +36,7 @@ function scrollJatek() {
         toggleActions: "restart none reverse none",
       },
       y:"0%",
-      duration:4
+      duration:3
     })
   
   }
