@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 /*Itt lesznek a főstilusok*/
 /*
-
+MUSZÁJ BEIMPORTÁLNI HOGY MÜKÖDJÖN A NAV BÁR!
 Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behelyezni ilyen sorrendbe:
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
@@ -11,6 +11,7 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
 /*Nav bár*/
 
 /* Scrollbar ne látszódjon */
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -129,6 +130,27 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
   border-radius: 13px;
   color: white;
 }
+
+
+/*Norbus*/
+
+.animacio {
+  transition: transform 250ms;
+}
+
+.animacio:hover {
+  transform: translateY(-10px);
+  cursor: pointer;;
+}
+
+#egycikk * {
+  padding: 10px;
+}
+
+
+/*Norbus*/
+
+
 
 /*Reszponzvitás*/
 @media screen and (max-width: 770px) {

@@ -5,6 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 function QS(elem) {
   return document.querySelector(elem);
 }
+function ID(elem) {
+  return document.getElementById(elem);
+}
 function $(elem) {
   return document.querySelectorAll(elem);
 }
@@ -20,8 +23,7 @@ const scroll = QS(".scroll");
 const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
 const content = QS(".content");
-const staggeran = QS(".staggeran");
-const adatAnimacio = QS(".adatAnimacio");
+
 var szazalekok = [];
 var szovegek = [];
 
@@ -42,10 +44,8 @@ function init() {
   beuszasok();
   navSlide();
   tartalom();
-  generalas();
   navIcon.addEventListener("click", videoNincs);
-  //animacioPirosa();
-  adatLeptetes();
+  kepTartalom();
   setTimeout(() => {
     ScrollTrigger.refresh();
   }, 100);
@@ -158,66 +158,41 @@ function scrollAnimacio(belso, kulso) {
     });
   }
 }
-
-function generalas() {
-  for (var index = 0; index < 64; index++) {
-    staggeran.innerHTML += `<div class="kocka"></div>`;
-  }
-
-  fetch("ati/fooldal.json")
+function kepTartalom() {
+  fetch("szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
-      adatTarolas(data.adatok);
+      kepGaleria(data.kepek);
     })
     .catch((err) => console.log("hiba", err));
 }
-function adatTarolas(jsonName) {
-  for (let index = 0; index < jsonName.length; index++) {
-    szovegek.push(jsonName[index].szoveg);
-    //console.log(jsonName[index].szazalek);
-    szazalekok.push(jsonName[index].szazalek);
-  }
-  console.log(szovegek);
-  console.log(szazalekok);
-  animacioPirosa();
-  //}
-}
-function animacioPirosa() {
-  eddig = Math.floor(64 * (szazalekok[4] / 100));
-  //console.log(szamSzazalek);
 
-  let targets = gsap.utils.toArray(".kocka").slice(0, eddig);
-
-  gsap.to(targets, {
-    scale: 0.4,
-    background: "red",
-    duration: 2,
-    stagger: {
-      each: 0.1,
-    },
-    scrollTrigger: {
-      trigger: staggeran,
-      start: "top 90%",
-      end: "top 90%",
-      markers: true,
-      toggleActions: "play none reverse none",
-    },
-  });
-}
-function adatLeptetes() {
+function kepGaleria(jsonName) {
+  console.log(jsonName);
+  let randomIndex = Math.floor(Math.random() * jsonName.length);
+  ID("kep1").src = jsonName[randomIndex].kepek[0];
+  ID("kep2").src = jsonName[randomIndex].kepek[1];
+  console.log(randomIndex);
   setInterval(() => {
-    tl.fromTo(
-      adatAnimacio,
-      1.5,
-      { x: "0%" },
-      { x: "-100%", ease: Power2.easeInOut }
-    ).fromTo(
-      adatAnimacio,
-      1.5,
-      { x: "-100%" },
-      { x: "0%", ease: Power2.easeInOut },
-      "+=3"
-    );
+    randomIndex = Math.floor(Math.random() * jsonName.length);
+    console.log(randomIndex);
+    
+    ID("kep1").style.opacity = "0";
+    ID("kep1").style.transitionDuration = "500ms";
+    ID("kep2").style.opacity = "0";
+    ID("kep2").style.transitionDuration = "500ms";
+    setTimeout(() => {
+      ID("kep2").src = jsonName[randomIndex].kepek[1];
+      ID("kep1").src = jsonName[randomIndex].kepek[0];
+    }, 500);
+    setTimeout(() => {
+      ID("kep1").style.opacity = "1";
+      ID("kep1").style.transitionDuration = "500ms";
+      ID("kep2").style.opacity = "1";
+      ID("kep2").style.transitionDuration = "500ms";
+    }, 550);
+   
+    
   }, 5000);
 }
 

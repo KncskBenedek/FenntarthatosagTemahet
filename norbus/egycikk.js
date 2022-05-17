@@ -4,24 +4,24 @@ function ID(elem) {
     return document.getElementById(elem);
   }
 
-
 function init () {
     let txt = "";
-    const aktualisCikk = JSON.parse(localStorage.getItem("egycikk"));
-    txt += `<div class="container max-w-6xl mx-auto">`;
+    const aktualisCikk = JSON.parse(localStorage.getItem("cikkek"));
+    console.log(aktualisCikk);
+    txt += `<div class="max-w-6xl mx-auto">`;
     txt += `<div class="flex flex-col box-border order-first w-full text-black border-solid mx:w-1/2 md:pl-10 md:order-none">`;
     for (data in aktualisCikk) {
             if(data === "cim") {
               //txt += `<div class="flex justify-between">`;
-              txt += `<h1 class="text-6xl font-bold tracking-tight text-center" >${aktualisCikk[data]}</h1>`;
+              txt += `<h1 class="font-bold tracking-tight text-center text-3xl" >${aktualisCikk[data]}</h1>`;
                 //txt += "</div>";
             }else if (data.indexOf("bekezd")>=0){
               //txt += `<div class = "cikk">`;
-              txt += `<p class="tracking-tight text-center text-2xl" >${aktualisCikk[data]}</p>`;
+              txt += `<p class="tracking-tight text-justify" >${aktualisCikk[data]}</p>`;
               //txt += "</div>";
             }else if (data.indexOf("alcim")>=0){
               //txt += `<div class = "alcim">`;
-              txt += `<h2 class="text-4xl font-bold text-left" >${aktualisCikk[data]}</h2>`;
+              txt += `<h2 class="font-bold text-left text-2xl" >${aktualisCikk[data]}</h2>`;
               //txt += "</div>";
             } else if (data === "szerzo") {
               //txt += `<div class = "szerzo">`;
@@ -36,23 +36,15 @@ function init () {
               felsorTxt += `<li>${aktualisCikk[data]}</li>`;
               txt += felsorTxt;
             }else if (data.indexOf("kep")>=0) {
-               
-                var kepVegSzam =parseInt(String([data])[3]);
-                console.log(kepVegSzam)
-                if(kepVegSzam%2==0){
                     //txt += `<div >`;
                     txt += `<img src="${aktualisCikk[data]}" alt="kep" >`;
-                    //txt += `</div>`;
-                }else{
-                    //txt += `<div>`;
-                    txt += `<img src="${aktualisCikk[data]}" alt="kep">`;
                     //txt += `</div>`;
                 }
  
             }
-        }
         txt += "</div>";
         txt+= `<button onclick="location.href = 'cikkek.html';" type="button" class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Vissza</button>`;
         txt += "</div>";
-              ID("egycikk").innerHTML += txt;
-            }
+        ID("egycikk").innerHTML += txt;
+      }
+      

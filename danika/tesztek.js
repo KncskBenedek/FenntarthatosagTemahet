@@ -1,3 +1,11 @@
+function $(elem) {
+    return document.querySelectorAll(elem);
+}
+
+function S(elem) {
+    return document.querySelector(elem);
+}
+
 window.addEventListener("load", init);
 const kerdesekAltIsk = [];
 const kerdesekKozIsk = [];
@@ -7,27 +15,27 @@ let helyesValaszok = [];
 let helyesValaszokCheck = [];
 let joV = 0;
 let szazalek;
-let dobozIndex=0;
+let dobozIndex;
 
 const fajlAltIsk = "json/altIsk.json";
 const fajlKozIsk = "json/kozIsk.json";
 const fajlFeln = "json/feln.json";
 
 function init() {
-    const altIsk=document.querySelector("#alt");
-    const kozIsk=document.querySelector("#kozp");
-    const feln=document.querySelector("#feln");
+    const altIsk=S("#alt");
+    const kozIsk=S("#kozp");
+    const feln=S("#feln");
 
-    altIsk.addEventListener("click", altIskEsemeny);
-    kozIsk.addEventListener("click", kozIskEsemeny);
-    feln.addEventListener("click", felnEsemeny);
-    
-    document.querySelectorAll(".dl_tesztdoboz").forEach(doboz=>doboz.style.opacity = 0);
-    // beolvas(fajlKozIsk);
-    // beolvas(fajlFeln);   
+    altIsk.addEventListener("click", altIskBeilleszt);
+    kozIsk.addEventListener("click", kozIskBeilleszt);
+    feln.addEventListener("click", felnBeilleszt);
 
-    // const gomb=document.querySelector("#gomb");
-    // gomb.addEventListener("click", gombEsemeny);
+    const gombAlt=S("#gombAlt");
+    gombAlt.addEventListener("click", gombAltEsemeny);
+    const gombKozp=S("#gombKozp");
+    gombKozp.addEventListener("click", gombKozpEsemeny);
+    const gombFeln=S("#gombFeln");
+    gombFeln.addEventListener("click", gombFelnEsemeny);
 }
 
 function nullazas() {
@@ -36,25 +44,81 @@ function nullazas() {
     joV = 0;
 }
 
-function altIskEsemeny() {
+function altIskBeilleszt() {
+    dobozIndex=0;
     beolvas(fajlAltIsk);
     nullazas();
-    document.querySelectorAll(".dl_tesztdoboz")[0].style.opacity=1;
-    document.querySelector("#alt").removeEventListener("click", altIskEsemeny);
+    megjelenit(dobozIndex);
+    S("#alt").removeEventListener("click", altIskBeilleszt);
+    S("#alt").addEventListener("click", function () {
+        eltuntet(dobozIndex);
+    });
 }
-function kozIskEsemeny() {
+function kozIskBeilleszt() {
+    dobozIndex=1;
     beolvas(fajlKozIsk);
     nullazas();
-    document.querySelectorAll(".dl_tesztdoboz")[1].style.opacity=1;
-    // document.querySelectorAll(".dl_tesztdoboz")[1].style.display="inline";
-    document.querySelector("#kozp").removeEventListener("click", kozIskEsemeny);
+    megjelenit(dobozIndex);
+    S("#kozp").removeEventListener("click", kozIskBeilleszt);
+    S("#kozp").addEventListener("click", function () {
+        eltuntet(dobozIndex);
+    });
 }
-function felnEsemeny() {
+function felnBeilleszt() {
+    dobozIndex=2;
     beolvas(fajlFeln);
     nullazas();
-    document.querySelectorAll(".dl_tesztdoboz")[2].style.opacity=1;
-    // document.querySelectorAll(".dl_tesztdoboz")[2].style.display="inline";
-    document.querySelector("#feln").removeEventListener("click", felnEsemeny);
+    megjelenit(dobozIndex);
+    S("#feln").removeEventListener("click", felnBeilleszt);
+    S("#feln").addEventListener("click", function () {
+        eltuntet(dobozIndex);
+    });
+}
+
+function megjelenit(dobozIndex) {
+    $(".dl_tesztdoboz")[dobozIndex].style.display = "block";
+    if (dobozIndex===0) {
+        S("#gombAlt").style.display = "block";
+        S("#alt").addEventListener("click", function () {
+            eltuntet(dobozIndex);
+        });
+    }
+    if (dobozIndex===1) {
+        S("#gombKozp").style.display = "block";
+        S("#kozp").addEventListener("click", function () {
+            eltuntet(dobozIndex);
+        });
+        
+    }
+    if (dobozIndex===2) {
+        S("#gombFeln").style.display = "block";
+        S("#feln").addEventListener("click", function () {
+            eltuntet(dobozIndex);
+        });
+    }
+}
+
+function eltuntet(dobozszam) {
+    $(".dl_tesztdoboz")[dobozszam].style.display = "none";
+    if (dobozszam===0) {
+        S("#gombAlt").style.display = "none";
+        S("#alt").addEventListener("click", function () {
+            megjelenit(dobozszam);
+        });
+    }
+    if (dobozszam===1) {
+        S("#gombKozp").style.display = "none";
+        S("#kozp").addEventListener("click", function () {
+            megjelenit(dobozszam);
+        });
+        
+    }
+    if (dobozszam===2) {
+        S("#gombFeln").style.display = "none";
+        S("#feln").addEventListener("click", function () {
+            megjelenit(dobozszam);
+        });
+    }
 }
 
 function beolvas(fajl) {
@@ -75,13 +139,13 @@ function beolvas(fajl) {
                 });
             }
             if (fajl === fajlAltIsk) {
-                feldolgoz(kerdesekAltIsk);
+                feldolgoz(kerdesekAltIsk, dobozIndex);
             }
             else if (fajl === fajlKozIsk) {
-                feldolgoz(kerdesekKozIsk);
+                feldolgoz(kerdesekKozIsk, dobozIndex);
             }
             else if (fajl === fajlFeln) {
-                feldolgoz(kerdesekFeln);
+                feldolgoz(kerdesekFeln, dobozIndex);
             }
         })
         .catch((err)=>{
@@ -89,8 +153,8 @@ function beolvas(fajl) {
         });
 }
 
-function feldolgoz(tomb) {
-    const szuloElem=document.querySelectorAll(".dl_tesztdoboz");
+function feldolgoz(tomb, index) {
+    const szuloElem=$(".dl_tesztdoboz");
     let txt="";
     tomb.forEach((tipus)=>{
         for (const key in tipus) {
@@ -106,49 +170,45 @@ function feldolgoz(tomb) {
         }
         txt += "<br>";
     });
-    szuloElem[dobozIndex].innerHTML+=txt;
-    dobozIndex++;
+    szuloElem[index].innerHTML+=txt;
 }
 
 
-function radioEll() {
-    let valaszok = document.querySelectorAll("input[name='radio']");
+function valaszokEll(dobozId) {
+    let valaszok = document.getElementById(`${dobozId}`).getElementsByTagName("input");
+    console.log(valaszok);
     let valasztott;
-    let i = 0;
-    valaszok.forEach((valasz)=>{
-        if (valasz.checked) {
-            valasztott = valasz.value;
-            console.log(valasztott);
-            if (valasztott===helyesValaszok[i]) {
-                joV++;
-                console.log("jo");
-            }
-            i++;
-        }
-    }); 
-}
-
-function checkboxEll() {
-    let valaszok = document.querySelectorAll("input[name='checkbox']");
     let valasztottak = [];
-    valaszok.forEach((valasz)=>{
-        if (valasz.checked) {
-            valasztottak.push(valasz.value);
-        }
-    });
-    console.log(valasztottak);
-    let i=0;
-    while (i<helyesValaszokCheck.length && !(valasztottak[i]===helyesValaszokCheck[0] || valasztottak[i]===helyesValaszokCheck[1])) {
-        i++;
-    }
+    let index = 0; 
 
-    if (!(i<helyesValaszokCheck.length)) {
-        joV+=2;
-        // console.log(" jo");
+    for (let i = 0; i < valaszok.length; i++) {
+        let valasz = valaszok[i];
+        if (valasz.type == 'radio') {
+            if (valasz.checked) {
+                valasztott = valasz.value;
+                console.log(valasztott);
+                if (valasztott===helyesValaszok[index]) {
+                    joV++;
+                    console.log("jo");
+                }
+                index++;
+            }
+        }        
+        if (valasz.type === 'checkbox') {
+            if (valasz.checked) {
+                valasztottak.push(valasz.value);
+        
+                while (i<helyesValaszokCheck.length && !(valasztottak[i]===helyesValaszokCheck[i]) && !(valasztottak[i]===helyesValaszokCheck[i])) {
+                    i++;
+                }
+                if (!(i<helyesValaszokCheck.length)) {
+                    joV+=1;
+                    console.log("joCheck");
+                    console.log(joV);
+                }
+            }
+        }
     }
-    // else {
-    //     console.log(" hibas");
-    // }
 }
 
 function kerdesekBeilleszt(kerdesek, tipus) {
@@ -201,9 +261,22 @@ function vege() {
     alert(`Az elért pontszámod: ${joV}. Válaszaidat ${szazalek}%-ban válaszoltad meg helyesen!` );
 }
 
-function gombEsemeny() {
-    radioEll();
-    checkboxEll();
-    // vege();
-    document.querySelector("#gomb").removeEventListener("click", gombEsemeny);
+function gombAltEsemeny() {
+    console.log(helyesValaszok);
+    valaszokEll("altalanos");
+    vege();
+    gombAlt.removeEventListener("click", gombAltEsemeny);
+    eltuntet(0);
+}
+function gombFelnEsemeny() {
+    valaszokEll("felnott");
+    vege();
+    gombFeln.removeEventListener("click", gombFelnEsemeny);
+    eltuntet(1);
+}
+function gombKozpEsemeny() {
+    valaszokEll("kozep");
+    vege();
+    gombKozp.removeEventListener("click", gombKozpEsemeny);
+    eltuntet(2);
 }

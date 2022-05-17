@@ -1,89 +1,67 @@
 window.addEventListener("load", init);
-localStorage.setItem("elem", "a kurva js");
 
-var jsonAdat = [];
+jsonAdat = []
 
 function init() {
   tartalom();
-  ok();
 }
 
-function ok () {
-  for (let index = 0; index <10; index++) {
-    ID(index).addEventListener("click", asd);
+function clikkHozzaadas() {
+  for (let index = 0; index < 10; index++) {
+    ID(index).addEventListener("click", clikkTarolas);
   }
-
 }
-function asd () {
-  let index = parseInt(event.target.id);
-  localStorage.setItem("egycikk",JSON.stringify(jsonAdat[index]));// jsonAdat[index]);
+function clikkTarolas() {
+  let index = parseInt(event.currentTarget.id);
+  localStorage.setItem("cikkek", JSON.stringify(jsonAdat[index])); // jsonAdat[index]);
   window.location.assign("cikk.html");
-};
+}
 
 function ID(elem) {
   return document.getElementById(elem);
 }
 
-
-
 function $(elem) {
   return document.querySelector(elem);
 }
 
-
-function tartalom(){
-  fetch("ujForras.json")
+function tartalom() {
+  fetch("szovegSzerzo.json")
     .then((response) => response.json())
     .then((data) => {
-      jsonAdat = data.cikkek;
-      megjelenit(data.cikkek);
+      megjelenit(data.szovegSzerzo);
     })
     .catch((err) => console.log("hiba", err));
+
+    fetch("ujForras.json")
+    .then((response) => response.json())
+    .then((adat) => {
+      jsonAdat = adat.cikkek;
+    })
+    .catch((err) => console.log("hiba", err));
+
+  }
+
+function megjelenit(szerzokSzovege) {
+  var index = 0;
+  let txt = "";
+  txt += `<div class="grid grid-cols-3 gap-10 mt-10 sm:grid-cols-8 lg:grid-cols-19 sm:px-8 xl:px-0">`;
+  for (const kulcs in szerzokSzovege) {
+    let aktualisSzerzoSzoveg = szerzokSzovege[kulcs];
+    for (const kulcs2 in aktualisSzerzoSzoveg) {
+      if (kulcs2 === "szoveg") {
+        txt += `<div id="${index}"
+        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md animacio"
+        href="cikk.html">`;
+        txt += `<div class="text-xl font-medium text-gray-700">${aktualisSzerzoSzoveg[kulcs2]}</div>`;
+      } else if (kulcs2 === "szerzo") {
+        txt += `<p class="text-base text-center text-gray-500">${aktualisSzerzoSzoveg[kulcs2]}</p>`;
+      }
+    }
+    txt += `</div>`;
+    index++;
+  }
+  $(".cikkek").innerHTML += txt;
+  clikkHozzaadas();
 }
-
-function megjelenit(cikkek) {
-  var cikkekSzama = 1;
-
-  for (const kulcs in cikkek) {
-    let aktualisCikk = cikkek[kulcs];
-    let txt = "";
-    //txt += `<div class = "${cikkekSzama}">`;
-    cikkekSzama++;
-    for (const data in aktualisCikk) {
-        if(data === "cim") {
-          txt += `<div class = "cim">`;
-          txt += `<h1>${aktualisCikk[data]}</h1>`;
-          txt += "</div>";
-        }else if (data.indexOf("bekezd")>=0){
-          txt += `<div class = "cikk">`;
-          txt += `<p>${aktualisCikk[data]}</p>`;
-          txt += "</div>";
-        }else if (data.indexOf("alcim")>=0){
-          txt += `<div class = "alcim">`;
-          txt += `<h2>${aktualisCikk[data]}</h2>`;
-          txt += "</div>";
-        } else if (data === "szerzo") {
-          txt += `<div class = "szerzo">`;
-          txt += `<p=>${aktualisCikk[data]}</p>`;
-          txt += "</div>"; 
-        }else if (data === "link") {
-          txt += `<div class = "link">`;
-          txt += `<a href="${aktualisCikk[data]}">Forrás</a>`;
-          txt += "</div>";
-        } else if (data.indexOf("felsorolas")>=0) {
-          felsorTxt = "";
-          felsorTxt += `<li>${aktualisCikk[data]}</li>`;
-          txt += felsorTxt;
-        }else if (data.indexOf("kep")>=0) {
-          txt += `<div class = "kep">`;
-          txt += `<img src= "${aktualisCikk[data]}" alt="kep">`;
-          txt += "</div>";
-        }
-        //txt += "</div>";
-          }
-        }
-        
-        
-        } 
-        
 
