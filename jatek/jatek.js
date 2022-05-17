@@ -86,9 +86,24 @@ function jatekKezd() {
     let idKepek = ID("kepek");
     let txt = "";
     //kepek keverése
+    shuffleArray();
     for (let index = 0; index < kepek.length; index++) {
-         txt += `<img src="jKepek/hatter.jpg" id="${index}">`; //jKepek/${kepek[index]
+         txt += `<div class="kartya"><img src="jKepek/hatter.jpg" id="${index}"></div>`; //jKepek/${kepek[index]
     }
     idKepek.innerHTML = txt;
 
 }
+
+function shuffleArray() {
+    let index = kepek.length;
+    while (0 !== index) {
+      
+      let randInd = Math.floor(Math.random() * index);
+      index -= 1;
+      // Swap it with the current element.
+      let tmp = kepek[index];
+      kepek[index] = kepek[randInd];
+      kepek[randInd] = tmp;
+    }
+    return kepek;
+  }
