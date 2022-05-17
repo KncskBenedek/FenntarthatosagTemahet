@@ -169,14 +169,11 @@ function kepTartalom() {
 }
 
 function kepGaleria(jsonName) {
-  console.log(jsonName);
   let randomIndex = Math.floor(Math.random() * jsonName.length);
   ID("kep1").src = jsonName[randomIndex].kepek[0];
   ID("kep2").src = jsonName[randomIndex].kepek[1];
-  console.log(randomIndex);
   setInterval(() => {
     randomIndex = Math.floor(Math.random() * jsonName.length);
-    console.log(randomIndex);
 
     ID("kep1").style.opacity = "0";
     ID("kep1").style.transitionDuration = "500ms";
