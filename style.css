@@ -131,6 +131,27 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
   color: white;
 }
 
+
+/*Norbus*/
+
+.animacio {
+  transition: transform 250ms;
+}
+
+.animacio:hover {
+  transform: translateY(-10px);
+  cursor: pointer;;
+}
+
+#egycikk * {
+  padding: 10px;
+}
+
+
+/*Norbus*/
+
+
+
 /*Reszponzvitás*/
 @media screen and (max-width: 770px) {
   /*Nav bár reszponzivitás*/
