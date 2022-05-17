@@ -7,10 +7,9 @@ function CLASS(nev) {
 let slideIndex = 0;
 
 function MSZ_init() {
-  CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero") });
-  CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ") });
+  CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero"), leirJson("0")});
+  CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ"), leirJson("1")});
   slJson();
-  slJson2();
 }
 
 function MSZ_slideBetolt(kep) {
@@ -19,18 +18,7 @@ function MSZ_slideBetolt(kep) {
     let kepTomb = kep[index].kepek;
     if (kep[index].kollekcio == "Zero") {
       document.getElementById("slideKep").src = kepTomb[0];
-    }
-    index++;
-    if (index >= kep.length - 1) {
-      index = 0;
-    }
-  }, 1000);
-}
-function MSZ_slideBetolt2(kep) {
-  let index = 1;
-  setInterval(() => {
-    let kepTomb = kep[index].kepek;
-    if (kep[index].kollekcio == "Kreativ") {
+    }else{
       document.getElementById("slideKep2").src = kepTomb[0];
     }
     index++;
@@ -73,6 +61,24 @@ function MSZ_kepbetolt(data, koll) {
   });
 }
 
+function leirBetolt(szov, resz){
+  if(resz=="0"){
+    document.querySelector(".cim").innerHTML=`<h2>${szov[0].cim}</h2>`;
+    document.querySelector(".sz").innerHTML=`<p>${szov[0].szoveg}</p><br><p>${szov[0].kezdo}</p>`;
+    document.querySelector(".felsorol").innerHTML=`<ul>
+    <li>${szov[0].felsorolas}</li>
+    <li>${szov[0].felsorolas2}</li>
+    <li>${szov[0].felsorolas3}</li>
+  </ul>`;
+  document.querySelector(".sz2").innerHTML=`<p>${szov[0].szoveg2}</p>`;
+  }else{
+    document.querySelector(".cim").innerHTML=`<h2>${szov[1].cim}</h2>`;
+    document.querySelector(".sz").innerHTML=`<p>${szov[1].szoveg}</p>`;
+    document.querySelector(".sz2").innerHTML=`<p>${szov[1].szoveg2}</p>`;
+    document.querySelector(".felsorol").innerHTML="";
+  }
+
+}
 
 function jsonbolOlvas(koll) {
   fetch('kepek.json')
@@ -84,10 +90,10 @@ function slJson() {
     .then(response => response.json())
     .then(adat => MSZ_slideBetolt(adat.kepek));
 }
-function slJson2() {
+function leirJson(resz){
   fetch('kepek.json')
     .then(response => response.json())
-    .then(adat => MSZ_slideBetolt2(adat.kepek));
+    .then(leir => leirBetolt(leir.leiras,resz));
 }
 
 function kattint(aktKep) {
