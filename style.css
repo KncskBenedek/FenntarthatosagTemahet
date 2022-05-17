@@ -139,7 +139,7 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
 
 .animacio:hover {
   transform: translateY(-10px);
-  cursor:grab;
+  cursor: pointer;;
 }
 
 #egycikk * {
