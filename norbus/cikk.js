@@ -27,7 +27,7 @@ tlcikk.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
       toggleActions: "restart none reverse none",
     },
     y:"0%",
-    duration:5
+    duration:3
   })
 
 }
@@ -82,7 +82,7 @@ function megjelenit(szerzokSzovege) {
     txt += `</div>`;
     index++;
   }
-  $(".cikkek").innerHTML += txt;
+  $(".cikkek").innerHTML = txt;
   clikkHozzaadas();
 }
 
