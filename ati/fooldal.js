@@ -11,7 +11,9 @@ function ID(elem) {
 function $(elem) {
   return document.querySelectorAll(elem);
 }
-
+var tema = "";
+var randomIndex = 0;
+var leiras = [];
 const hero = QS(".hero");
 const slider = QS(".slider");
 const navbar = QS(".navbar");
@@ -23,11 +25,8 @@ const scroll = QS(".scroll");
 const tesztek = QS(".bejegyzes2");
 const galeria = QS(".bejegyzes3");
 const content = QS(".content");
+const kezdoGaleria = QS(".kezdoGaleria");
 
-var szazalekok = [];
-var szovegek = [];
-
-let szamSzazalek = 0;
 var lathato = true;
 
 const linkek = document.querySelectorAll(".container li");
@@ -44,8 +43,10 @@ function init() {
   beuszasok();
   navSlide();
   tartalom();
+  galeriaScroll();
   navIcon.addEventListener("click", videoNincs);
   kepTartalom();
+  // galeriaSzoveg();
   setTimeout(() => {
     ScrollTrigger.refresh();
   }, 100);
@@ -159,22 +160,62 @@ function scrollAnimacio(belso, kulso) {
     });
   }
 }
+function galeriaScroll() {
+  tl.fromTo(
+    QS("#kep1"),
+    0,
+    { x: "0%" },
+    { x: "-150%", ease: Power2.easeInOut }
+  );
+  tl.fromTo(
+    QS("#kep2"),
+    0,
+    { x: "0%" },
+    { x: "+150%", ease: Power2.easeInOut }
+  );
+  gsap.to(QS("#kep1"), {
+    //QS("#kep1")
+    scrollTrigger: {
+      trigger: kezdoGaleria,
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "restart none reverse none",
+    },
+    x: "0%",
+    duration: "2",
+  });
+  gsap.to(QS("#kep2"), {
+    //QS("#kep1")
+    scrollTrigger: {
+      trigger: kezdoGaleria,
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "restart none reverse none",
+    },
+    x: "0%",
+    duration: "2",
+  });
+}
 function kepTartalom() {
-  fetch("../szabrina/kepek.json")
+  fetch("./szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
+      leiras = data.leiras;
       kepGaleria(data.kepek);
     })
     .catch((err) => console.log("hiba", err));
 }
-
 function kepGaleria(jsonName) {
-  let randomIndex = Math.floor(Math.random() * jsonName.length);
+  randomIndex = Math.floor(Math.random() * jsonName.length);
   ID("kep1").src = jsonName[randomIndex].kepek[0];
   ID("kep2").src = jsonName[randomIndex].kepek[1];
+  tema = jsonName[randomIndex].kollekcio;
+  galeriaSzovegBehelyezes(tema);
   setInterval(() => {
     randomIndex = Math.floor(Math.random() * jsonName.length);
-
+    tema = jsonName[randomIndex].kollekcio;
     ID("kep1").style.opacity = "0";
     ID("kep1").style.transitionDuration = "500ms";
     ID("kep2").style.opacity = "0";
@@ -182,6 +223,7 @@ function kepGaleria(jsonName) {
     setTimeout(() => {
       ID("kep2").src = jsonName[randomIndex].kepek[1];
       ID("kep1").src = jsonName[randomIndex].kepek[0];
+      galeriaSzovegBehelyezes(tema);
     }, 500);
     setTimeout(() => {
       ID("kep1").style.opacity = "1";
@@ -190,6 +232,18 @@ function kepGaleria(jsonName) {
       ID("kep2").style.transitionDuration = "500ms";
     }, 550);
   }, 5000);
+}
+
+function galeriaSzovegBehelyezes(tema) {
+  if (tema === "Zero") {
+    console.log("Zero");
+    QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[0].cim}</h2>`;
+    QS(".galeriaSzoveg").innerHTML += `<p>${leiras[0].szoveg}</p>`;
+  } else {
+    console.log("Kreativ");
+    QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[1].cim}</h2>`;
+    QS(".galeriaSzoveg").innerHTML += `<p>${leiras[1].szoveg}</p>`;
+  }
 }
 
 function tartalom() {

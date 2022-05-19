@@ -70,10 +70,21 @@ article {
   flex-direction: row;
   justify-content: space-around;
 }
+
 .galeriaSzoveg {
   width: 25%;
+  border: black solid 1px;
+}
+.galeriaSzoveg img {
+  z-index: -1;
+  width: 20%;
+  height: 20%;
 }
 .galeriaSzoveg a {
+  position: relative;
+  z-index: 100;
+}
+.galeriaSzoveg p a {
   position: relative;
   top: 40%;
 }
