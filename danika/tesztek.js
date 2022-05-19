@@ -39,6 +39,7 @@ function init() {
     kozIsk.addEventListener("click", kozIskBeilleszt);
     
     feln.addEventListener("click", felnBeilleszt);
+    scrolltesztek();
 }
 
 function nullazas() {
@@ -100,6 +101,27 @@ function megjelenit(event) {
         doboz.style.display = "none";
     }
 }
+
+const tltesztek = gsap.timeline();
+
+function scrolltesztek () {
+
+    tltesztek.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
+    
+      gsap.to($(".scrollanimacio"),{
+        scrollTrigger: {
+          trigger: $(".scrollanimacio"),
+          start: "top 90%",
+          end: "top 90%",
+          markers: false,
+          toggleActions: "restart none reverse none",
+        },
+        y:"0%",
+        duration:3
+      })
+    
+    }
+
 
 function dobozIndexBeallito(event) {
     if (event.target.id==="alt") {
