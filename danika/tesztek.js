@@ -11,6 +11,8 @@ const kerdesekAltIsk = [];
 const kerdesekKozIsk = [];
 const kerdesekFeln = [];
 
+const tlteszt = gsap.timeline();
+
 let helyesValaszok = [];
 let helyesValaszokCheck = [];
 let joV = 0;
@@ -22,24 +24,40 @@ const fajlKozIsk = "json/kozIsk.json";
 const fajlFeln = "json/feln.json";
 
 function init() {
-    const bezar = document.getElementsByClassName("bezar")[0];
-    const felugro = document.getElementById("felugro");
-
-    bezar.addEventListener("click", function () {
-        felugro.style.display = "none";
-    });
-
+    scrollTesztek();
     const altIsk=S("#alt");
     const kozIsk=S("#kozp");
     const feln=S("#feln");
 
-    
     altIsk.addEventListener("click", altIskBeilleszt);
-    
     kozIsk.addEventListener("click", kozIskBeilleszt);
-    
     feln.addEventListener("click", felnBeilleszt);
+
+    const gombAlt=S("#gombAlt");
+    gombAlt.addEventListener("click", gombAltEsemeny);
+    const gombKozp=S("#gombKozp");
+    gombKozp.addEventListener("click", gombKozpEsemeny);
+    const gombFeln=S("#gombFeln");
+    gombFeln.addEventListener("click", gombFelnEsemeny);
 }
+
+function scrollTesztek () {
+
+    tlteszt.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
+    
+      gsap.to($(".scrollanimacio"),{
+        scrollTrigger: {
+          trigger: $(".scrollanimacio"),
+          start: "top 90%",
+          end: "top 90%",
+          markers: false,
+          toggleActions: "restart none reverse none",
+        },
+        y:"0%",
+        duration:3
+      })
+    
+    }
 
 function nullazas() {
     // helyesValaszok = [];
@@ -183,6 +201,7 @@ function feldolgoz(tomb, index) {
     szuloElem[index].innerHTML+=txt;
 }
 
+
 function valaszokEll(dobozId) {
     let valaszok = document.getElementById(`${dobozId}`).getElementsByTagName("input");
     console.log(valaszok);
@@ -287,15 +306,15 @@ function gombAltEsemeny(event) {
     gombAlt.removeEventListener("click", gombAltEsemeny);
     megjelenit(event);
 }
-function gombKozpEsemeny(event) {
-    valaszokEll("kozep");
-    vege();
-    gombKozp.removeEventListener("click", gombKozpEsemeny);
-    megjelenit(event);
-}
 function gombFelnEsemeny(event) {
     valaszokEll("felnott");
     vege();
     gombFeln.removeEventListener("click", gombFelnEsemeny);
+    megjelenit(event);
+}
+function gombKozpEsemeny(event) {
+    valaszokEll("kozep");
+    vege();
+    gombKozp.removeEventListener("click", gombKozpEsemeny);
     megjelenit(event);
 }
