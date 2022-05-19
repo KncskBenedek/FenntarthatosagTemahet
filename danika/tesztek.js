@@ -42,8 +42,8 @@ function init() {
 }
 
 function nullazas() {
-    helyesValaszok = [];
-    helyesValaszokCheck = [];
+    // helyesValaszok = [];
+    // helyesValaszokCheck = [];
     joV = 0;
 }
 
@@ -88,6 +88,7 @@ function felnBeilleszt(event) {
 
 function megjelenit(event) {
     console.log(dobozIndex);
+    nullazas();
     dobozIndexBeallito(event);
     const doboz=$(".dl_tesztdoboz")[dobozIndex];
     console.log(doboz);
@@ -185,34 +186,42 @@ function feldolgoz(tomb, index) {
 function valaszokEll(dobozId) {
     let valaszok = document.getElementById(`${dobozId}`).getElementsByTagName("input");
     console.log(valaszok);
+    console.log(helyesValaszok);
     let valasztott;
     let valasztottak = [];
-    let index = 0; 
+    // let index = 0; 
 
     for (let i = 0; i < valaszok.length; i++) {
         let valasz = valaszok[i];
         if (valasz.type == 'radio') {
             if (valasz.checked) {
                 valasztott = valasz.value;
+                valasz.checked = false;
                 console.log(valasztott);
-                if (valasztott===helyesValaszok[index]) {
+                // if (valasztott===helyesValaszok[index]) {
+                //     joV++;
+                //     console.log("jo");
+                // }
+                // index++;
+                if(helyesValaszok.includes(valasztott)) {
                     joV++;
                     console.log("jo");
                 }
-                index++;
             }
         }        
         if (valasz.type === 'checkbox') {
             if (valasz.checked) {
                 valasztottak.push(valasz.value);
-        
-                while (i<helyesValaszokCheck.length && !(valasztottak[i]===helyesValaszokCheck[i]) && !(valasztottak[i]===helyesValaszokCheck[i])) {
-                    i++;
-                }
-                if (!(i<helyesValaszokCheck.length)) {
-                    joV+=1;
-                    console.log("joCheck");
-                    console.log(joV);
+                valasz.checked = false;
+                // while (i<helyesValaszokCheck.length && !(valasztottak[i]===helyesValaszokCheck[i]) && !(valasztottak[i]===helyesValaszokCheck[i])) {
+                //     i++;
+                // }
+                for (let j = 0; j < helyesValaszokCheck.length; j++) {
+                    if (helyesValaszokCheck.includes(valasztottak[i])) {
+                        joV+=1;
+                        console.log("joCheck");
+                        console.log(joV);
+                    }
                 }
             }
         }
@@ -222,7 +231,7 @@ function valaszokEll(dobozId) {
 function kerdesekBeilleszt(kerdesek, tipus) {
     let txt="";
     let kerdesSzam = 0;
-    let i = 0;
+    // let i = 0;
     kerdesek.forEach((kerdes)=>{
         for (const key in kerdes) {
             if (tipus==="checkbox") {
@@ -236,8 +245,8 @@ function kerdesekBeilleszt(kerdesek, tipus) {
                     }
                 }
                 else{
-                    helyesValaszokCheck[i]=kerdes[key];
-                    i++;
+                    helyesValaszokCheck.push(kerdes[key]);
+                    // i++;
                 }
             }
             else{
@@ -251,8 +260,8 @@ function kerdesekBeilleszt(kerdesek, tipus) {
                     }
                 }
                 else{
-                    helyesValaszok[i]=kerdes[key];
-                    i++;
+                    helyesValaszok.push(kerdes[key])
+                    // i++;
                 }
             }
         }
@@ -262,7 +271,7 @@ function kerdesekBeilleszt(kerdesek, tipus) {
 
 function szazalekSzamitas() {
     szazalek = joV/(helyesValaszok.length+helyesValaszokCheck.length)*100;
-    szazalek.toFixed(2);
+    szazalek=szazalek.toFixed(2);
 }
 
 function vege() {
