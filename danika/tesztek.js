@@ -11,6 +11,8 @@ const kerdesekAltIsk = [];
 const kerdesekKozIsk = [];
 const kerdesekFeln = [];
 
+const tlteszt = gsap.timeline();
+
 let helyesValaszok = [];
 let helyesValaszokCheck = [];
 let joV = 0;
@@ -22,6 +24,7 @@ const fajlKozIsk = "json/kozIsk.json";
 const fajlFeln = "json/feln.json";
 
 function init() {
+    scrollTesztek();
     const altIsk=S("#alt");
     const kozIsk=S("#kozp");
     const feln=S("#feln");
@@ -37,6 +40,24 @@ function init() {
     const gombFeln=S("#gombFeln");
     gombFeln.addEventListener("click", gombFelnEsemeny);
 }
+
+function scrollTesztek () {
+
+    tlteszt.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
+    
+      gsap.to($(".scrollanimacio"),{
+        scrollTrigger: {
+          trigger: $(".scrollanimacio"),
+          start: "top 90%",
+          end: "top 90%",
+          markers: true,
+          toggleActions: "restart none reverse none",
+        },
+        y:"0%",
+        duration:3
+      })
+    
+    }
 
 function nullazas() {
     helyesValaszok = [];
