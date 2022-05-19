@@ -1,89 +1,133 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+    />
     <script
-    type="module"
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-  ></script>
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
     <title>Teszt kérdések</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
+      <nav class="navbar">
+        <h1><ion-icon name="leaf-sharp"></ion-icon></h1>
+        <ul class="container">
+          <li><a href="../index.html">Főoldal</a></li>
+          <li><a href="../norbus/cikkek.html">Cikkek</a></li>
+          <li><a href="../danika/tesztek.html">Teszt kérdések</a></li>
+          <li><a href="../szabrina/kepgaleria.html">Galéria</a></li>
+          <li><a href="../jatek/jatek.html">Játék</a></li>
+        </ul>
+        <div class="navicon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
 
-        <nav class="navbar">
-            <h1><ion-icon name="leaf-sharp"></ion-icon></h1>
-            <ul class="container">
-              <li><a href="../index.html">Főoldal</a></li>
-              <li><a href="../norbus/cikkek.html">Cikkek</a></li>
-              <li><a href="../danika/tesztek.html">Teszt kérdések</a></li>
-              <li><a href="../szabrina/kepgaleria.html">Galéria</a></li>
-              <li><a href="../jatek/jatek.html">Játék</a></li>
-            </ul>
-            <div class="navicon">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
-          </nav>
-          
-        <article id="teszt_article" class="py-20 max-w-6xl mx-auto scrollanimacio">
-            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md altIsk_Teszt">
-                <h1 id="alt" class="text-4xl font-bold tracking-tight text-center dl_tesztnev">Általános Iskolás Teszt</h1>
-                <div class="dl_tesztdoboz" id="altalanos"></div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok" type="submit" id="gombAlt">Küldés</button>
-            </div>
-            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md kozIsk_Teszt">
-                <h1 id="kozp" class="text-4xl font-bold tracking-tight text-center dl_tesztnev">Középiskolás Teszt</h1>
-                <div class="dl_tesztdoboz" id="kozep"></div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok" type="submit" id="gombKozp">Küldés</button>
-            </div>       
-            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md feln_Teszt">
-                <h1 id="feln" class="text-4xl font-bold tracking-tight text-center dl_tesztnev">Felnőtt Teszt</h1>
-                <div class="dl_tesztdoboz" id="felnott"></div>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok" type="submit" id="gombFeln">Küldés</button>
-            </div>
-        </article>
+      <article
+        id="teszt_article"
+        class="py-20 max-w-6xl mx-auto scrollanimacio"
+      >
+        <div
+          class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md altIsk_Teszt"
+        >
+          <h1
+            id="alt"
+            class="text-4xl font-bold tracking-tight text-center dl_tesztnev"
+          >
+            Általános Iskolás Teszt
+          </h1>
+          <div class="dl_tesztdoboz" id="altalanos"></div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok"
+            type="submit"
+            id="gombAlt"
+          >
+            Küldés
+          </button>
+        </div>
+        <div
+          class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md kozIsk_Teszt"
+        >
+          <h1
+            id="kozp"
+            class="text-4xl font-bold tracking-tight text-center dl_tesztnev"
+          >
+            Középiskolás Teszt
+          </h1>
+          <div class="dl_tesztdoboz" id="kozep"></div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok"
+            type="submit"
+            id="gombKozp"
+          >
+            Küldés
+          </button>
+        </div>
+        <div
+          class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md feln_Teszt"
+        >
+          <h1
+            id="feln"
+            class="text-4xl font-bold tracking-tight text-center dl_tesztnev"
+          >
+            Felnőtt Teszt
+          </h1>
+          <div class="dl_tesztdoboz" id="felnott"></div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full gombok"
+            type="submit"
+            id="gombFeln"
+          >
+            Küldés
+          </button>
+        </div>
+      </article>
 
-        <footer class="footer">
-            <div class="keszitok">
-              <p>Weboldal készitői:</p>
-              <div class="nevek">
-                <p>&nbsp;Dervalics Attila,</p>
-                <p>&nbsp;Koncsik Benedek,</p>
-                <p>&nbsp;Molnár Szabrina,</p>
-                <p>&nbsp;Ódor Norbert</p>
-              </div>
-            </div>
-            <div class="logok">
-              <a href="https://www.facebook.com/SZAMALK.szalezi.tech.szgi/"
-                ><ion-icon class="facebook" name="logo-facebook"></ion-icon
-              ></a>
-              <a href="https://www.instagram.com/szamalkszalezi/"
-                ><ion-icon class="instangram" name="logo-instagram"></ion-icon
-              ></a>
-              <a href="https://www.szamalk-szalezi.hu/"
-              ><img
-              style="display: inline;
-              vertical-align: baseline;" src="../kepek/szamalk_logo.png" alt=""
-            /></a>
-            </div>
-          </footer>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-          <script src="../ati/fooldal.js"></script>
-          <script src="tesztek.js"></script>
-
+      <footer class="footer">
+        <div class="keszitok">
+          <p>Weboldal készitői:</p>
+          <div class="nevek">
+            <p>&nbsp;Dervalics Attila,</p>
+            <p>&nbsp;Koncsik Benedek,</p>
+            <p>&nbsp;Molnár Szabrina,</p>
+            <p>&nbsp;Ódor Norbert</p>
+          </div>
+        </div>
+        <div class="logok">
+          <a href="https://www.facebook.com/SZAMALK.szalezi.tech.szgi/"
+            ><ion-icon class="facebook" name="logo-facebook"></ion-icon
+          ></a>
+          <a href="https://www.instagram.com/szamalkszalezi/"
+            ><ion-icon class="instangram" name="logo-instagram"></ion-icon
+          ></a>
+          <a href="https://www.szamalk-szalezi.hu/"
+            ><img
+              style="display: inline; vertical-align: baseline"
+              src="../kepek/szamalk_logo.png"
+              alt=""
+          /></a>
+        </div>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+      <script src="../ati/fooldal.js"></script>
+      <script src="tesztek.js"></script>
     </main>
-</body>
+  </body>
 </html>
