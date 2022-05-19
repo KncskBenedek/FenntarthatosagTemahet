@@ -50,7 +50,7 @@ function scrollTesztek () {
           trigger: $(".scrollanimacio"),
           start: "top 90%",
           end: "top 90%",
-          markers: true,
+          markers: false,
           toggleActions: "restart none reverse none",
         },
         y:"0%",
