@@ -135,6 +135,19 @@ html {
   color: white;
 }
 
+/*tesztek*/
+
+
+.dl_tesztnev {
+  transition: transform 250ms;
+}
+
+.dl_tesztnev:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+/*tesztek*/
+
 /*Norbus*/
 
 .animacio {
