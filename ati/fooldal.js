@@ -105,60 +105,31 @@ function navSlide() {
 }
 
 function scrollAnimacio(belso, kulso) {
-  if (window.innerWidth <= 770) {
-    gsap.to(belso, {
-      scrollTrigger: {
-        trigger: belso,
-        start: "top 90%",
-        end: "top 90%",
-        markers: true,
-        toggleActions: "restart none reverse none",
-      },
-      x: kulso.offsetWidth / 4,
-      duration: 2,
-      opacity: 1,
-      color: "#2c364f;",
-    });
-    gsap.to(kulso, {
-      scrollTrigger: {
-        trigger: kulso,
-        start: "top 90%",
-        end: "top 90%",
-        markers: true,
-        toggleActions: "restart none reverse none",
-      },
-      duration: 2,
-      backgroundPosition: "left",
-      color: "#2c364f;",
-    });
-  } else {
-    gsap.to(belso, {
-      scrollTrigger: {
-        trigger: belso,
-        start: "top 90%",
-        end: "top 90%",
-        scrub: true,
-        markers: true,
-        toggleActions: "restart none reverse none",
-      },
-      x: kulso.offsetWidth / 4,
-      duration: 2,
-      opacity: 1,
-      color: "#2c364f;",
-    });
-    gsap.to(kulso, {
-      scrollTrigger: {
-        trigger: kulso,
-        start: "top 90%",
-        end: "top 90%",
-        markers: true,
-        toggleActions: "restart none reverse none",
-      },
-      duration: 2,
-      backgroundPosition: "left",
-      color: "#2c364f;",
-    });
-  }
+  gsap.to(belso, {
+    scrollTrigger: {
+      trigger: belso,
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "play none none none",
+    },
+    x: kulso.offsetWidth / 4,
+    duration: 2,
+    opacity: 1,
+    color: "#2c364f;",
+  });
+  gsap.to(kulso, {
+    scrollTrigger: {
+      trigger: kulso,
+      start: "top 90%",
+      end: "top 90%",
+      markers: true,
+      toggleActions: "play none none none",
+    },
+    duration: 2,
+    backgroundPosition: "left",
+    color: "#2c364f;",
+  });
 }
 function galeriaScroll() {
   tl.fromTo(
@@ -180,10 +151,11 @@ function galeriaScroll() {
       start: "top 90%",
       end: "top 90%",
       markers: true,
-      toggleActions: "restart none reverse none",
+      toggleActions: "play none none none",
     },
     x: "0%",
     duration: "2",
+    ease: Power0.easeIn,
   });
   gsap.to(QS("#kep2"), {
     //QS("#kep1")
@@ -192,14 +164,15 @@ function galeriaScroll() {
       start: "top 90%",
       end: "top 90%",
       markers: true,
-      toggleActions: "restart none reverse none",
+      toggleActions: "play none none none",
     },
     x: "0%",
     duration: "2",
+    ease: Power0.easeIn,
   });
 }
 function kepTartalom() {
-  fetch("./szabrina/kepek.json")
+  fetch("szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
       leiras = data.leiras;
@@ -259,7 +232,7 @@ function megjelenitBevezeto(jsonName) {
     txt = "";
     txt += `<h3>${jsonName[index - 1].cim}</h3>`;
     for (const key in jsonName[index - 1].bekezdes) {
-      txt += `<li>${jsonName[index - 1].bekezdes[key]}</li>`;
+      txt += `<p>${jsonName[index - 1].bekezdes[key]}</p>`;
     }
     QS(".b" + index).innerHTML = txt;
   }
