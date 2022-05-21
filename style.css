@@ -22,6 +22,7 @@ Betü szín: #2c364f
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  color: #2c364f;
 }
 body,
 html {
@@ -39,9 +40,6 @@ html {
   z-index: 100;
 }
 
-.navbar h1 {
-  color: white;
-}
 .navbar ion-icon {
   color: rgba(0, 128, 0, 0.836);
 }
@@ -97,7 +95,7 @@ html {
 .footer {
   background-color: #89abe3ff;
   color: #2c364f;
-  height: 5vh;
+  height: 6vh;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -106,9 +104,11 @@ html {
 }
 
 .keszitok {
-  padding-top: 10px;
   font-size: 13px;
   font-weight: bold;
+}
+.web_kesz {
+  padding: 10px 3px 10px 3px;
 }
 .nevek {
   text-align: right;
