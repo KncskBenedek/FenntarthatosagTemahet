@@ -54,7 +54,8 @@
   width: 20%;
 }
 #kisKepek img:hover{
-opacity: 100%;
+  cursor: pointer;
+  opacity: 100%;
 }
 
 #nagyKep, #kisLeptetoCont {

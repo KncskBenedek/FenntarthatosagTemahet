@@ -18,7 +18,6 @@ window.addEventListener("resize", () => {
         ref = hatszAl? kepekArr:kepekArrKis;
         QS(".item img").src = ref[jInd];
     } 
-    //ref = hatszAl? kepekArr:kepekArrKis;
 });
 
 
@@ -33,14 +32,10 @@ window.addEventListener("load", function () {
         ID("tervezo").innerHTML = "Tervező: " + ruhaJson.tervezo;
         ID("fotos").innerHTML = "Fotós: " + ruhaJson.fotosnev;
         ID("modell").innerHTML = "Modell: " + ruhaJson.modell;
-        //let indicators = ; // `<ul class="carousel-indicators">`;
-        let kep = ""; //`div class="carousel-inner">`;
         
-
-
+        let kep = ""; 
         hossz = ruhaJson.kepek.length;
-
-        //console.log(ruhaJson);
+        
         //képek
         
         for (let index = 0; index < hossz; index++) {
@@ -56,7 +51,6 @@ window.addEventListener("load", function () {
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
         let nagykep = kep + gombok ;//indicators + kepek + gombok;
-        console.log(nagykep);
         ID("nagyKep").innerHTML += nagykep;
         
 
@@ -64,14 +58,16 @@ window.addEventListener("load", function () {
         ID("next").addEventListener("click", ()=>{lep(1)});
         
         kezd(kepekArrKis);
-        /* let ho = kepekArr.length === 2 ? 2 : 3;
+        let ho = kepekArr.length === 2 ? 2 : 3;
         for (let index = 0; index < ho; index++) {
-            ID(`kisKepQS{index}`).addEventListener("click", nagyKepLesz);
-        }  */
+            ID(`kisKep${index}`).addEventListener("click", nagyKepLesz);
+        }
+        kiemel(jInd);
 
     }
     QS(".navicon").addEventListener("click", zind);
 });
+
 
 function lep(ertek){
     jInd += ertek;
@@ -80,11 +76,23 @@ function lep(ertek){
     }else if(jInd>= ref.length){
         jInd = 0;
     }
-    //console.log("bent jInd = "+ jInd);
     megjelenit(jInd);
 }
 
+function kiemel(index){
+    let elem = QS(`.kicsi${index}`);
+    
+    for (let n = 0; n < 3; n++) {
+        QS(`#kisKep${n}`).style.opacity = "60%";
+    }
+    if (elem !== null) {
+        elem.style.opacity = "100%";
+    }
+}
+
+
 function megjelenit(index){
+    kiemel(index);
     QS(".item img").style.opacity = 0;
     QS(".item img").style.transitionDuration = "200ms";
     setTimeout(()=>{ 
@@ -92,14 +100,12 @@ function megjelenit(index){
         QS(".item img").style.opacity = 1;
         QS(".item img").style.transitionDuration = "200ms";
  }, 200);
-    
-    
-    //QS(".item img").style.transitionDelay = "0ms";
     QS(".hanyadik").innerHTML = `${index+1} / ${hossz}`;
+
 }
 
+
 function zind(){
-    //console.log("Bement a zind");
     QS(".navicon").removeEventListener("click", zind);
     ID("nagyKep").style.zIndex = -1;
     QS(".navicon").addEventListener("click", zindVissz);
@@ -107,7 +113,6 @@ function zind(){
 
 
 function zindVissz(){
-    console.log("Bement a zindVissz");
     QS(".navicon").removeEventListener("click", zindVissz)
     ID("nagyKep").style.zIndex = 0;
     QS(".navicon").addEventListener("click", zind);
@@ -116,19 +121,19 @@ function zindVissz(){
 
 function kezd(tombKepek) {
     let alsoKepek = "";
+    
     if (tombKepek.length <= 3) {
         alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="${tombKepek.length === 2 ? "ketKisKep" : "alapKiskepek"}">`;
     } else {
         alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="alapKiskepek"><a id="bal" class="prev">❮</a> <a id="jobb" class="next">❯</a>`;
     }
+
     let meddig = tombKepek.length === 2 ? 2 : 3;
     for (let index = 0; index < meddig; index++) {
-        alsoKepek += `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi"></div>`;
+        alsoKepek += `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi${index}"></div>`;
     }
     
-        alsoKepek += `</div></div> `;
-
-    
+    alsoKepek += `</div></div> `;
     ID("leiras").innerHTML += alsoKepek;
 
     if (kepekArr.length > 3) {
@@ -145,6 +150,7 @@ function jobbra() {
         lepteto++;
         if (lepteto < kepekArrKis.length) {
             ID("kisKep" + index).src = kepekArrKis[lepteto];
+            ID("kisKep" + index).className = `kicsi${lepteto}`;
             if (index === 0) {
                 n = lepteto;
             }
@@ -154,11 +160,12 @@ function jobbra() {
                 n = lepteto;
             }
             ID("kisKep" + index).src = kepekArrKis[lepteto];
+            ID("kisKep" + index).className = `kicsi${lepteto}`;
         }
     }
+    kiemel(jInd);
     vege = lepteto
     lepteto = n;
-
 }
 
 
@@ -168,37 +175,37 @@ function balra() {
         vege--;
         if (vege >= 0) {
             ID("kisKep" + index).src = kepekArrKis[vege];
+            ID("kisKep" + index).className = `kicsi${vege}`;
             if (index === 2) {
-
                 n = vege;
             }
         } else {
             vege = kepekArr.length - 1;
             if (index === 2) {
-
                 n = vege;
             }
             ID("kisKep" + index).src = kepekArrKis[vege];
+            ID("kisKep" + index).className = `kicsi${vege}`;
         }
     }
+    kiemel(jInd);
     lepteto = vege
     vege = n;
 }
 
 
 function nagyKepLesz() {
-
-    let ut = event.target.src;
-    let i = 0;
-    let alapUt = kepekArrKis[i].replace("..", "");
-    while (!(ut.includes(alapUt))) {
-        i++;
-        alapUt = kepekArrKis[i].replace("..", "");
+    console.log(event.target.className);
+    let id = parseInt((event.target.className).replace("kicsi", ""));
+    console.log(id);
+    console.log(typeof id);
+    console.log("bent van a metódusban");
+    if(jInd !== id){
+        console.log("bent van az elágazásban");
+        jInd = id;
+        megjelenit(jInd);
     }
-    if (i < kepekArrKis.length) {
-        
-       
-    }
+    
 }
 
 
