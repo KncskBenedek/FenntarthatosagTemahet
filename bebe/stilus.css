@@ -81,6 +81,9 @@ h6 {
   line-height: unset;
   font-size: xx-large;
 }
+footer p{
+  margin-bottom: 0;
+}
 
 @media screen and (max-width: 770px) {
   #bemutat {
