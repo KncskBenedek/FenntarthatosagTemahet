@@ -148,6 +148,9 @@ input[type="radio"],input[type="checkbox"] {
   padding: 0%;
 }
 
+.dl_tesztdoboz div {
+  font-weight: bold;
+}
 .dl_tesztdoboz {
 max-width: 400px;
 }
