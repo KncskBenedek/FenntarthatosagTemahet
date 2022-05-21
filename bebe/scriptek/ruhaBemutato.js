@@ -34,21 +34,21 @@ window.addEventListener("load", function () {
             kepekArr.push(ruhaJson.kepek[index]);
             kepekArrKis.push(ruhaJson.kicsiKepek[index]);
             if (index === 0) {
-                kepek += `<div class="items" data-active> <div class="hanyadik">${index+1} / ${hossz}</div> <img src="${ruhaJson.kepek[index]}"/></div>`;
+                console.log("bléptem nyomik");
+                kepek += `<div class="items" data-active="true"> <div class="hanyadik">${index+1} / ${hossz}</div> <img src="${ruhaJson.kepek[index]}"/></div>`;
             } else {
                 kepek += `<div class="items" > <div class="hanyadik">${index+1} / ${hossz}</div> <img src="${ruhaJson.kepek[index]}"/></div>`;
             }
             
         }
-        
+        console.log(kepek);
         //gombok
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
         let nagykep = kepek + gombok ;//indicators + kepek + gombok;
-        
+        console.log(nagykep);
         ID("nagyKep").innerHTML += nagykep;
-        QS(".items").dataset.active = true;
-        megjelenit(jInd);
+        
 
         ID("prev").addEventListener("click", ()=>{lep(-1)});
         ID("next").addEventListener("click", ()=>{lep(1)});
@@ -57,7 +57,7 @@ window.addEventListener("load", function () {
         /* let ho = kepekArr.length === 2 ? 2 : 3;
         for (let index = 0; index < ho; index++) {
             ID(`kisKepQS{index}`).addEventListener("click", nagyKepLesz);
-        } */
+        }  */
 
     }
     QS(".navicon").addEventListener("click", zind);
@@ -102,18 +102,16 @@ function kezd(tombKepek) {
     if (tombKepek.length <= 3) {
         alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="${tombKepek.length === 2 ? "ketKisKep" : "alapKiskepek"}">`;
     } else {
-        alsoKepek = `<div id="kisLeptetoCont"> <a id="bal" class="prev">❮</a> <div id="kisKepek" class="alapKiskepek">`;
+        alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="alapKiskepek"><a id="bal" class="prev">❮</a> <a id="jobb" class="next">❯</a>`;
     }
     let meddig = tombKepek.length === 2 ? 2 : 3;
     for (let index = 0; index < meddig; index++) {
         alsoKepek += `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi"></div>`;
     }
-    if (tombKepek.length <= 3) {
+    
         alsoKepek += `</div></div> `;
 
-    } else {
-        alsoKepek += `</div> <a id="jobb" class="next">❯</a> </div> `;
-    }
+    
     ID("leiras").innerHTML += alsoKepek;
 
     if (kepekArr.length > 3) {
