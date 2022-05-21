@@ -143,9 +143,29 @@ html {
 
 /*tesztek*/
 
+input[type="radio"],input[type="checkbox"] {
+  margin-right: 15px;
+  padding: 0%;
+}
+
+.dl_tesztdoboz div {
+  font-weight: bold;
+}
+.dl_tesztdoboz {
+max-width: 400px;
+}
+
 .dl_tesztnev {
   transition: transform 250ms;
 }
+
+
+#teszt_article * {
+  padding-top: 30px;
+  
+}
+#teszt_article 
+
 
 .dl_tesztnev:hover {
   transform: translateY(-10px);
