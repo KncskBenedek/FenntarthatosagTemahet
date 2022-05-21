@@ -105,31 +105,55 @@ function navSlide() {
 }
 
 function scrollAnimacio(belso, kulso) {
-  gsap.to(belso, {
-    scrollTrigger: {
-      trigger: belso,
-      start: "top 90%",
-      end: "top 90%",
-      markers: true,
-      toggleActions: "play none none none",
-    },
-    x: kulso.offsetWidth / 4,
-    duration: 2,
-    opacity: 1,
-    color: "#2c364f;",
-  });
-  gsap.to(kulso, {
-    scrollTrigger: {
-      trigger: kulso,
-      start: "top 90%",
-      end: "top 90%",
-      markers: true,
-      toggleActions: "play none none none",
-    },
-    duration: 2,
-    backgroundPosition: "left",
-    color: "#2c364f;",
-  });
+  if (window.innerWidth < 770) {
+    gsap.to(belso, {
+      scrollTrigger: {
+        trigger: belso,
+        start: "top 90%",
+        end: "top 90%",
+        toggleActions: "play none none none",
+      },
+      x: 25,
+      duration: 2,
+      opacity: 1,
+      color: "#2c364f;",
+    });
+    gsap.to(kulso, {
+      scrollTrigger: {
+        trigger: kulso,
+        start: "top 90%",
+        end: "top 90%",
+        toggleActions: "play none none none",
+      },
+      duration: 2,
+      backgroundPosition: "left",
+      color: "#2c364f;",
+    });
+  } else {
+    gsap.to(belso, {
+      scrollTrigger: {
+        trigger: belso,
+        start: "top 90%",
+        end: "top 90%",
+        toggleActions: "play none none none",
+      },
+      x: kulso.offsetWidth / 3.7,
+      duration: 2,
+      opacity: 1,
+      color: "#2c364f;",
+    });
+    gsap.to(kulso, {
+      scrollTrigger: {
+        trigger: kulso,
+        start: "top 90%",
+        end: "top 90%",
+        toggleActions: "play none none none",
+      },
+      duration: 2,
+      backgroundPosition: "left",
+      color: "#2c364f;",
+    });
+  }
 }
 function galeriaScroll() {
   tl.fromTo(
@@ -150,7 +174,6 @@ function galeriaScroll() {
       trigger: kezdoGaleria,
       start: "top 90%",
       end: "top 90%",
-      markers: true,
       toggleActions: "play none none none",
     },
     x: "0%",
@@ -163,7 +186,6 @@ function galeriaScroll() {
       trigger: kezdoGaleria,
       start: "top 90%",
       end: "top 90%",
-      markers: true,
       toggleActions: "play none none none",
     },
     x: "0%",
@@ -172,7 +194,7 @@ function galeriaScroll() {
   });
 }
 function kepTartalom() {
-  fetch("szabrina/kepek.json")
+  fetch("./szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
       leiras = data.leiras;
@@ -204,7 +226,7 @@ function kepGaleria(jsonName) {
       ID("kep2").style.opacity = "1";
       ID("kep2").style.transitionDuration = "500ms";
     }, 550);
-  }, 5000);
+  }, 10000);
 }
 
 function galeriaSzovegBehelyezes(tema) {
@@ -230,7 +252,7 @@ function tartalom() {
 function megjelenitBevezeto(jsonName) {
   for (let index = 1; index < jsonName.length + 1; index++) {
     txt = "";
-    txt += `<h3>${jsonName[index - 1].cim}</h3>`;
+    txt += `<h2>${jsonName[index - 1].cim}</h2>`;
     for (const key in jsonName[index - 1].bekezdes) {
       txt += `<p>${jsonName[index - 1].bekezdes[key]}</p>`;
     }
