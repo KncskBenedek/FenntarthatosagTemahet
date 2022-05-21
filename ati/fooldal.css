@@ -11,7 +11,7 @@ body {
   z-index: -100;
 }
 body {
-  background-color: #af9b84;
+  background-color: #fcf6f5ff;
 }
 
 .content {
@@ -23,7 +23,9 @@ body {
   left: 0;
   height: 100vh;
   width: 100%;
-  background: #2c364f;
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, #fcf6f5ff 50%, #89abe3ff 50%);
+  background-position: right;
   z-index: -200;
 }
 article {
@@ -40,7 +42,7 @@ article {
 /*Scroll animációk*/
 .scrollAnimacio div {
   background-size: 200% 200%;
-  background-image: linear-gradient(to right, #15b374 50%, transparent 50%);
+  background-image: linear-gradient(to right, #89abe3ff 50%, transparent 50%);
   background-position: right;
   transition: 2000ms;
 }

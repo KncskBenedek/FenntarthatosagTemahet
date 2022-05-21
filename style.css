@@ -7,9 +7,11 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="ati/fooldal.js"></script>
 */
-
-/*Nav bár*/
-
+/*
+Háttér szín: #fcf6f5ff
+nav, footer(szöveg mögé?Gombok?)) : #89abe3ff
+Betü szín: #2c364f
+*/
 /* Scrollbar ne látszódjon */
 
 ::-webkit-scrollbar {
@@ -20,6 +22,7 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  color: #2c364f;
 }
 body,
 html {
@@ -27,7 +30,7 @@ html {
 }
 
 .navbar {
-  background-color: #15b374;
+  background-color: #89abe3ff;
   height: 5vh;
   display: flex;
   justify-content: space-around;
@@ -37,9 +40,6 @@ html {
   z-index: 100;
 }
 
-.navbar h1 {
-  color: white;
-}
 .navbar ion-icon {
   color: rgba(0, 128, 0, 0.836);
 }
@@ -93,9 +93,9 @@ html {
 }
 /*Footer*/
 .footer {
-  background-color: #15b374;
-  color: white;
-  height: 5vh;
+  background-color: #89abe3ff;
+  color: #2c364f;
+  height: 6vh;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -105,6 +105,10 @@ html {
 
 .keszitok {
   font-size: 13px;
+  font-weight: bold;
+}
+.web_kesz {
+  padding: 10px 3px 10px 3px;
 }
 .nevek {
   text-align: right;
@@ -145,12 +149,14 @@ html {
 
 input[type="radio"],
 input[type="checkbox"] {
+  margin-top: 10px;
   margin-right: 15px;
-  padding: 0%;
+  /* margin-left: 25px; */
 }
 
 .dl_tesztdoboz div {
   font-weight: bold;
+  padding-bottom: 10px;
 }
 .dl_tesztdoboz {
   max-width: 400px;
@@ -235,7 +241,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 770px) {
   /*Nav bár reszponzivitás*/
   .container {
-    background-color: #a88952; /*Háttér színévelk egyezzen meg*/
+    background-color: #fcf6f5ff; /*Háttér színévelk egyezzen meg*/
     position: absolute;
     right: 0;
     height: 90.5vh;
@@ -283,7 +289,7 @@ input[type="checkbox"] {
 /*Nav bár csíkok anímáció*/
 .nav-active {
   transform: translateX(0%);
-  background-color: #15b374; /*A nav bár színvel egyezzen emg*/
+  background-color: #89abe3ff; /*A nav bár színvel egyezzen emg*/
 }
 
 @keyframes containerFade {
