@@ -103,6 +103,7 @@ html{
 
 /*-------------------ARTICLE-------------------*/
 .MSZ_article{
+  grid-area: art;
   padding-top: 60px;
   margin: auto;
   width: 100%;
@@ -364,8 +365,8 @@ footer{
     width: 294px;
   }
 }
-@media screen and (hover: hover) and (max-width: 2000px) {
+@media screen and (max-width: 2000px) {
   .MSZ_kartya:after {
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
