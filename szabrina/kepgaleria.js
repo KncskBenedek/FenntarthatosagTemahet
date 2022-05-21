@@ -13,19 +13,32 @@ function MSZ_init() {
 }
 
 function MSZ_slideBetolt(kep) {
-  let index = 1;
-  setInterval(() => {
-    let kepTomb = kep[index].kepek;
-    if (kep[index].kollekcio == "Zero") {
-      document.getElementById("slideKep").src = kepTomb[0];
+  let index = 0;
+  var Ztomb=[];
+  var Ktomb=[];
+  kep.forEach(element => {
+    if (element.kollekcio == "Zero") {
+      Ztomb.push(index);
     }else{
-      document.getElementById("slideKep2").src = kepTomb[0];
+      Ktomb.push(index);
     }
     index++;
-    if (index >= kep.length - 1) {
+  });
+  index=0;
+  console.log(Ztomb);
+  console.log(Ktomb);
+  console.log(kep[Ztomb[0]]);
+  setInterval(() => {
+      document.getElementById("slideKep").src = kep[Ztomb[index]].kepek[0];
+      document.getElementById("slideKep2").src = kep[Ktomb[index]].kepek[0];
+    index++;
+    if ((index >= Ztomb.length - 1) || (index >=Ktomb.length-1)) {
       index = 0;
     }
   }, 1000);
+  if (index >= kep.length - 1) {
+    index = 0;
+  }
 }
 
 function MSZ_kepbetolt(data, koll) {
