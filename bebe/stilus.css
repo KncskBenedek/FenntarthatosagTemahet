@@ -109,7 +109,10 @@ opacity: 100%;
   #kisKepek img {
     opacity: 100%;
   }
-
+  #nagyKep img{
+    width: 495px;
+    height: 730px;
+  }
   #bemutat {
     display: flex;
     flex-direction: column-reverse;
@@ -124,7 +127,11 @@ opacity: 100%;
   }
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
+  #nagyKep img{
+    height: auto;
+    width: 100%;
+  }
   #nagyKep {
     width: 295px;
     height: 540px;
