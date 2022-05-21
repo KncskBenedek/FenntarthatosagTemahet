@@ -70,13 +70,13 @@ function tartalom() {
 function megjelenit(szerzokSzovege) {
   var index = 0;
   let txt = "";
-  txt += `<div class="grid grid-cols-3 gap-10 mt-10 sm:grid-cols-8 lg:grid-cols-19 sm:px-8 xl:px-0">`;
+  txt += `<div class="grid grid-cols-3 gap-10 mt-10 sm:grid-cols-8 lg:grid-cols-19 sm:px-20 xl:px-10">`;
   for (const kulcs in szerzokSzovege) {
     let aktualisSzerzoSzoveg = szerzokSzovege[kulcs];
     for (const kulcs2 in aktualisSzerzoSzoveg) {
       if (kulcs2 === "szoveg") {
         txt += `<div id="${index}"
-        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 border-2 border-black rounded-md animacio"
+        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 lg:border-2 border-black animacio"
         href="cikk.html">`;
         txt += `<div class="text-xl font-medium text-gray-700">${aktualisSzerzoSzoveg[kulcs2]}</div>`;
       } else if (kulcs2 === "szerzo") {
