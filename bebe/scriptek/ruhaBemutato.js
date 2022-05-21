@@ -5,7 +5,7 @@ let jInd = 0;
 function ID(elem) {
     return document.getElementById(elem);
 }
-
+let hossz;
 
 
 
@@ -22,30 +22,25 @@ window.addEventListener("load", function () {
         ID("fotos").innerHTML = "Fotós: " + ruhaJson.fotosnev;
         ID("modell").innerHTML = "Modell: " + ruhaJson.modell;
         //let indicators = ; // `<ul class="carousel-indicators">`;
-        let kepek = ""; //`div class="carousel-inner">`;
-        let index = 0;
+        let kep = ""; //`div class="carousel-inner">`;
+        
 
 
-        let hossz = ruhaJson.kepek.length;
+        hossz = ruhaJson.kepek.length;
 
         //console.log(ruhaJson);
         //képek
         for (let index = 0; index < hossz; index++) {
             kepekArr.push(ruhaJson.kepek[index]);
             kepekArrKis.push(ruhaJson.kicsiKepek[index]);
-            if (index === 0) {
-                console.log("bléptem nyomik");
-                kepek += `<div class="items" data-active="true"> <div class="hanyadik">${index+1} / ${hossz}</div> <img src="${ruhaJson.kepek[index]}"/></div>`;
-            } else {
-                kepek += `<div class="items" > <div class="hanyadik">${index+1} / ${hossz}</div> <img src="${ruhaJson.kepek[index]}"/></div>`;
-            }
-            
         }
-        console.log(kepek);
+            kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${kepekArr[0]}"/></div>`;
+        
+        
         //gombok
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
-        let nagykep = kepek + gombok ;//indicators + kepek + gombok;
+        let nagykep = kep + gombok ;//indicators + kepek + gombok;
         console.log(nagykep);
         ID("nagyKep").innerHTML += nagykep;
         
@@ -70,15 +65,22 @@ function lep(ertek){
     }else if(jInd>= kepekArr.length){
         jInd = 0;
     }
-    
+    console.log("bent jInd = "+ jInd);
     megjelenit(jInd);
 }
 
 function megjelenit(index){
-    let n =  QS("[data-active]");
-    //console.log(n);
-    $(".items")[index].dataset.active = true;
-    delete n.dataset.active;
+    QS(".item img").style.opacity = 0;
+    QS(".item img").style.transitionDuration = "200ms";
+    setTimeout(()=>{ 
+        QS(".item img").src = kepekArr[index];
+        QS(".item img").style.opacity = 1;
+        QS(".item img").style.transitionDuration = "200ms";
+ }, 200);
+    
+    
+    //QS(".item img").style.transitionDelay = "0ms";
+    QS(".hanyadik").innerHTML = `${index+1} / ${hossz}`;
 }
 
 function zind(){
