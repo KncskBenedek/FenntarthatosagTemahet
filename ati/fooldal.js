@@ -49,7 +49,7 @@ function init() {
   // galeriaSzoveg();
   setTimeout(() => {
     ScrollTrigger.refresh();
-  }, 100);
+  }, 300);
 }
 function beuszasok() {
   tl.fromTo(

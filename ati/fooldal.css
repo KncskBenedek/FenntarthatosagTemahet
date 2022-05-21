@@ -28,7 +28,7 @@ body {
 }
 article {
   display: flex;
-  height: 95vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }

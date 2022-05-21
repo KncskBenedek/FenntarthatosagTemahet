@@ -143,7 +143,8 @@ html {
 
 /*tesztek*/
 
-input[type="radio"],input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
   margin-right: 15px;
   padding: 0%;
 }
@@ -152,22 +153,17 @@ input[type="radio"],input[type="checkbox"] {
   font-weight: bold;
 }
 .dl_tesztdoboz {
-max-width: 400px;
+  max-width: 400px;
 }
 
 .dl_tesztnev {
   transition: transform 250ms;
 }
 
-
 #teszt_article * {
   padding-top: 30px;
-  
 }
-#teszt_article 
-
-
-.dl_tesztnev:hover {
+#teszt_article .dl_tesztnev:hover {
   transform: translateY(-10px);
   cursor: pointer;
 }
@@ -242,7 +238,7 @@ max-width: 400px;
     background-color: #a88952; /*Háttér színévelk egyezzen meg*/
     position: absolute;
     right: 0;
-    height: 95vh;
+    height: 90.5vh;
     top: 5vh;
     display: flex;
     flex-direction: column;
