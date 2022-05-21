@@ -229,7 +229,6 @@ function valaszokEll(dobozId) {
 function kerdesekBeilleszt(kerdesek, tipus) {
   let txt = "";
   let kerdesSzam = 0;
-  // let i = 0;
   kerdesek.forEach((kerdes) => {
     for (const key in kerdes) {
       if (tipus === "checkbox") {
@@ -242,7 +241,6 @@ function kerdesekBeilleszt(kerdesek, tipus) {
           }
         } else {
           helyesValaszokCheck.push(kerdes[key]);
-          // i++;
         }
       } else {
         if (!(key === "helyesV")) {
@@ -254,7 +252,6 @@ function kerdesekBeilleszt(kerdesek, tipus) {
           }
         } else {
           helyesValaszok.push(kerdes[key]);
-          // i++;
         }
       }
     }
