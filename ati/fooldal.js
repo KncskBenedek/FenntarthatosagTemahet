@@ -67,8 +67,8 @@ function beuszasok() {
     .fromTo(
       slider,
       1.2,
-      { x: "-100%" },
-      { x: "0%", ease: Power2.easeInOut },
+      { backgroundPositionX: "100%" },
+      { backgroundPositionX: "0%", ease: Power2.easeInOut },
       "-=1.2"
     )
     .fromTo(
@@ -212,21 +212,21 @@ function kepGaleria(jsonName) {
     randomIndex = Math.floor(Math.random() * jsonName.length);
     tema = jsonName[randomIndex].kollekcio;
     ID("kep1").style.opacity = "0";
-    ID("kep1").style.transitionDuration = "500ms";
+    ID("kep1").style.transitionDuration = "600ms";
     ID("kep2").style.opacity = "0";
-    ID("kep2").style.transitionDuration = "500ms";
+    ID("kep2").style.transitionDuration = "600ms";
     setTimeout(() => {
       ID("kep2").src = jsonName[randomIndex].kepek[1].substring(1);
       ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1);
       galeriaSzovegBehelyezes(tema);
-    }, 500);
+    }, 600);
     setTimeout(() => {
       ID("kep1").style.opacity = "1";
-      ID("kep1").style.transitionDuration = "500ms";
+      ID("kep1").style.transitionDuration = "600ms";
       ID("kep2").style.opacity = "1";
-      ID("kep2").style.transitionDuration = "500ms";
-    }, 550);
-  }, 10000);
+      ID("kep2").style.transitionDuration = "600ms";
+    }, 650);
+  }, 8000);
 }
 
 function galeriaSzovegBehelyezes(tema) {

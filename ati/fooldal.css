@@ -22,9 +22,9 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  width: 200%;
+  width: 100%;
   background-size: 200% 200%;
-  background: linear-gradient(to right, transparent 50%, #89abe3ff 50%);
+  background-image: linear-gradient(to right, #fcf6f5ff 50%, #89abe3ff 50%);
   background-position: right;
   z-index: -200;
 }
