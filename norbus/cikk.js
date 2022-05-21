@@ -1,10 +1,14 @@
 window.addEventListener("load", init);
-
 jsonAdat = []
 const tlcikk = gsap.timeline();
 function init() {
-  tartalom();
-  scrollCikk();
+  if(localStorage.getItem("betoltszam") === null) {
+    localStorage.setItem("betoltszam", 1);
+    tartalom();
+    scrollCikk();
+  }else{
+    tartalom();
+  }
 }
 
 function clikkHozzaadas() {
