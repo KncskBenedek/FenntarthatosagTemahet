@@ -32,6 +32,9 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
 .navbar h1 {
@@ -95,16 +98,16 @@ html {
   height: 5vh;
   display: flex;
   justify-content: space-between;
-  padding: 0;
-  margin: 0;
   position: relative;
   width: 100%;
   bottom: 0;
 }
+
 .keszitok {
   font-size: 13px;
 }
 .nevek {
+  text-align: right;
   display: flex;
   justify-content: space-between;
   font-size: 13px;
@@ -185,7 +188,7 @@ html {
   cursor: pointer;
 }
 
-.dl_tesztdoboz{
+.dl_tesztdoboz {
   margin-bottom: 10px;
   /* background-color: rgba(64, 232, 64, 0.621); */
   border: none;
