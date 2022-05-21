@@ -76,8 +76,20 @@ window.addEventListener("load", function () {
         }
 
     }
+    $(".navicon").addEventListener("click", zind);
 });
-
+function zind(){
+    console.log("Bement a zind");
+    $(".navicon").removeEventListener("click", zind);
+    ID("nagyKep").style.zIndex = -1;
+    $(".navicon").addEventListener("click", zindVissz);
+}
+function zindVissz(){
+    console.log("Bement a zindVissz");
+    $(".navicon").removeEventListener("click", zindVissz)
+    ID("nagyKep").style.zIndex = 0;
+    $(".navicon").addEventListener("click", zind);
+}
 function kezd(tombKepek) {
     let alsoKepek = "";
     if (tombKepek.length <= 3) {
@@ -104,22 +116,18 @@ function kezd(tombKepek) {
 
 }
 
-function balra() {
+function jobbra() {
     let n = lepteto;
-
     for (let index = 0; index < 3; index++) {
         lepteto++;
-
         if (lepteto < kepekArrKis.length) {
             ID("kisKep" + index).src = kepekArrKis[lepteto];
             if (index === 0) {
-
                 n = lepteto;
             }
         } else {
             lepteto = 0;
             if (index === 0) {
-
                 n = lepteto;
             }
             ID("kisKep" + index).src = kepekArrKis[lepteto];
@@ -130,7 +138,7 @@ function balra() {
 
 }
 
-function jobbra() {
+function balra() {
     let n = 0;
     for (let index = 2; index >= 0; index--) {
         vege--;

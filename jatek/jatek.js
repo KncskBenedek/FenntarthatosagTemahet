@@ -13,7 +13,34 @@ const kepek = ["kep1.jpg", "kep1.jpg", "kep2.jpg", "kep2.jpg", "kep3.jpg", "kep3
 let sorhossz = 4;
 
 
-window.addEventListener("load", jatekKezd);
+const tlJatek = gsap.timeline();
+
+window.addEventListener("load", init);
+
+
+function init () {
+    jatekKezd();
+    scrollJatek();
+}
+
+function scrollJatek() {
+
+    tlJatek.fromTo(ID("jatek"), 0, { y: "0%" }, { y: "-200%" });
+  
+    gsap.to(ID("jatek"), {
+      scrollTrigger: {
+        trigger: ID("jatek"),
+        start: "top 90%",
+        end: "top 90%",
+        markers: false,
+        toggleActions: "restart none reverse none",
+      },
+      y:"0%",
+      duration:3
+    })
+  
+  }
+
 
 function megfordit() {
     let id = event.target.id;

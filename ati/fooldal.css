@@ -34,13 +34,8 @@ article {
 }
 .hero {
   height: 60%;
-  width: 100%;
+  max-width: 100%;
   position: relative;
-}
-.hero img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 /*Scroll animációk*/
 .scrollAnimacio div {
@@ -51,51 +46,52 @@ article {
   transition: 2000ms;
 }
 .scrollAnimacio div div {
+  padding: 0px 0px 30px 0px;
   width: 50%;
   /*https://stackoverflow.com/questions/20751937/transition-background-color-via-slide-animation#comment31098517_20751998*/
   transition: 900ms;
   opacity: 0;
   color: #2c364f;
 }
-.scrollAnimacio div div h1 {
+.scrollAnimacio div div h3 {
+  padding: 20px 0px 20px 0px;
   text-align: center;
 }
 .scrollAnimacio div div p {
   text-align: left;
 }
+
 /*kezdoGaleria*/
-.kezdoGaleria{
+.kezdoGaleria {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 }
-.galeriaSzoveg{
-  border: black solid 1px;
-  width: 25%;
 
+.galeriaSzoveg {
+  width: 25%;
+  border: black solid 1px;
 }
-.galeriaSzoveg a{
+.galeriaSzoveg img {
+  z-index: -1;
+  width: 20%;
+  height: 20%;
+}
+.galeriaSzoveg a {
   position: relative;
-  left: 10%;
+  z-index: 100;
+}
+.galeriaSzoveg p a {
+  position: relative;
   top: 40%;
 }
-.galeriaSzoveg a:after {
-  content: "";
-  position: absolute;
-  background-color: #2c364f;
-  height: 3px;
-  width: 0%;
-  left: 0;
-  bottom: -7px;
-  transition: 0.3s;
-}
-.kezdoGaleria a{
+.kezdoGaleria a {
   width: 25%;
   height: 100%;
   text-decoration: none;
 }
-.kezdoGaleria img{
+.kezdoGaleria img {
   width: 100%;
   height: 100%;
 }
@@ -125,16 +121,28 @@ article {
   .hero img {
     display: none;
   }
+  /*
   .hero iframe {
     width: 550px;
     height: 400px;
     margin: auto;
+  }*/
+  .kezdoGaleria {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .kezdoGaleria a,
+  .galeriaSzoveg {
+    margin: auto;
+    width: 80%;
   }
 }
 @media screen and (max-width: 580px) {
-  .hero iframe {
+  /*.hero iframe {
     width: 400px;
     height: 250px;
     margin: auto;
-  }
+  }*/
 }

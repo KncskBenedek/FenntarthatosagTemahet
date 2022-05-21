@@ -1,7 +1,7 @@
 window.addEventListener("load", init);
 
 jsonAdat = []
-const tl = gsap.timeline();
+const tlcikk = gsap.timeline();
 function init() {
   tartalom();
   scrollCikk();
@@ -15,16 +15,21 @@ function clikkHozzaadas() {
 }
 
 function scrollCikk () {
+
+tlcikk.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
+
   gsap.to($(".scrollanimacio"),{
     scrollTrigger: {
       trigger: $(".scrollanimacio"),
       start: "top 90%",
       end: "top 90%",
-      markers: true,
+      markers: false,
       toggleActions: "restart none reverse none",
     },
-    
+    y:"0%",
+    duration:3
   })
+
 }
 
 function clikkTarolas() {
@@ -77,7 +82,7 @@ function megjelenit(szerzokSzovege) {
     txt += `</div>`;
     index++;
   }
-  $(".cikkek").innerHTML += txt;
+  $(".cikkek").innerHTML = txt;
   clikkHozzaadas();
 }
 

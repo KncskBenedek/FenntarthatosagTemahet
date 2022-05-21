@@ -21,7 +21,8 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-body, html{
+body,
+html {
   overflow-x: hidden;
 }
 
@@ -96,6 +97,9 @@ body, html{
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
 }
 .keszitok {
   font-size: 13px;
@@ -134,6 +138,62 @@ body, html{
   color: white;
 }
 
+/*tesztek*/
+
+.dl_tesztnev {
+  transition: transform 250ms;
+}
+
+.dl_tesztnev:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+/*felugró*/
+.doboz {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.felugro_doboz {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.bezar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.bezar:hover,
+.bezar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dl_tesztdoboz{
+  margin-bottom: 10px;
+  /* background-color: rgba(64, 232, 64, 0.621); */
+  border: none;
+  border-radius: 5px;
+  display: none;
+}
+
+/*tesztek*/
 
 /*Norbus*/
 
@@ -143,17 +203,14 @@ body, html{
 
 .animacio:hover {
   transform: translateY(-10px);
-  cursor: pointer;;
+  cursor: pointer;
 }
 
 #egycikk * {
   padding: 10px;
 }
 
-
 /*Norbus*/
-
-
 
 /*Reszponzvitás*/
 @media screen and (max-width: 770px) {
