@@ -43,21 +43,11 @@ function init() {
 }
 
 function nullazas() {
-  // helyesValaszok = [];
-  // helyesValaszokCheck = [];
   joV = 0;
 }
 
 function altIskBeilleszt(event) {
-  if (event.target.id === "alt") {
-    dobozIndex = 0;
-  }
-  if (event.target.id === "kozp") {
-    dobozIndex = 1;
-  }
-  if (event.target.id === "feln") {
-    dobozIndex = 2;
-  }
+  dobozIndexBeallito(event);
   beolvas(fajlAltIsk);
   nullazas();
   megjelenit(event);
@@ -208,8 +198,6 @@ function valaszokEll(dobozId) {
   console.log(valaszok);
   console.log(helyesValaszok);
   let valasztott;
-  let valasztottak = [];
-  // let index = 0;
 
   for (let i = 0; i < valaszok.length; i++) {
     let valasz = valaszok[i];
@@ -218,11 +206,6 @@ function valaszokEll(dobozId) {
         valasztott = valasz.value;
         valasz.checked = false;
         console.log(valasztott);
-        // if (valasztott===helyesValaszok[index]) {
-        //     joV++;
-        //     console.log("jo");
-        // }
-        // index++;
         if (helyesValaszok.includes(valasztott)) {
           joV++;
           console.log("jo");
@@ -231,17 +214,12 @@ function valaszokEll(dobozId) {
     }
     if (valasz.type === "checkbox") {
       if (valasz.checked) {
-        valasztottak.push(valasz.value);
+        valasztott=valasz.value;
         valasz.checked = false;
-        // while (i<helyesValaszokCheck.length && !(valasztottak[i]===helyesValaszokCheck[i]) && !(valasztottak[i]===helyesValaszokCheck[i])) {
-        //     i++;
-        // }
-        for (let j = 0; j < helyesValaszokCheck.length; j++) {
-          if (helyesValaszokCheck.includes(valasztottak[i])) {
-            joV += 1;
-            console.log("joCheck");
-            console.log(joV);
-          }
+        if (helyesValaszokCheck.includes(valasztott)) {
+          joV += 1;
+          console.log("joCheck");
+          console.log(joV);
         }
       }
     }
@@ -284,13 +262,13 @@ function kerdesekBeilleszt(kerdesek, tipus) {
   return txt;
 }
 
-function szazalekSzamitas() {
-  szazalek = (joV / (helyesValaszok.length + helyesValaszokCheck.length)) * 100;
+function szazalekSzamitas(kerdesSzam) {
+  szazalek = (joV / kerdesSzam) * 100;
   szazalek = szazalek.toFixed(2);
 }
 
-function vege() {
-  szazalekSzamitas();
+function vege(kerdesSzam) {
+  szazalekSzamitas(kerdesSzam);
   document.getElementById(
     "szov"
   ).innerHTML = `Az elért pontszámod: ${joV}.<br> Válaszaidat ${szazalek}%-ban válaszoltad meg helyesen!`;
@@ -300,19 +278,21 @@ function vege() {
 function gombAltEsemeny(event) {
   console.log(helyesValaszok);
   valaszokEll("altalanos");
-  vege();
+  vege(11);
   gombAlt.removeEventListener("click", gombAltEsemeny);
   megjelenit(event);
 }
 function gombKozpEsemeny(event) {
   valaszokEll("kozep");
-  vege();
+  console.log(helyesValaszokCheck);
+  console.log(joV);
+  vege(12);
   gombKozp.removeEventListener("click", gombKozpEsemeny);
   megjelenit(event);
 }
 function gombFelnEsemeny(event) {
   valaszokEll("felnott");
-  vege();
+  vege(15);
   gombFeln.removeEventListener("click", gombFelnEsemeny);
   megjelenit(event);
 }
