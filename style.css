@@ -7,9 +7,11 @@ Az anímációk hogy működjenek ezt kell beimportálni  a body legaljára behe
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="ati/fooldal.js"></script>
 */
-
-/*Nav bár*/
-
+/*
+Háttér szín: #fcf6f5ff
+nav, footer(szöveg mögé?Gombok?)) : #89abe3ff
+Betü szín: #2c364f
+*/
 /* Scrollbar ne látszódjon */
 
 ::-webkit-scrollbar {
@@ -27,7 +29,7 @@ html {
 }
 
 .navbar {
-  background-color: #15b374;
+  background-color: #89abe3ff;
   height: 5vh;
   display: flex;
   justify-content: space-around;
@@ -93,8 +95,8 @@ html {
 }
 /*Footer*/
 .footer {
-  background-color: #15b374;
-  color: white;
+  background-color: #89abe3ff;
+  color: #2c364f;
   height: 5vh;
   display: flex;
   justify-content: space-between;
@@ -104,7 +106,9 @@ html {
 }
 
 .keszitok {
+  padding-top: 10px;
   font-size: 13px;
+  font-weight: bold;
 }
 .nevek {
   text-align: right;
@@ -235,7 +239,7 @@ input[type="checkbox"] {
 @media screen and (max-width: 770px) {
   /*Nav bár reszponzivitás*/
   .container {
-    background-color: #a88952; /*Háttér színévelk egyezzen meg*/
+    background-color: #fcf6f5ff; /*Háttér színévelk egyezzen meg*/
     position: absolute;
     right: 0;
     height: 90.5vh;
@@ -283,7 +287,7 @@ input[type="checkbox"] {
 /*Nav bár csíkok anímáció*/
 .nav-active {
   transform: translateX(0%);
-  background-color: #15b374; /*A nav bár színvel egyezzen emg*/
+  background-color: #89abe3ff; /*A nav bár színvel egyezzen emg*/
 }
 
 @keyframes containerFade {
