@@ -86,6 +86,10 @@ html{
   border: none;
   width: 100%;
 }
+.MSZ_menu button:hover{
+  color: #2c364f;
+  background-color: white;
+}
 .MSZ_slide_keret img{
   width: 100%;
   vertical-align: middle;
@@ -102,6 +106,27 @@ html{
   padding-top: 60px;
   margin: auto;
   width: 100%;
+  padding-bottom: 50px;
+}
+.elejere{
+  margin: auto;
+  width: 40%;
+}
+.elejere_btn{
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #2c364f;
+  border: none;
+  width: 100%;
+}
+.elejere_btn:hover{
+  color: #2c364f;
+  background-color: white;
 }
 /*-------------------SZÖVEG-------------------*/
 #szoveg{
@@ -169,6 +194,7 @@ html{
 
 #MSZ_galeria {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 4rem;
   padding: 1rem;
   max-width: 1400px;
@@ -236,7 +262,6 @@ html{
 }
 
 .MSZ_copy{
-  font-family: var(--font-serif);
   font-size: 1.5rem;
   font-style: italic;
   font-size: 1.5rem;
@@ -311,25 +336,8 @@ html{
 footer{
   grid-area: fo;
 }
-@media (min-width: 400px) {
-  #MSZ_galeria {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-@media (min-width: 600px) {
-  #MSZ_galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 800px) {
-  #MSZ_galeria {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 800px) {
-  .MSZ_kartya{
-    width: 294px;
-  }
+
+@media only screen and (max-width: 1000px) {
   #MSZ_headTarolo{
     grid-template-columns: 1fr;
   }
@@ -339,13 +347,24 @@ footer{
     padding: 5%;
     grid-gap:20px;
   }
+  #MSZ_galeria { 
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-@media (min-width: 1000px) {
-  #MSZ_galeria {
-    grid-template-columns: repeat(4, 1fr);
-  }   
+@media only screen and (max-width: 750px){
+  #MSZ_galeria { 
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (hover: hover) and (max-width: 2000px) {
+@media only screen and (max-width: 550px){
+  #MSZ_galeria { 
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .MSZ_kartya{
+    width: 294px;
+  }
+}
+@media screen and (hover: hover) and (max-width: 2000px) {
   .MSZ_kartya:after {
     transform: translateY(0);
   }
