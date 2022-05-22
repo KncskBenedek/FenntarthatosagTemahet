@@ -92,15 +92,15 @@ function leirBetolt(szov, resz){
   </ul>`;
   document.querySelector(".sz2").innerHTML=`<p>${szov[0].szoveg2}</p>`;
   document.querySelector(".tanar").innerHTML=`<p>${szov[0].tanar}</p>`
-  document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[0].tanar}</p>`
+  document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[0].tanar}</p><ion-icon name="arrow-down-outline"></ion-icon>`
   }else{
     document.querySelector(".cim").innerHTML=`<h2>${szov[1].cim}</h2>`;
     document.querySelector(".sz").innerHTML=`<p>${szov[1].szoveg}</p>`;
     document.querySelector(".sz2").innerHTML=`<p>${szov[1].szoveg2}</p>`;
     document.querySelector(".felsorol").innerHTML="";
-    document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[1].tanar}</p>`
+    document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[1].tanar}</p><ion-icon name="arrow-down-outline"></ion-icon>`
   }
-
+  
 }
 
 function jsonbolOlvas(koll) {
