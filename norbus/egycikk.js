@@ -35,7 +35,7 @@ function megjelenit() {
   let txt = "";
   const aktualisCikk = JSON.parse(localStorage.getItem("cikkek"));
   txt += `<div class="max-w-6xl mx-auto">`;
-  txt += `<div class="flex flex-col box-border order-first w-full text-black border-solid mx:w-1/2 md:pl-10 md:order-none">`;
+  txt += `<div class="flex flex-col box-border order-first w-full border-solid mx:w-1/2 md:pl-10 md:order-none">`;
   for (data in aktualisCikk) {
     if (data === "cim") {
       //txt += `<div class="flex justify-between">`;
