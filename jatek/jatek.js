@@ -1,10 +1,4 @@
-function ID(elem) {
-    return document.getElementById(elem);
-}
 
-function $(elem) {
-    return document.querySelectorAll(elem);
-}
 let megTalalva = 0;
 let megy = false;
 const hol = [];

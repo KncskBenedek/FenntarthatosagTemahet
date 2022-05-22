@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
     let lS = localStorage.getItem("aktualis") ;
     if (lS === null) { 
         alert("You are not supposed to be here!");
-        location.replace("../szabrina/kepgaleria.html")
+        location.replace("../szabrina/kepgaleria.html");
     } else {
         var ruhaJson = JSON.parse(lS);
         ID("ruhaLeiras").innerHTML = ruhaJson.szoveg;
@@ -144,14 +144,16 @@ function kezd(tombKepek) {
 
 }
 
-
+function kicsiKepLesz(index, hely){
+    ID("kisKep" + index).src = kepekArrKis[hely];
+    ID("kisKep" + index).className = `kicsi${hely}`;
+}
 function jobbra() {
     let n = lepteto;
     for (let index = 0; index < 3; index++) {
         lepteto++;
         if (lepteto < kepekArrKis.length) { //kód ismétlés
-            ID("kisKep" + index).src = kepekArrKis[lepteto];
-            ID("kisKep" + index).className = `kicsi${lepteto}`;
+            kicsiKepLesz(index, lepteto)
             if (index === 0) {
                 n = lepteto;
             }
@@ -160,8 +162,7 @@ function jobbra() {
             if (index === 0) {
                 n = lepteto;
             }
-            ID("kisKep" + index).src = kepekArrKis[lepteto];
-            ID("kisKep" + index).className = `kicsi${lepteto}`;
+            kicsiKepLesz(index, lepteto)
         }
     }
     kiemel(jInd);
@@ -175,8 +176,7 @@ function balra() {
     for (let index = 2; index >= 0; index--) {
         vege--;
         if (vege >= 0) { // kód ismétlés
-            ID("kisKep" + index).src = kepekArrKis[vege];
-            ID("kisKep" + index).className = `kicsi${vege}`;
+            kicsiKepLesz(index, vege);
             if (index === 2) {
                 n = vege;
             }
@@ -185,8 +185,7 @@ function balra() {
             if (index === 2) {
                 n = vege;
             }
-            ID("kisKep" + index).src = kepekArrKis[vege];
-            ID("kisKep" + index).className = `kicsi${vege}`;
+            kicsiKepLesz(index, vege);
         }
     }
     kiemel(jInd);
