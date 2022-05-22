@@ -10,6 +10,7 @@ function MSZ_init() {
   CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero"), leirJson("0")});
   CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ"), leirJson("1")});
   slJson();
+  galAnim()
 }
 
 function MSZ_slideBetolt(kep) {
@@ -25,9 +26,6 @@ function MSZ_slideBetolt(kep) {
     index++;
   });
   index=0;
-  console.log(Ztomb);
-  console.log(Ktomb);
-  console.log(kep[Ztomb[0]]);
   setInterval(() => {
       document.getElementById("slideKep").src = kep[Ztomb[index]].kepek[0];
       document.getElementById("slideKep2").src = kep[Ktomb[index]].kepek[0];
@@ -35,11 +33,20 @@ function MSZ_slideBetolt(kep) {
     if ((index >= Ztomb.length - 1) || (index >=Ktomb.length-1)) {
       index = 0;
     }
-  }, 1000);
+  }, 1500);
   if (index >= kep.length - 1) {
     index = 0;
   }
 }
+
+function galAnim(){
+  gsap.set(".MSZ_header",{scale:1});
+  gsap.timeline()
+      .from(".MSZ_header", {duration:1.5, yPercent:-100})
+      .from(".MSZ_article", {duration:1.5, xPercent:-100})
+}
+
+
 
 function MSZ_kepbetolt(data, koll) {
   console.log(data);
