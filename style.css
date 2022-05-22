@@ -146,6 +146,18 @@ html {
 .kartya {
   padding: 10px;
 }
+#kepek{
+  max-width: 900px;
+  margin: auto;
+}
+  @media screen and (max-width: 770px) {
+    .kartya{
+      width: 95px;
+      padding: 3px;
+      
+    }
+  }
+
 /*jatek*/
 
 
