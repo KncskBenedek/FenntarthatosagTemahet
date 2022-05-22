@@ -14,7 +14,7 @@ function init() {
 
 function scrollEgyCikk() {
 
-  tlegycikk.fromTo(ID("egycikk"), 0, { y: "0%" }, { y: "-200%" });
+  tlegycikk.fromTo(ID("egycikk"), 0, { x: "0%" }, { x: "-200%" });
 
   gsap.to(ID("egycikk"), {
     scrollTrigger: {
@@ -24,8 +24,8 @@ function scrollEgyCikk() {
       markers: false,
       toggleActions: "restart none reverse none",
     },
-    y:"0%",
-    duration:4
+    x:"0%",
+    duration:2
   })
 
 }
