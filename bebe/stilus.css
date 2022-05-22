@@ -5,7 +5,9 @@
   grid-template-columns: 1fr 1fr;
   z-index: -2;
   padding-top: 50px;
-  /* min-height: 96vh; */
+  min-height: 96vh;
+  max-width: 90%;
+  margin: auto;
 }
 
 .item img {
@@ -58,7 +60,8 @@
   opacity: 60%;
 }
 #kisKepek div {
-  height: auto;
+  overflow: hidden;
+  height: 92%;
   width: 20%;
 }
 #kisKepek img:hover {
@@ -69,11 +72,12 @@
 #nagyKep,
 #kisLeptetoCont {
   overflow: hidden;
-  padding: 16px;
+  padding: 20px;
   font-weight: bold;
   position: relative;
 }
 #nagyKep {
+  
   width: 495px;
   height: 730px;
 }
@@ -107,21 +111,36 @@
   background-color: rgba(0, 0, 0, 800%);
 }
 
-/* @media screen and (max-width: 888px){
-  .next{
-    right: 5%;
+@media screen and (max-width: 1000px){
+  #kisKepek div {
+    width: 30%;
   }
-  .prev{
-    left: 5%;
+  #bal{
+    left: 0;
   }
-} */
-@media screen and (max-width: 770px) {
-  #kisKepek img {
-    opacity: 100%;
+  #jobb{
+    right: 0;
   }
-  #nagyKep img {
+}
+@media screen and (max-width: 900px){
+  #kisKepek div {
+    width: 30%;
+  }
+#bemutat{
+  max-width: 100%;
+}
+#nagyKep img {
     width: 495px;
     height: 730px;
+  }
+}
+@media screen and (max-width: 770px) {
+  #kisKepek div {
+    
+    width: 20%;
+  }
+  #kisKepek img {
+    opacity: 100%;
   }
   #bemutat {
     display: flex;
@@ -135,6 +154,12 @@
     align-items: center;
     padding: 10px;
   }
+  #bal{
+    left: 8%;
+  }
+  #jobb{
+    right: 8%;
+  }
 }
 @media screen and (max-width: 600px) {
   #nagyKep img {
@@ -146,5 +171,8 @@
     height: 540px;
     /* width: 100%;
     height: auto; */
+  }
+  #kisKepek div {
+    width: 25%;
   }
 }
