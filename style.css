@@ -177,6 +177,11 @@ input[type="checkbox"] {
 #teszt_article .dl_tesztnev:hover {
   transform: translateY(-10px);
   cursor: pointer;
+  
+}
+
+#teszt_article h1:hover {
+color: #89abe3ff;
 }
 
 /*felugró*/
