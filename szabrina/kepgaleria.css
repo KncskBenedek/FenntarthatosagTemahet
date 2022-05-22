@@ -338,7 +338,16 @@ html{
 footer{
   grid-area: fo;
 }
-
+@media screen and (max-width: 1362px){
+  .kreativ{
+    height: 123px;
+  }
+}
+/* @media screen and (max-width: 2195px){
+  .zero{
+    height: 66px;
+  }
+} */
 @media only screen and (max-width: 1000px) {
   #MSZ_headTarolo{
     grid-template-columns: 1fr;
