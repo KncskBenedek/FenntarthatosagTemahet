@@ -82,8 +82,9 @@ function lep(ertek){
 
 function kiemel(index){
     let elem = QS(`.kicsi${index}`);
-    
-    for (let n = 0; n < hossz; n++) {
+    let meddig = hossz === 2? 2:3;
+    for (let n = 0; n < meddig; n++) {
+        
         QS(`#kisKep${n}`).style.opacity = "60%";
     }
     if (elem !== null) {
@@ -100,7 +101,7 @@ function megjelenit(index){
         QS(".item img").src = ref[index];
         QS(".item img").style.opacity = 1;
         QS(".item img").style.transitionDuration = "200ms";
- }, 200);
+ }, 250);
     QS(".hanyadik").innerHTML = `${index+1} / ${hossz}`;
 
 }
@@ -131,7 +132,7 @@ function kezd(tombKepek) {
 
     let meddig = tombKepek.length === 2 ? 2 : 3;
     for (let index = 0; index < meddig; index++) {
-        alsoKepek += `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi${index}"></div>`;
+        alsoKepek += `<div> <img id="kisKep${index}" src="${tombKepek[index]}" class="kicsi${index}" alt="kép"></div>`;
     }
     
     alsoKepek += `</div></div> `;
