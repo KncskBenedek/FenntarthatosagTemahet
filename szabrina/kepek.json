@@ -183,7 +183,7 @@
                 "../kepek/fehersz/ruha15/kicsi/72.jpg",
                 "../kepek/fehersz/ruha15/kicsi/73.jpg",
                 "../kepek/fehersz/ruha15/kicsi/74.jpg",
-                "../kepek/fehersz/ruha15/kicsi/75"
+                "../kepek/fehersz/ruha15/kicsi/75.jpg"
             ],
             "kollekcio": "Zero"
         },
@@ -209,7 +209,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 39,
+            "id": 10,
             "tervezo": "Balla Robin",
             "fotosnev": "Fehér Szebasztián",
             "modell": "",
@@ -236,7 +236,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 10,
+            "id": 11,
             "tervezo": "Buzás Vanda Szonja",
             "fotosnev": "Józsa Anna",
             "modell": "Buzás Vanda Szonja",
@@ -253,7 +253,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 11,
+            "id": 12,
             "tervezo": "Fábián Fanni",
             "fotosnev": "Józsa Anna",
             "modell": "Ádámszki Zsuzsanna",
@@ -272,7 +272,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 12,
+            "id": 13,
             "tervezo": "Fábián Fanni",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Ádámszki Zsuzsanna",
@@ -288,14 +288,14 @@
             "kicsiKepek": [
                 "../kepek/fehersz/ruha11/kicsi/47.jpg",
                 "../kepek/fehersz/ruha11/kicsi/48.jpg",
-                "../kepek/fehersz/ruha11/49.jpg",
+                "../kepek/fehersz/ruha11/kicsi/49.jpg",
                 "../kepek/fehersz/ruha11/kicsi/50.jpg",
                 "../kepek/fehersz/ruha11/kicsi/51.jpg"
             ],
             "kollekcio": "Kreativ"
         },
         {
-            "id": 13,
+            "id": 14,
             "tervezo": "Fazekas Anna",
             "fotosnev": "Gáll Regina",
             "modell": "Fazekas Anna",
@@ -316,7 +316,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 14,
+            "id": 15,
             "tervezo": "Fazekas Anna",
             "fotosnev": "Gáll Regina",
             "modell": "Fazekas Anna",
@@ -337,7 +337,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 19,
+            "id": 16,
             "tervezo": "Juhász Nóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Juhász Nóra",
@@ -356,7 +356,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 15,
+            "id": 17,
             "tervezo": "Fódi Martin Levente",
             "fotosnev": "Józsa Anna",
             "modell": "Heilman Petra",
@@ -373,7 +373,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 16,
+            "id": 18,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Gáll Regina",
             "modell": "Horváth Dorina",
@@ -392,7 +392,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 17,
+            "id": 19,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Józsa Anna",
             "modell": "Horváth Dorina",
@@ -409,7 +409,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 36,
+            "id": 20,
             "tervezo": "Tóth Dávid",
             "fotosnev": "Józsa Anna",
             "modell": "Buzás Vanda",
@@ -426,7 +426,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 18,
+            "id": 21,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Horváth Dorina",
@@ -447,7 +447,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 20,
+            "id": 22,
             "tervezo": "Kertész Krisztina",
             "fotosnev": "Gáll Regina",
             "modell": "Kertész Krisztina",
@@ -472,7 +472,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 21,
+            "id": 23,
             "tervezo": "Kertész Krisztina",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Kertész Krisztina",
@@ -495,7 +495,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 22,
+            "id": 24,
             "tervezo": "Mészáros Mercédesz Beatrix",
             "fotosnev": "Józsa Anna",
             "modell": "Lövei Lejla",
@@ -512,7 +512,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 23,
+            "id": 25,
             "tervezo": "Mészáros Mercédesz Beatrix",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Lövei Lejla",
@@ -533,7 +533,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 24,
+            "id": 26,
             "tervezo": "Nagy Dominika Anna",
             "fotosnev": "Józsa Anna",
             "modell": "Nagy Dominika Anna",
@@ -552,7 +552,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 25,
+            "id": 27,
             "tervezo": "Nagy Dominika Anna",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Nagy Dominika Anna",
@@ -571,7 +571,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 26,
+            "id": 28,
             "tervezo": "Nagy Flóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Nagy Flóra",
@@ -596,7 +596,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 27,
+            "id": 29,
             "tervezo": "Nagy Flóra",
             "fotosnev": "Józsa Anna",
             "modell": "Nagy Flóra",
@@ -613,7 +613,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 28,
+            "id": 30,
             "tervezo": "Nagy Hanna Napsugár",
             "fotosnev": "Gáll Regina és Józsa Anna",
             "modell": "Nagy Hanna Napsugár",
@@ -656,7 +656,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 29,
+            "id": 31,
             "tervezo": "Nagy Hanna Napsugár",
             "fotosnev": "Gáll Regina",
             "modell": "Nagy Hanna Napsugár",
@@ -683,7 +683,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 30,
+            "id": 32,
             "tervezo": "Nagy Hanna Napsugár",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Nagy Hanna Napsugár",
@@ -716,7 +716,7 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 31,
+            "id": 33,
             "tervezo": "Novák Nóra",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Sárácz Tijáná",
@@ -747,7 +747,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 32,
+            "id": 34,
             "tervezo": "Szoboszlai Bella",
             "fotosnev": "Gáll Regina",
             "modell": "Szoboszlai Bella",
@@ -787,7 +787,6 @@
                 "../kepek/gallr/ruha11/kicsi/9.jpg",
                 "../kepek/gallr/ruha11/kicsi/10.jpg",
                 "../kepek/gallr/ruha11/kicsi/11.jpg",
-                "../kepek/gallr/ruha11/kicsi/12.jpg",
                 "../kepek/gallr/ruha11/kicsi/13.jpg",
                 "../kepek/gallr/ruha11/kicsi/14.jpg",
                 "../kepek/gallr/ruha11/kicsi/15.jpg",
@@ -798,7 +797,6 @@
                 "../kepek/gallr/ruha11/kicsi/20.jpg",
                 "../kepek/gallr/ruha11/kicsi/21.jpg",
                 "../kepek/gallr/ruha11/kicsi/22.jpg",
-                "../kepek/gallr/ruha11/kicsi/23.jpg",
                 "../kepek/gallr/ruha11/kicsi/24.jpg",
                 "../kepek/gallr/ruha11/kicsi/25.jpg",
                 "../kepek/gallr/ruha11/kicsi/26.jpg",
@@ -812,7 +810,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 33,
+            "id": 35,
             "tervezo": "Szoboszlai Bella",
             "fotosnev": "Józsa Anna",
             "modell": "Szoboszlai Bella",
@@ -821,19 +819,17 @@
             "kepek": [
                 "../kepek/jozsaa/ruha5/10.jpg",
                 "../kepek/jozsaa/ruha5/11.jpg",
-                "../kepek/jozsaa/ruha5/12.jpg",
                 "../kepek/jozsaa/ruha5/13.jpg"
             ],
             "kicsiKepek": [
                 "../kepek/jozsaa/ruha5/kicsi/2.jpg",
                 "../kepek/jozsaa/ruha5/kicsi/3.jpg",
-                "../kepek/jozsaa/ruha5/kicsi/4.jpg",
                 "../kepek/jozsaa/ruha5/kicsi/5.jpg"
             ],
             "kollekcio": "Kreativ"
         },
         {
-            "id": 34,
+            "id": 36,
             "tervezo": "Szórád Nikolett",
             "fotosnev": "Józsa Anna",
             "modell": "Bencze Rubina",
@@ -858,7 +854,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 35,
+            "id": 37,
             "tervezo": "Szórád Nikolett",
             "fotosnev": "Józsa Anna",
             "modell": "Bencze Rubina",
@@ -870,14 +866,14 @@
                 "../kepek/jozsaa/ruha12/32.jpg"
             ],
             "kicsiKepek": [
+                "../kepek/jozsaa/ruha12/kicsi/24.jpg",
                 "../kepek/jozsaa/ruha12/kicsi/25.jpg",
-                "../kepek/jozsaa/ruha12/kicsi/26.jpg",
-                "../kepek/jozsaa/ruha12/kicsi/27.jpg"
+                "../kepek/jozsaa/ruha12/kicsi/26.jpg"
             ],
             "kollekcio": "Kreativ"
         },
         {
-            "id": 37,
+            "id": 38,
             "tervezo": "Wertheim Loretta",
             "fotosnev": "Fehér Szebasztián",
             "modell": "Wertheim Loretta",
@@ -898,7 +894,7 @@
             "kollekcio": "Zero"
         },
         {
-            "id": 38,
+            "id": 39,
             "tervezo": "Wertheim Loretta",
             "fotosnev": "Gáll Regina",
             "modell": "Wertheim Loretta",
