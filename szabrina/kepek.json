@@ -288,7 +288,7 @@
             "kicsiKepek": [
                 "../kepek/fehersz/ruha11/kicsi/47.jpg",
                 "../kepek/fehersz/ruha11/kicsi/48.jpg",
-                "../kepek/fehersz/ruha11/49.jpg",
+                "../kepek/fehersz/ruha11/kicsi/49.jpg",
                 "../kepek/fehersz/ruha11/kicsi/50.jpg",
                 "../kepek/fehersz/ruha11/kicsi/51.jpg"
             ],
@@ -870,9 +870,9 @@
                 "../kepek/jozsaa/ruha12/32.jpg"
             ],
             "kicsiKepek": [
+                "../kepek/jozsaa/ruha12/kicsi/24.jpg",
                 "../kepek/jozsaa/ruha12/kicsi/25.jpg",
-                "../kepek/jozsaa/ruha12/kicsi/26.jpg",
-                "../kepek/jozsaa/ruha12/kicsi/27.jpg"
+                "../kepek/jozsaa/ruha12/kicsi/26.jpg"
             ],
             "kollekcio": "Kreativ"
         },
