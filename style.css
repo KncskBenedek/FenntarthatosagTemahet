@@ -40,8 +40,8 @@ html {
   z-index: 100;
 }
 
-.navbar ion-icon {
-  color: rgba(0, 128, 0, 0.836);
+.navbar img {
+  width: 4vh;
 }
 .navicon {
   display: none;
@@ -95,7 +95,7 @@ html {
 .footer {
   background-color: #89abe3ff;
   color: #2c364f;
-  height: 6vh;
+  height: 5vh;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -106,9 +106,6 @@ html {
 .keszitok {
   font-size: 13px;
   font-weight: bold;
-}
-.web_kesz {
-  padding: 10px 3px 10px 3px;
 }
 .nevek {
   text-align: right;
