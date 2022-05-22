@@ -11,7 +11,7 @@ let hatszAl = szelesseg > 600;
 ref = hatszAl? kepekArr:kepekArrKis;
 
 window.addEventListener("resize", () => {
-    //console.log("bent a resizeban");
+    
     szelesseg = window.innerWidth ;
     let elozo = hatszAl;
     hatszAl = szelesseg > 600;
@@ -44,10 +44,8 @@ window.addEventListener("load", function () {
             kepekArrKis.push(ruhaJson.kicsiKepek[index]);
             
         }
-        console.log(hossz);
-            kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${ref[0]}"/></div>`;
-        
-        
+
+        kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${ref[0]}"/></div>`;
         //gombok
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
@@ -93,14 +91,18 @@ function kiemel(index){
 }
 
 
+function itemOp(opa){
+    QS(".item img").style.opacity = opa;
+    QS(".item img").style.transitionDuration = "200ms";
+}
+
+
 function megjelenit(index){
     kiemel(index);
-    QS(".item img").style.opacity = 0;
-    QS(".item img").style.transitionDuration = "200ms";
+    itemOp(0);
     setTimeout(()=>{ 
         QS(".item img").src = ref[index];
-        QS(".item img").style.opacity = 1;
-        QS(".item img").style.transitionDuration = "200ms";
+        itemOp(1);
  }, 250);
     QS(".hanyadik").innerHTML = `${index+1} / ${hossz}`;
 
@@ -196,13 +198,11 @@ function balra() {
 
 
 function nagyKepLesz() {
-    console.log(event.target.className);
+    
     let id = parseInt((event.target.className).replace("kicsi", ""));
-    console.log(id);
-    console.log(typeof id);
-    console.log("bent van a metódusban");
+    
     if(jInd !== id){
-        console.log("bent van az elágazásban");
+        
         jInd = id;
         megjelenit(jInd);
     }
