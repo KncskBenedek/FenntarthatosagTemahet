@@ -131,10 +131,13 @@
   background-color: #2c364f;
   
 }
-#naBtn{
-  display: none;
-}
 
+#naBtn{
+  display: block;
+}
+#kisKepek a{
+  z-index: 1;
+}
 @media screen and (max-width: 1000px){
   #kisKepek div {
     width: 30%;
@@ -174,12 +177,9 @@
     align-items: center;
   }
   #naBtn{
-    display: block;
+    
     bottom: 20%;
     margin: 10px;
-  }
-  #leBtn{
-    display: none;
   }
   #leiras {
     display: flex;

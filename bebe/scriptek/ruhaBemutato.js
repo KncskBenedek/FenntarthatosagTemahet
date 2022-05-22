@@ -50,7 +50,6 @@ window.addEventListener("load", function () {
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
         let nagykep = kep + gombok ;//indicators + kepek + gombok;
-        //ID("nagyKep").innerHTML += ``;
         ID("nagyKep").innerHTML += nagykep;
         
 
@@ -70,6 +69,7 @@ window.addEventListener("load", function () {
 
 
 function lep(ertek){
+    
     jInd += ertek;
     if(jInd < 0){
     jInd = ref.length - 1;
@@ -140,12 +140,14 @@ function kezd(tombKepek) {
     
     alsoKepek += `</div></div> `;
     ID("leiras").innerHTML += alsoKepek;
+    
 
     if (kepekArr.length > 3) {
+        
         ID("jobb").addEventListener("click", jobbra);
         ID("bal").addEventListener("click", balra);
     }
-    ID("leiras").innerHTML += `<a href="../szabrina/kepgaleria.html" class="vissza" id="leBtn"> <button>Vissza</button></a>`;
+   /*  ID("leiras").innerHTML += `<a href="../szabrina/kepgaleria.html" class="vissza" id="leBtn"> <button>Vissza</button></a>`; */
     
 }
 
@@ -154,6 +156,7 @@ function kicsiKepLesz(index, hely){
     ID("kisKep" + index).className = `kicsi${hely}`;
 }
 function jobbra() {
+    
     let n = lepteto;
     for (let index = 0; index < 3; index++) {
         lepteto++;
