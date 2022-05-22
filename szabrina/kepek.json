@@ -209,6 +209,33 @@
             "kollekcio": "Kreativ"
         },
         {
+            "id": 39,
+            "tervezo": "Balla Robin",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "",
+            "tovabboldalra": "../bebe/ruhabemutato.html",
+            "szoveg": "",
+            "kepek": [
+                "../kepek/fehersz/ruha18/image1.jpg",
+                "../kepek/fehersz/ruha18/image2.jpg",
+                "../kepek/fehersz/ruha18/image3.jpg",
+                "../kepek/fehersz/ruha18/image4.jpg",
+                "../kepek/fehersz/ruha18/image5.jpg",
+                "../kepek/fehersz/ruha18/image6.jpg",
+                "../kepek/fehersz/ruha18/image7.jpg"
+            ],
+            "kicsiKepek": [
+                "../kepek/fehersz/ruha18/kicsi/84.jpg",
+                "../kepek/fehersz/ruha18/kicsi/85.jpg",
+                "../kepek/fehersz/ruha18/kicsi/86.jpg",
+                "../kepek/fehersz/ruha18/kicsi/87.jpg",
+                "../kepek/fehersz/ruha18/kicsi/88.jpg",
+                "../kepek/fehersz/ruha18/kicsi/89.jpg",
+                "../kepek/fehersz/ruha18/kicsi/90.jpg"
+            ],
+            "kollekcio": "Zero"
+        },
+        {
             "id": 10,
             "tervezo": "Buzás Vanda Szonja",
             "fotosnev": "Józsa Anna",
@@ -223,7 +250,7 @@
                 "../kepek/jozsaa/ruha4/kicsi/40.jpg",
                 "../kepek/jozsaa/ruha4/kicsi/41.jpg"
             ],
-            "kollekcio": "Zero"
+            "kollekcio": "Kreativ"
         },
         {
             "id": 11,
@@ -242,7 +269,7 @@
                 "../kepek/jozsaa/ruha15/kicsi/32.jpg",
                 "../kepek/jozsaa/ruha15/kicsi/33.jpg"
             ],
-            "kollekcio": "Kreativ"
+            "kollekcio": "Zero"
         },
         {
             "id": 12,
@@ -265,7 +292,7 @@
                 "../kepek/fehersz/ruha11/kicsi/50.jpg",
                 "../kepek/fehersz/ruha11/kicsi/51.jpg"
             ],
-            "kollekcio": "Zero"
+            "kollekcio": "Kreativ"
         },
         {
             "id": 13,
@@ -286,7 +313,7 @@
                 "../kepek/gallr/ruha7/kicsi/51.jpg",
                 "../kepek/gallr/ruha7/kicsi/52.jpg"
             ],
-            "kollekcio": "Kreativ"
+            "kollekcio": "Zero"
         },
         {
             "id": 14,
@@ -306,6 +333,25 @@
                 "../kepek/gallr/ruha6/kicsi/54.jpg",
                 "../kepek/gallr/ruha6/kicsi/55.jpg",
                 "../kepek/gallr/ruha6/kicsi/57.jpg"
+            ],
+            "kollekcio": "Kreativ"
+        },
+        {
+            "id": 19,
+            "tervezo": "Juhász Nóra",
+            "fotosnev": "Fehér Szebasztián",
+            "modell": "Juhász Nóra",
+            "tovabboldalra": "../bebe/ruhabemutato.html",
+            "szoveg": "Juhász Nóra ruhája különböző méretű tèglalapokból lett összevarva. Inspirációs tèmaként az èpületek ès a futónövènyek szolgáltak.",
+            "kepek": [
+                "../kepek/fehersz/ruha6/image1.jpg",
+                "../kepek/fehersz/ruha6/image2.jpg",
+                "../kepek/fehersz/ruha6/image3.jpg"
+            ],
+            "kicsiKepek": [
+                "../kepek/fehersz/ruha6/kicsi/19.jpg",
+                "../kepek/fehersz/ruha6/kicsi/20.jpg",
+                "../kepek/fehersz/ruha6/kicsi/21.jpg"
             ],
             "kollekcio": "Zero"
         },
@@ -363,6 +409,23 @@
             "kollekcio": "Kreativ"
         },
         {
+            "id": 36,
+            "tervezo": "Tóth Dávid",
+            "fotosnev": "Józsa Anna",
+            "modell": "Buzás Vanda",
+            "tovabboldalra": "../bebe/ruhabemutato.html",
+            "szoveg": "Tóth Dávid által tervezett öltözék egy könnyed nyári nadrág és blúz, melyet a művész  szülővárosa, Zalaegerszeg inspirált.",
+            "kepek": [
+                "../kepek/jozsaa/ruha10/20.jpg",
+                "../kepek/jozsaa/ruha10/21.jpg"
+            ],
+            "kicsiKepek": [
+                "../kepek/jozsaa/ruha10/kicsi/13.jpg",
+                "../kepek/jozsaa/ruha10/kicsi/14.jpg"
+            ],
+            "kollekcio": "Zero"
+        },
+        {
             "id": 18,
             "tervezo": "Hoffmann Dóra",
             "fotosnev": "Fehér Szebasztián",
@@ -380,25 +443,6 @@
                 "../kepek/fehersz/ruha4/kicsi/13.jpg",
                 "../kepek/fehersz/ruha4/kicsi/14.jpg",
                 "../kepek/fehersz/ruha4/kicsi/15.jpg"
-            ],
-            "kollekcio": "Zero"
-        },
-        {
-            "id": 19,
-            "tervezo": "Juhász Nóra",
-            "fotosnev": "Fehér Szebasztián",
-            "modell": "Juhász Nóra",
-            "tovabboldalra": "../bebe/ruhabemutato.html",
-            "szoveg": "Juhász Nóra ruhája különböző méretű tèglalapokból lett összevarva. Inspirációs tèmaként az èpületek ès a futónövènyek szolgáltak.",
-            "kepek": [
-                "../kepek/fehersz/ruha6/image1.jpg",
-                "../kepek/fehersz/ruha6/image2.jpg",
-                "../kepek/fehersz/ruha6/image3.jpg"
-            ],
-            "kicsiKepek": [
-                "../kepek/fehersz/ruha6/kicsi/19.jpg",
-                "../kepek/fehersz/ruha6/kicsi/20.jpg",
-                "../kepek/fehersz/ruha6/kicsi/21.jpg"
             ],
             "kollekcio": "Kreativ"
         },
@@ -669,7 +713,7 @@
                 "../kepek/fehersz/ruha7/kicsi/30.jpg",
                 "../kepek/fehersz/ruha7/kicsi/31.jpg"
             ],
-            "kollekcio": "Zero"
+            "kollekcio": "Kreativ"
         },
         {
             "id": 31,
@@ -700,7 +744,7 @@
                 "../kepek/fehersz/ruha14/kicsi/69.jpg",
                 "../kepek/fehersz/ruha14/kicsi/70.jpg"
             ],
-            "kollekcio": "Kreativ"
+            "kollekcio": "Zero"
         },
         {
             "id": 32,
@@ -833,23 +877,6 @@
             "kollekcio": "Kreativ"
         },
         {
-            "id": 36,
-            "tervezo": "Tóth Dávid",
-            "fotosnev": "Józsa Anna",
-            "modell": "Buzás Vanda",
-            "tovabboldalra": "../bebe/ruhabemutato.html",
-            "szoveg": "Tóth Dávid által tervezett öltözék egy könnyed nyári nadrág és blúz, melyet a művész  szülővárosa, Zalaegerszeg inspirált.",
-            "kepek": [
-                "../kepek/jozsaa/ruha10/20.jpg",
-                "../kepek/jozsaa/ruha10/21.jpg"
-            ],
-            "kicsiKepek": [
-                "../kepek/jozsaa/ruha10/kicsi/13.jpg",
-                "../kepek/jozsaa/ruha10/kicsi/14.jpg"
-            ],
-            "kollekcio": "Zero"
-        },
-        {
             "id": 37,
             "tervezo": "Wertheim Loretta",
             "fotosnev": "Fehér Szebasztián",
@@ -868,7 +895,7 @@
                 "../kepek/fehersz/ruha17/kicsi/82.jpg",
                 "../kepek/fehersz/ruha17/kicsi/83.jpg"
             ],
-            "kollekcio": "Kreativ"
+            "kollekcio": "Zero"
         },
         {
             "id": 38,
@@ -887,35 +914,9 @@
                 "../kepek/gallr/ruha5/kicsi/59.jpg",
                 "../kepek/gallr/ruha5/kicsi/60.jpg"
             ],
-            "kollekcio": "Zero"
-        },
-        {
-            "id": 39,
-            "tervezo": "Balla Robin",
-            "fotosnev": "Fehér Szebasztián",
-            "modell": "",
-            "tovabboldalra": "../bebe/ruhabemutato.html",
-            "szoveg": "",
-            "kepek": [
-                "../kepek/fehersz/ruha18/image1.jpg",
-                "../kepek/fehersz/ruha18/image2.jpg",
-                "../kepek/fehersz/ruha18/image3.jpg",
-                "../kepek/fehersz/ruha18/image4.jpg",
-                "../kepek/fehersz/ruha18/image5.jpg",
-                "../kepek/fehersz/ruha18/image6.jpg",
-                "../kepek/fehersz/ruha18/image7.jpg"
-            ],
-            "kicsiKepek": [
-                "../kepek/fehersz/ruha18/kicsi/84.jpg",
-                "../kepek/fehersz/ruha18/kicsi/85.jpg",
-                "../kepek/fehersz/ruha18/kicsi/86.jpg",
-                "../kepek/fehersz/ruha18/kicsi/87.jpg",
-                "../kepek/fehersz/ruha18/kicsi/88.jpg",
-                "../kepek/fehersz/ruha18/kicsi/89.jpg",
-                "../kepek/fehersz/ruha18/kicsi/90.jpg"
-            ],
             "kollekcio": "Kreativ"
         }
+        
     ],
     "leiras": [
                 {
