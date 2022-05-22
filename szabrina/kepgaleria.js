@@ -49,7 +49,7 @@ function galAnim(){
 
 
 function MSZ_kepbetolt(data, koll) {
-  console.log(data);
+  
   document.querySelector("#MSZ_galeria").innerHTML = "";
   if ("content" in document.createElement("template")) {
     var tDIV = document.querySelector("#MSZ_tarolo");
@@ -68,13 +68,13 @@ function MSZ_kepbetolt(data, koll) {
       }
     }
   }
-  console.log(document.querySelectorAll(".MSZ_btn"));
+  
   const gombTomb = document.querySelectorAll(".MSZ_btn");
   gombTomb.forEach((elem) => {
     elem.addEventListener("click", function (event) {
-      console.log(event.target.id); //ez a kattintott gomb sorszáma
+       //ez a kattintott gomb sorszáma
       let aktID = event.target.id;
-      console.log(data.kepek[aktID]); //ez a kattintott gombhoz tartozó adat
+      //ez a kattintott gombhoz tartozó adat
       let aktKep = data.kepek[aktID];
       kattint(aktKep);
     });
@@ -120,7 +120,7 @@ function leirJson(resz){
 }
 
 function kattint(aktKep) {
-  console.log(aktKep);
+  
   localStorage.setItem("aktualis", JSON.stringify(aktKep));
   //ezzel lépek a következő oldalra
   window.location.assign(aktKep.tovabboldalra);
