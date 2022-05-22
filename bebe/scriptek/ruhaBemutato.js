@@ -50,6 +50,7 @@ window.addEventListener("load", function () {
         let gombok = `<a id="prev" class="prev">❮</a><a id="next" class="next">❯</a>`;
 
         let nagykep = kep + gombok ;//indicators + kepek + gombok;
+        //ID("nagyKep").innerHTML += ``;
         ID("nagyKep").innerHTML += nagykep;
         
 
@@ -144,7 +145,8 @@ function kezd(tombKepek) {
         ID("jobb").addEventListener("click", jobbra);
         ID("bal").addEventListener("click", balra);
     }
-
+    ID("leiras").innerHTML += `<a href="../szabrina/kepgaleria.html" class="vissza" id="leBtn"> <button>Vissza</button></a>`;
+    
 }
 
 function kicsiKepLesz(index, hely){
