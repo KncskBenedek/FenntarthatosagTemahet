@@ -181,7 +181,7 @@ input[type="checkbox"] {
   transition: transform 250ms;
 }
 
-#teszt_article * {
+#teszt_article div {
   padding-top: 30px;
 }
 #teszt_article .dl_tesztnev:hover {
