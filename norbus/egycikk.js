@@ -25,7 +25,7 @@ function scrollEgyCikk() {
       toggleActions: "restart none reverse none",
     },
     x:"0%",
-    duration:2
+    duration:1.5
   })
 
 }

@@ -8,6 +8,7 @@ function init() {
     scrollCikk();
   }else{
     tartalom();
+    scrollCikkjobbrol();
   }
 }
 
@@ -17,6 +18,24 @@ function clikkHozzaadas() {
   }
 
 }
+
+function scrollCikkjobbrol () {
+
+  tlcikk.fromTo($(".scrollanimacio"), 0,{x:"0%"}, {x:"200%"});
+  
+    gsap.to($(".scrollanimacio"),{
+      scrollTrigger: {
+        trigger: $(".scrollanimacio"),
+        start: "top 90%",
+        end: "top 90%",
+        markers: false,
+        toggleActions: "restart none reverse none",
+      },
+      x:"0%",
+      duration:1.5
+    })
+  
+  }
 
 function scrollCikk () {
 
@@ -31,7 +50,7 @@ tlcikk.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
       toggleActions: "restart none reverse none",
     },
     y:"0%",
-    duration:3
+    duration:2.5
   })
 
 }
