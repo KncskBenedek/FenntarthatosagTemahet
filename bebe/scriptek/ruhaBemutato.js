@@ -25,14 +25,14 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", function () {
     let lS = localStorage.getItem("aktualis") ;
     if (lS === null) { 
-        alert("You are not supposed to be here :(");
+        alert("You are not supposed to be here!");
         location.replace("../szabrina/kepgaleria.html")
     } else {
         var ruhaJson = JSON.parse(lS);
         ID("ruhaLeiras").innerHTML = ruhaJson.szoveg;
-        ID("tervezo").innerHTML = "Tervező: " + ruhaJson.tervezo;
-        ID("fotos").innerHTML = "Fotós: " + ruhaJson.fotosnev;
-        ID("modell").innerHTML = "Modell: " + ruhaJson.modell;
+        ID("tervezo").innerHTML = "Tervező: " + `<span class="nev">${ruhaJson.tervezo}</span>`;
+        ID("fotos").innerHTML = "Fotós: " + `<span class="nev">${ruhaJson.fotosnev}</span>`;
+        ID("modell").innerHTML = "Modell: " + `<span class="nev">${ruhaJson.modell}</span>`;
         
         let kep = ""; 
         hossz = ruhaJson.kepek.length;
