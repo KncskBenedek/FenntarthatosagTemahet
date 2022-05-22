@@ -2,8 +2,8 @@ window.addEventListener("load", init);
 jsonAdat = []
 const tlcikk = gsap.timeline();
 function init() {
-  if(localStorage.getItem("betoltszam") === null) {
-    localStorage.setItem("betoltszam", 1);
+  if(sessionStorage.getItem("betoltszam") === null) {
+    sessionStorage.setItem("betoltszam", 1);
     tartalom();
     scrollCikk();
   }else{
@@ -76,11 +76,11 @@ function megjelenit(szerzokSzovege) {
     for (const kulcs2 in aktualisSzerzoSzoveg) {
       if (kulcs2 === "szoveg") {
         txt += `<div id="${index}"
-        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 lg:border-2 border-black md:border-2 border-black animacio"
+        class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 animacio"
         href="cikk.html">`;
-        txt += `<div class="text-xl font-medium text-gray-700">${aktualisSzerzoSzoveg[kulcs2]}</div>`;
+        txt += `<div class="text-xl font-medium">${aktualisSzerzoSzoveg[kulcs2]}</div>`;
       } else if (kulcs2 === "szerzo") {
-        txt += `<p class="text-base text-center text-gray-500">${aktualisSzerzoSzoveg[kulcs2]}</p>`;
+        txt += `<p class="text-base text-center">${aktualisSzerzoSzoveg[kulcs2]}</p>`;
       }
     }
     txt += `</div>`;

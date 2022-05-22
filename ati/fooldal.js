@@ -207,22 +207,21 @@ function kepTartalom() {
 }
 function kepGaleria(jsonName) {
   randomIndex = Math.floor(Math.random() * jsonName.length);
-  proba(randomIndex, jsonName);
-  //ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1);
+  kepValtas(randomIndex, jsonName);
 
   tema = jsonName[randomIndex].kollekcio;
   galeriaSzovegBehelyezes(tema);
   setInterval(() => {
     randomIndex = Math.floor(Math.random() * jsonName.length);
+    preLoad(randomIndex, jsonName);
+    console.log("váltok");
     tema = jsonName[randomIndex].kollekcio;
     ID("kep1").style.opacity = "0";
     ID("kep1").style.transitionDuration = "600ms";
     ID("kep2").style.opacity = "0";
     ID("kep2").style.transitionDuration = "600ms";
     setTimeout(() => {
-      proba(randomIndex, jsonName);
-      /* ID("kep2").src = jsonName[randomIndex].kepek[1].substring(1);
-      ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1); */
+      kepValtas(randomIndex, jsonName);
       galeriaSzovegBehelyezes(tema);
     }, 600);
     setTimeout(() => {
@@ -233,9 +232,16 @@ function kepGaleria(jsonName) {
     }, 1000);
   }, 8000);
 }
-function proba(index, jsonName) {
+function kepValtas(index, jsonName) {
   ID("kep1").src = jsonName[index].kepek[0].substring(1);
   ID("kep2").src = jsonName[index].kepek[1].substring(1);
+}
+function preLoad(index, jsonName) {
+  console.log("loadolok");
+  let kep1 = new Image();
+  kep1.src = jsonName[index].kepek[0].substring(1);
+  let kep2 = new Image();
+  kep2.src = jsonName[index].kepek[1].substring(1);
 }
 
 function galeriaSzovegBehelyezes(tema) {

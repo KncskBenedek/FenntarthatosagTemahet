@@ -146,9 +146,19 @@ html {
 .kartya {
   padding: 10px;
 }
+#kepek{
+  max-width: 900px;
+  margin: auto;
+}
+  @media screen and (max-width: 770px) {
+    .kartya{
+      width: 95px;
+      padding: 3px;
+      
+    }
+  }
+
 /*jatek*/
-
-
 
 /*tesztek*/
 
@@ -177,6 +187,11 @@ input[type="checkbox"] {
 #teszt_article .dl_tesztnev:hover {
   transform: translateY(-10px);
   cursor: pointer;
+  
+}
+
+#teszt_article h1:hover {
+color: #89abe3ff;
 }
 
 /*felugró*/
@@ -229,11 +244,21 @@ input[type="checkbox"] {
 
 .animacio {
   transition: transform 250ms;
+  background-color: #89abe3ff;
+  margin: 15px;
 }
 
 .animacio:hover {
   transform: translateY(-10px);
   cursor: pointer;
+  background-color: #2c364f;
+}
+
+.animacio:hover p {
+  color: #89abe3ff;
+}
+.animacio:hover div {
+  color: #89abe3ff;
 }
 
 #egycikk * {
@@ -272,6 +297,7 @@ input[type="checkbox"] {
     display: flex;
     height: 40vh;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     transition: 1200ms;
   }
