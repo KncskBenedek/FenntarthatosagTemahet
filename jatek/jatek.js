@@ -72,20 +72,32 @@ function megfordit() {
 }
 
 function kezd() {
-    for (let index = 0; index < 16; index++) {
-        ID(index).addEventListener("click", megfordit);
+    let hossz = sorhossz * sorhossz;
+    for (let index = 0; index < hossz; index++) {
+        ID(index).src = `jKepek/${kepek[index]}`;
     }
-    ID(event.target.id).disabled = true;
+    setTimeout(()=> {
+        for (let index = 0; index < hossz; index++) {
+            ID(index).src = "jKepek/hatter.jpg";
+            ID(index).addEventListener("click", megfordit);
+        }
+        ID("btnKezd").removeEventListener("click", kezd);
+        ID("btnKezd").addEventListener("click", ()=> {
+        clearInterval(szamlalo);
+        jatekKezd();});
+        ID("btnKezd").innerHTML = "Újra";
+    }, 1500);
+    //ID(event.target.id).disabled = true;
+    
     megy = true;
     let sec = 0;
     let szamlalo = setInterval(function () {
         sec++;
         let ido = valt(sec);
         ID("idoKi").innerHTML = ido;
-        if (megTalalva === 8) {
+        if (megTalalva === sorhossz*2) {
             clearInterval(szamlalo);
-            ID("btnKezd").disabled = false;
-            alert("Gratulálok sikerült megoldanod "+ido+" alatt!")
+            alert("Gratulálok sikerült megoldanod "+ido+" alatt!");
             jatekKezd();
         }
     }, 1000);
@@ -109,7 +121,6 @@ function valt(sec) {
 function jatekKezd() {
     megTalalva = 0;
     megy = false;
-    ID("btnKezd").addEventListener("click", kezd);
     let idKepek = ID("kepek");
     let txt = "";
     //kepek keverése
@@ -118,7 +129,10 @@ function jatekKezd() {
          txt += `<div class="kartya"><img src="jKepek/hatter.jpg" id="${index}"></div>`; //jKepek/${kepek[index]
     }
     idKepek.innerHTML = txt;
-
+    ID("idoKi").innerHTML = "";
+    ID("btnKezd").removeEventListener("click", jatekKezd)
+    ID("btnKezd").innerHTML = "Kezdés";
+    ID("btnKezd").addEventListener("click", kezd);
 }
 
 function shuffleArray() {
@@ -132,5 +146,5 @@ function shuffleArray() {
       kepek[index] = kepek[randInd];
       kepek[randInd] = tmp;
     }
-    return kepek;
+    
   }
