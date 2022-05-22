@@ -1,5 +1,5 @@
 window.addEventListener("load", init);
-
+window.addEventListener("resize", scrollAnimaciok);
 gsap.registerPlugin(ScrollTrigger);
 
 function QS(elem) {
@@ -33,9 +33,6 @@ const linkek = document.querySelectorAll(".container li");
 
 var tl = gsap.timeline();
 //scroll animációk
-scrollAnimacio(".b1", cikkek);
-scrollAnimacio(".b2", tesztek);
-scrollAnimacio(".b3", galeria);
 
 // föóldal anímációk
 
@@ -43,13 +40,19 @@ function init() {
   beuszasok();
   navSlide();
   tartalom();
+  scrollAnimaciok();
   galeriaScroll();
   navIcon.addEventListener("click", videoNincs);
   kepTartalom();
   // galeriaSzoveg();
   setTimeout(() => {
     ScrollTrigger.refresh();
-  }, 300);
+  }, 100);
+}
+function scrollAnimaciok() {
+  scrollAnimacio(".b1", cikkek);
+  scrollAnimacio(".b2", tesztek);
+  scrollAnimacio(".b3", galeria);
 }
 function beuszasok() {
   tl.fromTo(
@@ -204,8 +207,9 @@ function kepTartalom() {
 }
 function kepGaleria(jsonName) {
   randomIndex = Math.floor(Math.random() * jsonName.length);
-  ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1);
-  ID("kep2").src = jsonName[randomIndex].kepek[1].substring(1);
+  proba(randomIndex, jsonName);
+  //ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1);
+
   tema = jsonName[randomIndex].kollekcio;
   galeriaSzovegBehelyezes(tema);
   setInterval(() => {
@@ -216,8 +220,9 @@ function kepGaleria(jsonName) {
     ID("kep2").style.opacity = "0";
     ID("kep2").style.transitionDuration = "600ms";
     setTimeout(() => {
-      ID("kep2").src = jsonName[randomIndex].kepek[1].substring(1);
-      ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1);
+      proba(randomIndex, jsonName);
+      /* ID("kep2").src = jsonName[randomIndex].kepek[1].substring(1);
+      ID("kep1").src = jsonName[randomIndex].kepek[0].substring(1); */
       galeriaSzovegBehelyezes(tema);
     }, 600);
     setTimeout(() => {
@@ -225,17 +230,19 @@ function kepGaleria(jsonName) {
       ID("kep1").style.transitionDuration = "600ms";
       ID("kep2").style.opacity = "1";
       ID("kep2").style.transitionDuration = "600ms";
-    }, 650);
+    }, 1000);
   }, 8000);
+}
+function proba(index, jsonName) {
+  ID("kep1").src = jsonName[index].kepek[0].substring(1);
+  ID("kep2").src = jsonName[index].kepek[1].substring(1);
 }
 
 function galeriaSzovegBehelyezes(tema) {
   if (tema === "Zero") {
-    console.log("Zero");
     QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[0].cim}</h2>`;
     QS(".galeriaSzoveg").innerHTML += `<p>${leiras[0].szoveg}</p>`;
   } else {
-    console.log("Kreativ");
     QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[1].cim}</h2>`;
     QS(".galeriaSzoveg").innerHTML += `<p>${leiras[1].szoveg}</p>`;
   }
