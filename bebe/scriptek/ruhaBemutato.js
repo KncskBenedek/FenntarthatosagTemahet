@@ -44,7 +44,7 @@ window.addEventListener("load", function () {
             kepekArrKis.push(ruhaJson.kicsiKepek[index]);
             
         }
-        
+        console.log(hossz);
             kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${ref[0]}"/></div>`;
         
         
@@ -83,7 +83,7 @@ function lep(ertek){
 function kiemel(index){
     let elem = QS(`.kicsi${index}`);
     
-    for (let n = 0; n < 3; n++) {
+    for (let n = 0; n < hossz; n++) {
         QS(`#kisKep${n}`).style.opacity = "60%";
     }
     if (elem !== null) {
