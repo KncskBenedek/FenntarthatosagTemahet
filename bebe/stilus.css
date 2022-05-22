@@ -68,16 +68,15 @@
   width: 495px;
   height: 730px;
 }
-#prev, #next, .prev, .next{
+.prev, .next{
   position: absolute;
   cursor: pointer;
   top: 40%;
-  color: white;
-  background-color: black;
-  opacity: 60%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 20%);
   width: auto;
   padding: 7px;
-  border: 1px solid grey;
+  border: 1px solid rgba(101, 101, 101, 20%);
   border-radius: 15%;
   margin: 10px;
 }
@@ -93,9 +92,8 @@
 .prev{
   left: 8%;
 }
-#prev:hover, #next:hover{
-  background-color: black;
-  opacity: 80%;
+.next:hover, .prev:hover{
+  background-color: rgba(0, 0, 0, 800%);
 }
 
 /* @media screen and (max-width: 888px){

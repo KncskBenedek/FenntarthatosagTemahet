@@ -9,6 +9,7 @@ let ref;
 let szelesseg = window.innerWidth ;
 let hatszAl = szelesseg > 600;
 ref = hatszAl? kepekArr:kepekArrKis;
+
 window.addEventListener("resize", () => {
     //console.log("bent a resizeban");
     szelesseg = window.innerWidth ;
@@ -104,7 +105,7 @@ function megjelenit(index){
 
 }
 
-
+//kód ismétlés
 function zind(){
     QS(".navicon").removeEventListener("click", zind);
     ID("nagyKep").style.zIndex = -1;
@@ -148,7 +149,7 @@ function jobbra() {
     let n = lepteto;
     for (let index = 0; index < 3; index++) {
         lepteto++;
-        if (lepteto < kepekArrKis.length) {
+        if (lepteto < kepekArrKis.length) { //kód ismétlés
             ID("kisKep" + index).src = kepekArrKis[lepteto];
             ID("kisKep" + index).className = `kicsi${lepteto}`;
             if (index === 0) {
@@ -173,7 +174,7 @@ function balra() {
     let n = 0;
     for (let index = 2; index >= 0; index--) {
         vege--;
-        if (vege >= 0) {
+        if (vege >= 0) { // kód ismétlés
             ID("kisKep" + index).src = kepekArrKis[vege];
             ID("kisKep" + index).className = `kicsi${vege}`;
             if (index === 2) {
