@@ -14,11 +14,6 @@
                         "fo";
     
 }
-/*
-Háttér szín: #fcf6f5ff
-nav, footer(szöveg mögé?Gombok?)) : #89abe3ff
-Betü szín: #2c364f
-*/
 
 html{
   width: 100%;
@@ -26,7 +21,7 @@ html{
   min-width: fit-content;
 }
 
-/*-----------------------header-----------------------*/
+/*-----------------------HEADER-----------------------*/
 .MSZ_header{
     grid-area: hea;
     width: auto;
@@ -334,20 +329,17 @@ html{
   }
 
 
-/*-----------------------footer-----------------------*/
+/*-----------------------FOOTER-----------------------*/
 footer{
   grid-area: fo;
 }
+
+/*-----------------------RESZPONZIVITÁS-----------------------*/
 @media screen and (max-width: 1362px){
   .kreativ{
     height: 123px;
   }
 }
-/* @media screen and (max-width: 2195px){
-  .zero{
-    height: 66px;
-  }
-} */
 @media only screen and (max-width: 1000px) {
   #MSZ_headTarolo{
     grid-template-columns: 1fr;

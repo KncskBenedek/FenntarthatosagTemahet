@@ -63,7 +63,6 @@ function MSZ_kepbetolt(data, koll) {
         td[1].textContent = data.kepek[key].fotosnev;
         clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].kicsiKepek[0]})`;
         clone.querySelector(".MSZ_btn").id = data.kepek[key].id;
-        //clone.querySelector("a").href = data.kepek[key].tovabboldalra;
         galeriaDIV.appendChild(clone);
       }
     }
@@ -72,9 +71,7 @@ function MSZ_kepbetolt(data, koll) {
   const gombTomb = document.querySelectorAll(".MSZ_btn");
   gombTomb.forEach((elem) => {
     elem.addEventListener("click", function (event) {
-       //ez a kattintott gomb sorszáma
       let aktID = event.target.id;
-      //ez a kattintott gombhoz tartozó adat
       let aktKep = data.kepek[aktID];
       kattint(aktKep);
     });
@@ -122,6 +119,5 @@ function leirJson(resz){
 function kattint(aktKep) {
   
   localStorage.setItem("aktualis", JSON.stringify(aktKep));
-  //ezzel lépek a következő oldalra
   window.location.assign(aktKep.tovabboldalra);
 }
