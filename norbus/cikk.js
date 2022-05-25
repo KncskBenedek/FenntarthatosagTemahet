@@ -1,6 +1,6 @@
 window.addEventListener("load", init);
 jsonAdat = []
-const tlcikk = gsap.timeline();
+const TLCIKK = gsap.timeline();
 function init() {
   if(sessionStorage.getItem("betoltszam") === null) {
     sessionStorage.setItem("betoltszam", 1);
@@ -21,7 +21,7 @@ function clikkHozzaadas() {
 
 function scrollCikkjobbrol () {
 
-  tlcikk.fromTo($(".scrollanimacio"), 0,{x:"0%"}, {x:"200%"});
+  TLCIKK.fromTo($(".scrollanimacio"), 0,{x:"0%"}, {x:"200%"});
   
     gsap.to($(".scrollanimacio"),{
       scrollTrigger: {
@@ -39,7 +39,7 @@ function scrollCikkjobbrol () {
 
 function scrollCikk () {
 
-tlcikk.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
+TLCIKK.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
 
   gsap.to($(".scrollanimacio"),{
     scrollTrigger: {
@@ -50,14 +50,14 @@ tlcikk.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
       toggleActions: "restart none reverse none",
     },
     y:"0%",
-    duration:2.5
+    duration:2
   })
 
 }
 
 function clikkTarolas() {
   let index = parseInt(event.currentTarget.id);
-  localStorage.setItem("cikkek", JSON.stringify(jsonAdat[index])); // jsonAdat[index]);
+  localStorage.setItem("cikkek", JSON.stringify(jsonAdat[index]));
   window.location.assign("cikk.html");
 }
 
