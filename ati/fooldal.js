@@ -13,7 +13,7 @@ function $(elem) {
 }
 var tema = "";
 var randomIndex = 0;
-var leiras = [];
+var leirasTomb = [];
 const hero = QS(".hero");
 const slider = QS(".slider");
 const navbar = QS(".navbar");
@@ -39,16 +39,40 @@ var tl = gsap.timeline();
 function init() {
   beuszasok();
   navSlide();
-  tartalom();
+  //jsonBeolvas();
   scrollAnimaciok();
   galeriaScroll();
   navIcon.addEventListener("click", videoNincs);
-  kepTartalom();
+  jsonTombe("./szabrina/kepek.json", "leiras", leirasTomb,)
+ 
   // galeriaSzoveg();
   setTimeout(() => {
     ScrollTrigger.refresh();
   }, 100);
 }
+
+
+function jsonBeolvas(forras, kulcs, callback) {
+  fetch(forras)
+    .then((response) => response.json())
+    .then((data) => {
+      callback(data[kulcs]);
+    })
+    .catch((err) => console.log("hiba", err));
+}
+function jsonTombe(forras, kulcs, tomb) {
+  fetch(forras)
+    .then((response) => response.json())
+    .then((data) => {
+      tomb = data[kulcs];
+      console.log(tomb);
+    })
+    .then((data)=>{
+      jsonBeolvas("./szabrina/kepek.json", "kepek", kepGaleria)
+    })
+    .catch((err) => console.log("hiba", err));
+}
+
 function scrollAnimaciok() {
   scrollAnimacio(".b1", cikkek);
   scrollAnimacio(".b2", tesztek);
@@ -89,7 +113,6 @@ function beuszasok() {
       "-=1.2"
     );
 }
-//const navSlide = () => {
 function navSlide() {
   navIcon.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -196,42 +219,46 @@ function galeriaScroll() {
     ease: Power0.easeIn,
   });
 }
+
+/*
 function kepTartalom() {
   fetch("./szabrina/kepek.json")
     .then((response) => response.json())
     .then((data) => {
-      leiras = data.leiras;
+      leirasTomb = data.leirasTomb;
       kepGaleria(data.kepek);
     })
     .catch((err) => console.log("hiba", err));
-}
+}*/
 function kepGaleria(jsonName) {
   randomIndex = Math.floor(Math.random() * jsonName.length);
   kepValtas("kep1", jsonName[randomIndex].kepek[0].substring(1));
   kepValtas("kep2", jsonName[randomIndex].kepek[1].substring(1));
   tema = jsonName[randomIndex].kollekcio;
+  console.log(leirasTomb);
   galeriaSzovegBehelyezes(tema);
   setInterval(() => {
     randomIndex = Math.floor(Math.random() * jsonName.length);
     let ujKepek = preLoad(randomIndex, jsonName);
     tema = jsonName[randomIndex].kollekcio;
-    ID("kep1").style.opacity = "0";
-    ID("kep1").style.transitionDuration = "600ms";
-    ID("kep2").style.opacity = "0";
-    ID("kep2").style.transitionDuration = "600ms";
+    opacityValtas("kep1","0")
+    opacityValtas("kep2","0")
     setTimeout(() => {
       kepValtas("kep1", ujKepek[0].src);
       kepValtas("kep2", ujKepek[1].src);
       galeriaSzovegBehelyezes(tema);
     }, 620);
     setTimeout(() => {
-      ID("kep1").style.opacity = "1";
-      ID("kep1").style.transitionDuration = "600ms";
-      ID("kep2").style.opacity = "1";
-      ID("kep2").style.transitionDuration = "600ms";
+      opacityValtas("kep1","1")
+      opacityValtas("kep2","1")
     }, 1000);
   }, 8000);
 }
+function opacityValtas(mire, opMenny) {
+  ID(mire).style.opacity = opMenny;
+  ID(mire).style.transitionDuration = "600ms";
+}
+
 function kepValtas(id, src) {
   ID(id).src = src;
 }
@@ -246,14 +273,17 @@ function preLoad(index, jsonName) {
 
 function galeriaSzovegBehelyezes(tema) {
   if (tema === "Zero") {
-    QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[0].cim}</h2>`;
-    QS(".galeriaSzoveg").innerHTML += `<p>${leiras[0].szoveg}</p>`;
+    QS(".galeriaSzoveg").innerHTML = `<h2>${leirasTomb[0].cim}</h2>`;
+    QS(".galeriaSzoveg").innerHTML += `<p>${leirasTomb[0].szoveg}</p>`;
   } else {
-    QS(".galeriaSzoveg").innerHTML = `<h2>${leiras[1].cim}</h2>`;
-    QS(".galeriaSzoveg").innerHTML += `<p>${leiras[1].szoveg}</p>`;
+    QS(".galeriaSzoveg").innerHTML = `<h2>${leirasTomb[1].cim}</h2>`;
+    QS(".galeriaSzoveg").innerHTML += `<p>${leirasTomb[1].szoveg}</p>`;
   }
 }
 
+
+jsonBeolvas("ati/fooldal.json", "bevezeto", megjelenitBevezeto )
+/*
 function tartalom() {
   fetch("ati/fooldal.json")
     .then((response) => response.json())
@@ -261,7 +291,7 @@ function tartalom() {
       megjelenitBevezeto(data.bevezeto);
     })
     .catch((err) => console.log("hiba", err));
-}
+}*/
 function megjelenitBevezeto(jsonName) {
   for (let index = 1; index < jsonName.length + 1; index++) {
     txt = "";
