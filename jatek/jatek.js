@@ -3,7 +3,7 @@ let megTalalva = 0;
 let megy = false;
 const hol = [];
 const kepek = ["kep1.jpg", "kep1.jpg", "kep2.jpg", "kep2.jpg", "kep3.jpg", "kep3.jpg", "kep4.jpg", "kep4.jpg", "kep5.jpg", "kep5.jpg", "kep6.jpg", "kep6.jpg", "kep7.jpg", "kep7.jpg", "kep8.jpg", "kep8.jpg"];
-
+let hatter = "jKepek/hatter.jpg";
 let sorhossz = 4;
 
 
@@ -13,7 +13,7 @@ window.addEventListener("load", init);
 
 
 function init () {
-    jatekKezd();
+    kezdetiAllapot();
     scrollJatek();
 }
 
@@ -50,8 +50,8 @@ function megfordit() { // nem egy dolgot csinál
                 hol.splice(0);
             } else {
                 setTimeout(() => {//kód ismétlés
-                    ID(hol[0]).src = "jKepek/hatter.jpg";
-                    ID(hol[1]).src = "jKepek/hatter.jpg";
+                    ID(hol[0]).src = hatter;
+                    ID(hol[1]).src = hatter;
                     ID(hol[0]).addEventListener("click", megfordit);
                     ID(hol[1]).addEventListener("click", megfordit);
 
@@ -65,20 +65,20 @@ function megfordit() { // nem egy dolgot csinál
     }
 }
 
-function kezd() {
+function start() {
     let hossz = sorhossz * sorhossz;
     for (let index = 0; index < hossz; index++) {
         ID(index).src = `jKepek/${kepek[index]}`;
     }
     setTimeout(()=> {
         for (let index = 0; index < hossz; index++) {
-            ID(index).src = "jKepek/hatter.jpg";
+            ID(index).src =  hatter;
             ID(index).addEventListener("click", megfordit);
         }
-        ID("btnKezd").removeEventListener("click", kezd);
+        ID("btnKezd").removeEventListener("click", start);
         ID("btnKezd").addEventListener("click", ()=> {
         clearInterval(szamlalo);
-        jatekKezd();});
+        kezdetiAllapot();});
         ID("btnKezd").innerHTML = "Újra";
     }, 1500);
     //ID(event.target.id).disabled = true;
@@ -92,7 +92,7 @@ function kezd() {
         if (megTalalva === sorhossz*2) {
             clearInterval(szamlalo);
             alert("Gratulálok sikerült megoldanod "+ido+" alatt!");
-            jatekKezd();
+            kezdetiAllapot();
         }
     }, 1000);
 
@@ -112,7 +112,7 @@ function valt(sec) {
         .join(":");
 }
 
-function jatekKezd() {
+function kezdetiAllapot() {
     megTalalva = 0;
     megy = false;
     let idKepek = ID("kepek");
@@ -120,13 +120,13 @@ function jatekKezd() {
     //kepek keverése
     shuffleArray();
     for (let index = 0; index < kepek.length; index++) {
-         txt += `<div class="kartya"><img src="jKepek/hatter.jpg" id="${index}"></div>`; //jKepek/${kepek[index]
+         txt += `<div class="kartya"><img src="${hatter}" id="${index}"></div>`; //jKepek/${kepek[index]
     }
     idKepek.innerHTML = txt;
     ID("idoKi").innerHTML = "";
-    ID("btnKezd").removeEventListener("click", jatekKezd)
+    ID("btnKezd").removeEventListener("click", kezdetiAllapot)
     ID("btnKezd").innerHTML = "Kezdés";
-    ID("btnKezd").addEventListener("click", kezd);
+    ID("btnKezd").addEventListener("click", start);
 }
 
 function shuffleArray() {

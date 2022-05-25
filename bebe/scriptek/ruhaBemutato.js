@@ -8,12 +8,12 @@ let ref;
 let szelesseg = window.innerWidth;
 let hatszAl = szelesseg > 600;
 ref = hatszAl ? NAGYKEPEKTOMB : KISKEPEKTOMB;
-let leszed = ()=>{
+/* let leszed = ()=>{
     zind(leszed, felrak, -1);
 };
 let felrak = ()=>{
     zind(felrak, leszed, 0);
-};
+}; */
 window.addEventListener("resize", () => {
     szelesseg = window.innerWidth;
     let elozo = hatszAl;
@@ -54,8 +54,8 @@ window.addEventListener("load", function () {
             ID(`kisKep${index}`).addEventListener("click", nagyKepLesz);
         }
         kiemel(jelenlegiIndex);
-        QS(".navicon").addEventListener("click", leszed);
-        
+        //QS(".navicon").addEventListener("click", leszed); már felesleges cssben van megoldva
+
     }
 });
 function kepekMentese(ruhaJson) {
@@ -66,8 +66,7 @@ function kepekMentese(ruhaJson) {
 }
 function alapNagyKep() {
     let kep = "";
-    kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${
-        ref[0]
+    kep += `<div class="item"> <div class="hanyadik">${1} / ${hossz}</div> <img src="${ref[0]
         }"/></div>`;
 
     //gombok
@@ -126,28 +125,18 @@ function megjelenit(index) {
 }
 
 
-
-
-//kód ismétlés
-function zind(leszed, felrak, opacity) {
+/* function zind(leszed, felrak, zindex) {
     QS(".navicon").removeEventListener("click", leszed); 
-    ID("nagyKep").style.zIndex = opacity; 
+    ID("nagyKep").style.zIndex = zindex; 
     QS(".navicon").addEventListener("click", felrak); // zindVissza
-}
-
-/* function zindVissz() {
-    QS(".navicon").removeEventListener("click", zindVissz); // zindVissza
-    ID("nagyKep").style.zIndex = 0; // 0
-    QS(".navicon").addEventListener("click", zind); // zind
 } */
-//kódismétlés vége
+
 
 function kezdKisKepek(tombKepek) {
     let alsoKepek = "";
 
     if (tombKepek.length <= 3) {
-        alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="${
-            tombKepek.length === 2 ? "ketKisKep" : "alapKiskepek"
+        alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="${tombKepek.length === 2 ? "ketKisKep" : "alapKiskepek"
             }">`;
     } else {
         alsoKepek = `<div id="kisLeptetoCont"> <div id="kisKepek" class="alapKiskepek"><a id="bal" class="prev">❮</a> <a id="jobb" class="next">❯</a>`;
