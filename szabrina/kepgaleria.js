@@ -1,36 +1,45 @@
 window.addEventListener("load", MSZ_init);
 
-function CLASS(nev) {
-  return document.getElementsByClassName(nev);
-}
+function CLASS(elem) {
+  return document.getElementsByClassName(elem);}
+function QS(elem) {
+  return document.querySelector(elem);}
+function $(elem) {
+  return document.querySelector(elem);}
+function ID(elem) {
+  return document.getElementById(elem);}
 
 let slideIndex = 0;
+console.log(slideIndex);
 
 function MSZ_init() {
-  CLASS("zero")[0].addEventListener("click", function () { jsonbolOlvas("Zero"), leirJson("0")});
-  CLASS("kreativ")[0].addEventListener("click", function () { jsonbolOlvas("Kreativ"), leirJson("1")});
-  slJson();
-  galAnim()
+  CLASS("zero")[0].addEventListener("click", function () {
+    jsonbolOlvas("Zero", "0");
+  });
+  CLASS("kreativ")[0].addEventListener("click", function () {
+    jsonbolOlvas("Kreativ", "1");
+  });
+  galAnim();
 }
 
 function MSZ_slideBetolt(kep) {
   let index = 0;
-  var Ztomb=[];
-  var Ktomb=[];
-  kep.forEach(element => {
+  var zeroTomb = [];
+  var kreativTomb = [];
+  kep.forEach((element) => {
     if (element.kollekcio == "Zero") {
-      Ztomb.push(index);
-    }else{
-      Ktomb.push(index);
+      zeroTomb.push(index);
+    } else {
+      kreativTomb.push(index);
     }
     index++;
   });
-  index=0;
+  index = 0;
   setInterval(() => {
-      document.getElementById("slideKep").src = kep[Ztomb[index]].kepek[0];
-      document.getElementById("slideKep2").src = kep[Ktomb[index]].kepek[0];
+    ID("slideKep").src = kep[zeroTomb[index]].kepek[0];
+    ID("slideKep2").src = kep[kreativTomb[index]].kepek[0];
     index++;
-    if ((index >= Ztomb.length - 1) || (index >=Ktomb.length-1)) {
+    if (index >= zeroTomb.length - 1 || index >= kreativTomb.length - 1) {
       index = 0;
     }
   }, 1500);
@@ -39,21 +48,19 @@ function MSZ_slideBetolt(kep) {
   }
 }
 
-function galAnim(){
-  gsap.set(".MSZ_header",{scale:1});
-  gsap.timeline()
-      .from(".MSZ_header", {duration:1.5, yPercent:-100})
-      .from(".MSZ_article", {duration:1.5, xPercent:-100})
+function galAnim() {
+  gsap.set(".MSZ_header", { scale: 1 });
+  gsap
+    .timeline()
+    .from(".MSZ_header", { duration: 1.5, yPercent: -100 })
+    .from(".MSZ_article", { duration: 1.5, xPercent: -100 });
 }
 
-
-
 function MSZ_kepbetolt(data, koll) {
-  
-  document.querySelector("#MSZ_galeria").innerHTML = "";
+  QS("#MSZ_galeria").innerHTML = "";
   if ("content" in document.createElement("template")) {
-    var tDIV = document.querySelector("#MSZ_tarolo");
-    var galeriaDIV = document.querySelector("#MSZ_galeria");
+    var tDIV = QS("#MSZ_tarolo");
+    var galeriaDIV = QS("#MSZ_galeria");
 
     for (const key in data.kepek) {
       if (data.kepek[key].kollekcio == koll) {
@@ -61,14 +68,16 @@ function MSZ_kepbetolt(data, koll) {
         var td = clone.querySelectorAll("span");
         td[0].textContent = data.kepek[key].tervezo;
         td[1].textContent = data.kepek[key].fotosnev;
-        clone.querySelector(".MSZ_kartya").style.backgroundImage = `url(${data.kepek[key].kicsiKepek[0]})`;
+        clone.querySelector(
+          ".MSZ_kartya"
+        ).style.backgroundImage = `url(${data.kepek[key].kicsiKepek[0]})`;
         clone.querySelector(".MSZ_btn").id = data.kepek[key].id;
         galeriaDIV.appendChild(clone);
       }
     }
   }
-  
-  const gombTomb = document.querySelectorAll(".MSZ_btn");
+
+  const gombTomb = $(".MSZ_btn");
   gombTomb.forEach((elem) => {
     elem.addEventListener("click", function (event) {
       let aktID = event.target.id;
@@ -78,46 +87,37 @@ function MSZ_kepbetolt(data, koll) {
   });
 }
 
-function leirBetolt(szov, resz){
-  if(resz=="0"){
-    document.querySelector(".cim").innerHTML=`<h2>${szov[0].cim}</h2>`;
-    document.querySelector(".sz").innerHTML=`<p>${szov[0].szoveg}</p><br><p>${szov[0].kezdo}</p>`;
-    document.querySelector(".felsorol").innerHTML=`<ul>
-    <li>${szov[0].felsorolas}</li>
-    <li>${szov[0].felsorolas2}</li>
-    <li>${szov[0].felsorolas3}</li>
-  </ul>`;
-  document.querySelector(".sz2").innerHTML=`<p>${szov[0].szoveg2}</p>`;
-  document.querySelector(".tanar").innerHTML=`<p>${szov[0].tanar}</p>`
-  document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[0].tanar}</p><ion-icon name="arrow-down-outline"></ion-icon>`
-  }else{
-    document.querySelector(".cim").innerHTML=`<h2>${szov[1].cim}</h2>`;
-    document.querySelector(".sz").innerHTML=`<p>${szov[1].szoveg}</p>`;
-    document.querySelector(".sz2").innerHTML=`<p>${szov[1].szoveg2}</p>`;
-    document.querySelector(".felsorol").innerHTML="";
-    document.querySelector(".tanar").innerHTML=`<h4>Felkészítő tanár:</h4><p>${szov[1].tanar}</p><ion-icon name="arrow-down-outline"></ion-icon>`
+function leirBetolt(leiras, resz) {
+  for (const kulcs in leiras){
+    console.log(leiras);
+    if (leiras[kulcs].id == resz) {
+      QS(".cim").innerHTML = `<h2>${leiras[kulcs].cim}</h2>`;
+      QS(".sz").innerHTML = `<p>${leiras[kulcs].szoveg}</p><br><p>${leiras[kulcs].kezdo}</p>`;
+      QS(".felsorol").innerHTML = `<ul>
+      <li>${leiras[kulcs].felsorolas}</li>
+      <li>${leiras[kulcs].felsorolas2}</li>
+      <li>${leiras[kulcs].felsorolas3}</li>
+    </ul>`;
+      QS(".sz2").innerHTML = `<p>${leiras[kulcs].szoveg2}</p>`;
+      QS(".tanar").innerHTML = `<p>${leiras[kulcs].tanar}</p>`;
+      QS(
+        ".tanar"
+      ).innerHTML = `<h4>Felkészítő tanár:</h4><p>${leiras[kulcs].tanar}</p><ion-icon name="arrow-down-outline"></ion-icon>`;
+    }
   }
-  
 }
 
-function jsonbolOlvas(koll) {
-  fetch('kepek.json')
-    .then(response => response.json())
-    .then(data => MSZ_kepbetolt(data, koll));
+function jsonbolOlvas(koll, resz) {
+  fetch("kepek.json")
+    .then((response) => response.json())
+    .then((data) => { MSZ_kepbetolt(data, koll);
+      MSZ_slideBetolt(data.kepek);
+      leirBetolt(data.leiras, resz);
+    });
 }
-function slJson() {
-  fetch('kepek.json')
-    .then(response => response.json())
-    .then(adat => MSZ_slideBetolt(adat.kepek));
-}
-function leirJson(resz){
-  fetch('kepek.json')
-    .then(response => response.json())
-    .then(leir => leirBetolt(leir.leiras,resz));
-}
+
 
 function kattint(aktKep) {
-  
   localStorage.setItem("aktualis", JSON.stringify(aktKep));
   window.location.assign(aktKep.tovabboldalra);
 }
