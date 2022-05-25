@@ -36,7 +36,7 @@ function scrollJatek() {
   }
 
 
-function megfordit() {
+function megfordit() { // nem egy dolgot csinál
     let id = event.target.id;
     if (hol.length <= 1) {
         event.target.src = `jKepek/${kepek[Number(id)]}`;
@@ -49,7 +49,7 @@ function megfordit() {
                 megTalalva++;
                 hol.splice(0);
             } else {
-                setTimeout(() => {
+                setTimeout(() => {//kód ismétlés
                     ID(hol[0]).src = "jKepek/hatter.jpg";
                     ID(hol[1]).src = "jKepek/hatter.jpg";
                     ID(hol[0]).addEventListener("click", megfordit);
@@ -136,9 +136,9 @@ function shuffleArray() {
       let randInd = Math.floor(Math.random() * index);
       index -= 1;
       // Swap it with the current element.
-      let tmp = kepek[index];
+      let ideiglenes = kepek[index];
       kepek[index] = kepek[randInd];
-      kepek[randInd] = tmp;
+      kepek[randInd] = ideiglenes;
     }
     
   }
