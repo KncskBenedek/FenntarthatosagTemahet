@@ -7,111 +7,90 @@ function S(elem) {
 }
 
 window.addEventListener("load", init);
-const kerdesekAltIsk = [];
-const kerdesekKozIsk = [];
-const kerdesekFeln = [];
+const KERDESEKALTALANOS = [];
+const KERDESEKKOZEP = [];
+const KERDESEKFELNOTT = [];
 
-let helyesValaszok = [];
-let helyesValaszokCheck = [];
-let joV = 0;
+const KERDESEKSZAMA = [11, 12, 15];
+const DOBOZOKID = ["altalanos", "kozep", "felnott"];
+
+const KERDESEK = [KERDESEKALTALANOS, KERDESEKKOZEP, KERDESEKFELNOTT];
+
+const HELYESVALASZOK = [];
+const HELYESCHECKBOXVALASZOK = [];
+let pontszam = 0;
 let szazalek;
 let dobozIndex;
 
-const fajlAltIsk = "json/altIsk.json";
-const fajlKozIsk = "json/kozIsk.json";
-const fajlFeln = "json/feln.json";
+const FAJLOK = ["json/altIsk.json", "json/kozIsk.json", "json/feln.json"]; //json fájlok
+const H1IDK = [S("#alt"), S("#kozp"), S("#feln")]; //h1 tag id-jei querySelectorban elhelyezve
+const GOMBOK = [S("#gombAlt"), S("#gombKozp"), S("#gombFeln")]; //gombok id-jei querySelectorban elhelyezve
+const JSONDATA = [];
 
 function init() {
-  const bezar = document.getElementsByClassName("bezar")[0];
-  const felugro = document.getElementById("felugro");
+  const BEZAR = document.getElementsByClassName("bezar")[0];
+  const FELUGRO = document.getElementById("felugro");
 
-  bezar.addEventListener("click", function () {
-    felugro.style.display = "none";
+  BEZAR.addEventListener("click", function () {
+    FELUGRO.style.display = "none";
   });
 
-  const altIsk = S("#alt");
-  const kozIsk = S("#kozp");
-  const feln = S("#feln");
-
-    
-    altIsk.addEventListener("click", altIskBeilleszt);
-    
-    kozIsk.addEventListener("click", kozIskBeilleszt);
-    
-    feln.addEventListener("click", felnBeilleszt);
-    scrolltesztek();
+  H1IDK[0].addEventListener("click", tesztBeilleszt);
+  H1IDK[1].addEventListener("click", tesztBeilleszt);
+  H1IDK[2].addEventListener("click", tesztBeilleszt);
+  scrolltesztek();
 }
 
-function nullazas() {
-  joV = 0;
+function nullazas() { //lenullázza a pontszámot
+  pontszam = 0;
 }
 
-function altIskBeilleszt(event) {
+function tesztBeilleszt(event) { //egyszer beilleszti az adott tesztet
   dobozIndexBeallito(event);
-  beolvas(fajlAltIsk);
+  beolvas(FAJLOK[dobozIndex]);
   nullazas();
   megjelenit(event);
   $(".dl_tesztdoboz")[dobozIndex].style.display = "block";
-  S("#gombAlt").style.display = "block";
-  S("#alt").removeEventListener("click", altIskBeilleszt);
-  S("#alt").addEventListener("click", megjelenit);
-}
-function kozIskBeilleszt(event) {
-  dobozIndexBeallito(event);
-  beolvas(fajlKozIsk);
-  nullazas();
-  megjelenit(event);
-  $(".dl_tesztdoboz")[dobozIndex].style.display = "block";
-  S("#gombKozp").style.display = "block";
-  S("#kozp").removeEventListener("click", kozIskBeilleszt);
-  S("#kozp").addEventListener("click", megjelenit);
-}
-function felnBeilleszt(event) {
-  dobozIndexBeallito(event);
-  beolvas(fajlFeln);
-  nullazas();
-  megjelenit(event);
-  $(".dl_tesztdoboz")[dobozIndex].style.display = "block";
-  S("#gombFeln").style.display = "block";
-  S("#feln").removeEventListener("click", felnBeilleszt);
-  S("#feln").addEventListener("click", megjelenit);
+  GOMBOK[dobozIndex].style.display = "block";
+  H1IDK[dobozIndex].removeEventListener("click", tesztBeilleszt);
+  H1IDK[dobozIndex].addEventListener("click", megjelenit);
 }
 
-function megjelenit(event) {
+function megjelenit(event) { //megjeleníti az adott div-et és a hozzá tartozó gombot a gombMegjelenit() használatával
   nullazas();
   dobozIndexBeallito(event);
-  const doboz = $(".dl_tesztdoboz")[dobozIndex];
-  if (doboz.style.display === "none") {
-    doboz.style.display = "block";
+  const DOBOZ = $(".dl_tesztdoboz")[dobozIndex];
+  if (DOBOZ.style.display === "none") {
+    DOBOZ.style.display = "block";
     gombMegjelenit("block");
   } else {
     gombMegjelenit("none");
-    doboz.style.display = "none";
+    DOBOZ.style.display = "none";
   }
 }
 
 const tltesztek = gsap.timeline();
 
-function scrolltesztek () {
+function scrolltesztek() {
 
-    tltesztek.fromTo($(".scrollanimacio"), 0,{y:"0%"}, {y:"-200%"});
-    
-      gsap.to($(".scrollanimacio"),{
-        scrollTrigger: {
-          trigger: $(".scrollanimacio"),
-          start: "top 90%",
-          end: "top 90%",
-          markers: false,
-          toggleActions: "restart none reverse none",
-        },
-        y:"0%",
-        duration:3
-      })
-    
-    }
+  tltesztek.fromTo($(".scrollanimacio"), 0, { y: "0%" }, { y: "-200%" });
+
+  gsap.to($(".scrollanimacio"), {
+    scrollTrigger: {
+      trigger: $(".scrollanimacio"),
+      start: "top 90%",
+      end: "top 90%",
+      markers: false,
+      toggleActions: "restart none reverse none",
+    },
+    y: "0%",
+    duration: 3
+  })
+
+}
 
 
-function dobozIndexBeallito(event) {
+function dobozIndexBeallito(event) { //beállítja hogy melyik indexű diven tartózkodunk
   if (event.target.id === "alt") {
     dobozIndex = 0;
   }
@@ -123,56 +102,34 @@ function dobozIndexBeallito(event) {
   }
 }
 
-function gombMegjelenit(mutat) {
-  if (dobozIndex === 0) {
-    const gombAlt = S("#gombAlt");
-    gombAlt.style.display = mutat;
-    gombAlt.addEventListener("click", gombAltEsemeny);
-  }
-  if (dobozIndex === 1) {
-    const gombKozp = S("#gombKozp");
-    gombKozp.style.display = mutat;
-    gombKozp.addEventListener("click", gombKozpEsemeny);
-  }
-  if (dobozIndex === 2) {
-    const gombFeln = S("#gombFeln");
-    gombFeln.style.display = mutat;
-    gombFeln.addEventListener("click", gombFelnEsemeny);
-  }
+function gombMegjelenit(mutat) { //megjeleníti az adott küldés gombot
+  GOMBOK[dobozIndex].style.display = mutat;
+  GOMBOK[dobozIndex].addEventListener("click", gombEsemeny);
 }
 
-function beolvas(fajl) {
+function beolvas(fajl) { //beolvassa a JSON fájlt
   fetch(fajl)
     .then((res) => res.json())
     .then((data) => {
-      if (fajl === fajlAltIsk) {
-        data.altIsk.forEach((elem) => {
-          kerdesekAltIsk.push(elem);
-        });
-      } else if (fajl === fajlKozIsk) {
-        data.kozIsk.forEach((elem) => {
-          kerdesekKozIsk.push(elem);
-        });
-      } else if (fajl === fajlFeln) {
-        data.feln.forEach((elem) => {
-          kerdesekFeln.push(elem);
-        });
-      }
-      if (fajl === fajlAltIsk) {
-        feldolgoz(kerdesekAltIsk, dobozIndex);
-      } else if (fajl === fajlKozIsk) {
-        feldolgoz(kerdesekKozIsk, dobozIndex);
-      } else if (fajl === fajlFeln) {
-        feldolgoz(kerdesekFeln, dobozIndex);
-      }
+      tombJSONDATAFeltolt(data);
+      JSONDATA[dobozIndex].forEach((elem) => {
+        KERDESEK[dobozIndex].push(elem);
+      });
+      feldolgoz(KERDESEK[dobozIndex], dobozIndex);
     })
     .catch((err) => {
       console.log(err);
     });
 }
 
-function feldolgoz(tomb, index) {
-  const szuloElem = $(".dl_tesztdoboz");
+function tombJSONDATAFeltolt(data) { //feltölti a JSONDATA tömböt a megfelelő adatokkal
+  JSONDATA[0] = data.altIsk;
+  JSONDATA[1] = data.kozIsk;
+  JSONDATA[2] = data.feln;
+}
+
+function feldolgoz(tomb, index) { //feldolgozza a JSON fájlból kapott adatokat
+  const SZULO = $(".dl_tesztdoboz");
   let txt = "";
   tomb.forEach((tipus) => {
     for (const key in tipus) {
@@ -186,39 +143,29 @@ function feldolgoz(tomb, index) {
     }
     txt += "<br>";
   });
-  szuloElem[index].innerHTML += txt;
+  SZULO[index].innerHTML += txt;
 }
 
-function valaszokEll(dobozId) {
-  let valaszok = document
-    .getElementById(`${dobozId}`)
-    .getElementsByTagName("input");
+function valaszokEll(dobozId) { //ellenőrzi a válaszokat
+  const VALASZOK = document.getElementById(`${dobozId}`).getElementsByTagName("input");
   let valasztott;
 
-  for (let i = 0; i < valaszok.length; i++) {
-    let valasz = valaszok[i];
-    if (valasz.type == "radio") {
-      if (valasz.checked) {
-        valasztott = valasz.value;
-        valasz.checked = false;
-        if (helyesValaszok.includes(valasztott)) {
-          joV++;
-        }
+  for (let i = 0; i < VALASZOK.length; i++) {
+    let valasz = VALASZOK[i];
+    if (valasz.checked) {
+      valasztott = valasz.value;
+      valasz.checked = false;
+      if (HELYESVALASZOK.includes(valasztott)) {
+        pontszam++;
       }
-    }
-    if (valasz.type === "checkbox") {
-      if (valasz.checked) {
-        valasztott=valasz.value;
-        valasz.checked = false;
-        if (helyesValaszokCheck.includes(valasztott)) {
-          joV += 1;
-        }
+      if (HELYESCHECKBOXVALASZOK.includes(valasztott)) {
+        pontszam++;
       }
     }
   }
 }
 
-function kerdesekBeilleszt(kerdesek, tipus) {
+function kerdesekBeilleszt(kerdesek, tipus) { //a kérdéseket illeszti be a válaszokkal együtt
   let txt = "";
   let kerdesSzam = 0;
   kerdesek.forEach((kerdes) => {
@@ -232,7 +179,7 @@ function kerdesekBeilleszt(kerdesek, tipus) {
             txt += `<input type="${tipus}" name="valasz${kerdesSzam}" value="${kerdes[key]}">${kerdes[key]}<br>`;
           }
         } else {
-          helyesValaszokCheck.push(kerdes[key]);
+          HELYESCHECKBOXVALASZOK.push(kerdes[key]);
         }
       } else {
         if (!(key === "helyesV")) {
@@ -243,7 +190,7 @@ function kerdesekBeilleszt(kerdesek, tipus) {
             txt += `<input type="radio" name="valasz${kerdesSzam}" value="${kerdes[key]}">${kerdes[key]}<br>`;
           }
         } else {
-          helyesValaszok.push(kerdes[key]);
+          HELYESVALASZOK.push(kerdes[key]);
         }
       }
     }
@@ -251,34 +198,21 @@ function kerdesekBeilleszt(kerdesek, tipus) {
   return txt;
 }
 
-function szazalekSzamitas(kerdesSzam) {
-  szazalek = (joV / kerdesSzam) * 100;
+function szazalekSzamitas(kerdesSzam) { //felugró dobozban lévő százalékot számítja ki
+  szazalek = (pontszam / kerdesSzam) * 100;
   szazalek = szazalek.toFixed(2);
 }
 
-function vege(kerdesSzam) {
+function vege(kerdesSzam) { //felugró doboz szövege
   szazalekSzamitas(kerdesSzam);
-  document.getElementById(
-    "szov"
-  ).innerHTML = `Az elért pontszámod: ${joV}.<br> Válaszaidat ${szazalek}%-ban válaszoltad meg helyesen!`;
+  document.getElementById("szov").innerHTML = `Az elért pontszámod: ${pontszam}.<br> Válaszaidat ${szazalek}%-ban válaszoltad meg helyesen!`;
   document.getElementById("felugro").style.display = "block";
 }
 
-function gombAltEsemeny(event) {
-  valaszokEll("altalanos");
-  vege(11);
-  gombAlt.removeEventListener("click", gombAltEsemeny);
+function gombEsemeny(event) { //küldésgombok eseménye
+  dobozIndexBeallito(event);
   megjelenit(event);
-}
-function gombKozpEsemeny(event) {
-  valaszokEll("kozep");
-  vege(12);
-  gombKozp.removeEventListener("click", gombKozpEsemeny);
-  megjelenit(event);
-}
-function gombFelnEsemeny(event) {
-  valaszokEll("felnott");
-  vege(15);
-  gombFeln.removeEventListener("click", gombFelnEsemeny);
-  megjelenit(event);
+  valaszokEll(DOBOZOKID[dobozIndex]);
+  vege(KERDESEKSZAMA[dobozIndex]);
+  GOMBOK[dobozIndex].removeEventListener("click", gombEsemeny);
 }
