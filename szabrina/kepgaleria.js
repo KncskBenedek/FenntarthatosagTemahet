@@ -13,6 +13,7 @@ let slideIndex = 0;
 console.log(slideIndex);
 
 function MSZ_init() {
+  jsonbolOlvas();
   CLASS("zero")[0].addEventListener("click", function () {
     jsonbolOlvas("Zero", "0");
   });
@@ -76,7 +77,6 @@ function MSZ_kepbetolt(data, koll) {
       }
     }
   }
-
   const gombTomb = $(".MSZ_btn");
   gombTomb.forEach((elem) => {
     elem.addEventListener("click", function (event) {
@@ -92,12 +92,17 @@ function leirBetolt(leiras, resz) {
     console.log(leiras);
     if (leiras[kulcs].id == resz) {
       QS(".cim").innerHTML = `<h2>${leiras[kulcs].cim}</h2>`;
-      QS(".sz").innerHTML = `<p>${leiras[kulcs].szoveg}</p><br><p>${leiras[kulcs].kezdo}</p>`;
-      QS(".felsorol").innerHTML = `<ul>
-      <li>${leiras[kulcs].felsorolas}</li>
-      <li>${leiras[kulcs].felsorolas2}</li>
-      <li>${leiras[kulcs].felsorolas3}</li>
-    </ul>`;
+      if(leiras[kulcs].id=="0"){
+        QS(".sz").innerHTML = `<p>${leiras[kulcs].szoveg}</p><br><p>${leiras[kulcs].kezdo}</p>`;
+        QS(".felsorol").innerHTML = `<ul>
+        <li>${leiras[kulcs].felsorolas}</li>
+        <li>${leiras[kulcs].felsorolas2}</li>
+        <li>${leiras[kulcs].felsorolas3}</li>
+      </ul>`;
+      }else{
+        QS(".sz").innerHTML = `<p>${leiras[kulcs].szoveg}</p>`;
+        QS(".felsorol").innerHTML = `<p></p>`;
+      }
       QS(".sz2").innerHTML = `<p>${leiras[kulcs].szoveg2}</p>`;
       QS(".tanar").innerHTML = `<p>${leiras[kulcs].tanar}</p>`;
       QS(
